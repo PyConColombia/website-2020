@@ -131,7 +131,6 @@ $ lektor deploy production
 
 Se desplegará el contenido de la rama `production` en `pycon.co`
 
-___
 
 # 🛠️ Herramientasy servicios complementarios
 
@@ -148,6 +147,7 @@ Las estadísticas de visitas del sitio web utiliza [Google Analytics](https://an
 
 Los servicios de búsqueda y optimización utilizan la [Google Search Console](https://search.google.com/search-console/about)
 
+___
 
 <div align="center">
 
