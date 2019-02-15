@@ -28,7 +28,7 @@ class PyConPlugin(Plugin):
 
     def on_after_build_all(self, builder, **extra):
         """
-        Once the build process is over, save README and LICENSE.txt to assets.
+        Once the build process is over, save `COPY_FILES` to assets.
         """
         for f in self.COPY_FILES:
             fpath = os.path.join(builder.env.root_path, f)
@@ -39,4 +39,4 @@ class PyConPlugin(Plugin):
 
             if os.path.isfile(fpath):
                 shutil.copy(fpath, fbuildpath)
-                reporter.report_generic("{} copied to assets folder".format(f))
+                reporter.report_generic("{} copied to output assets folder".format(f))

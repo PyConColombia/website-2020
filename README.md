@@ -1,9 +1,9 @@
 <div align="center">
 
-# Sitio Web - PyCon Colombia 2020
+# Fuentes del Sitio Web de PyCon Colombia 2020
 
 <a href="https://github.com/PyConColombia">
-  <img width="150" src="https://www.pycon.co/static/images/logo.svg">
+  <img width="150" src="https://pyconcolombia.github.io/website-2020/static/images/logo.svg">
 </a>
 
 [![Build Status][build-badge]][build]
@@ -103,17 +103,17 @@ export LC_ALL=en_us.UTF-8
 export LANG=en_us.UTF-8
 ```
 
-* 🔴 Si ves `jinja2.exceptions.UndefinedError: 'estimate_reading_time' is undefined` significa que necesitas instalar o reinstalar los `plugins` de lektor. Puedes hacer esto ejecutando
-
-```
-$ lektor plugins reinstall
-```
-
 # 🚀 Despliegue
 
 Gracias a _Lektor Bot_ (Plugin de lektor conectado a Github), podemos desplegar nuestra web estática en diferentes repositorios (en la rama seleccionada en configuración - `gh-pages` en nuestro caso).
 
 La configuración de dichos repositorios se encuentra en `pyconcolombia.lektorproject`
+
+## Integración y despliegue continuo
+
+Este repositorio cuenta con servicio de integración continua mediante [TravisCI](https://travis-ci.org/PyConColombia/website-2020).
+Cada vez que se hace un commit a `develop` o `production` el servicio despliega la página
+siguiendo la configuración ubicada en el archivo [.travis.yml](https://github.com/PyConColombia/website-2020/blob/develop/.travis.yml)
 
 ## ✔️ Desarrollo
 
@@ -132,6 +132,23 @@ $ lektor deploy production
 Se desplegará el contenido de la rama `production` en `pycon.co`
 
 ___
+
+# 🛠️ Herramientasy servicios complementarios
+
+## Cloudfare
+
+La página utiliza [Cloudfare](https://www.cloudflare.com/) como servicio de cache y manejo de dominios y reglas 
+de direccionamiento.
+
+## Google Analytics
+
+Las estadísticas de visitas del sitio web utiliza [Google Analytics](https://analytics.google.com/analytics/web/).
+
+## Google Search Console
+
+Los servicios de búsqueda y optimización utilizan la [Google Search Console](https://search.google.com/search-console/about)
+
+
 <div align="center">
 
 💪 Colaboradores
