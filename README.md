@@ -7,7 +7,6 @@
 </a>
 
 [![Build Status][build-badge]][build]
-[![MIT License][license-badge]][LICENSE.txt]
 [![PRs Welcome][prs-badge]][prs] 
 [![GitHub issues](https://img.shields.io/github/issues/PyConColombia/website-2020.svg?style=flat-square)](https://github.com/PyConColombia/website-2020/issues)
 [![Twitter Jopmi](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/pyconcolombia)

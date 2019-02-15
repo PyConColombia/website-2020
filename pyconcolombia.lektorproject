@@ -19,9 +19,12 @@ locale = en
 
 [servers.develop]
 name = Develop
+enabled = yes
+default = yes
 target = ghpages+https://pyconcolombia/website-develop?cname=develop.pycon.co
 
 [servers.production]
 name = Production
+enabled = yes
 target = ghpages+https://pyconcolombia/website-2020?cname=www.pycon.co
 # target = ghpages+https://pyconcolombia/website-2020?cname=2020.pycon.co

@@ -3,11 +3,10 @@
 # Sitio Web - PyCon Colombia 2020
 
 <a href="https://github.com/PyConColombia">
-  <img width="150" src="assets/static/images/pycon.png">
+<img width="150" src="assets/static/images/pycon.png">
 </a>
 
 [![Build Status][build-badge]][build]
-[![MIT License][license-badge]][LICENSE.txt]
 [![PRs Welcome][prs-badge]][prs] 
 [![GitHub issues](https://img.shields.io/github/issues/PyConColombia/website-2020.svg?style=flat-square)](https://github.com/PyConColombia/website-2020/issues)
 [![Twitter Jopmi](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/pyconcolombia)
@@ -142,9 +141,9 @@ ___
 
 </div>
 
-[build-badge]: https://img.shields.io/travis/PyConColombia/website-2019.svg?style=flat-square
-[build]: https://travis-ci.org/PyConColombia/website-2019
+[build-badge]: https://img.shields.io/travis/PyConColombia/website-2020.svg?style=flat-square
+[build]: https://travis-ci.org/PyConColombia/website-2020
 [license-badge]: https://img.shields.io/npm/l/all-contributors.svg?style=flat-square
-[license]: https://github.com/PyConColombia/website-2019/blob/master/LICENSE
+[license]: https://github.com/PyConColombia/website-2020/blob/master/LICENSE.txt
 [prs-badge]: https://img.shields.io/badge/Issues-welcome-brightgreen.svg?style=flat-square
-[prs]: https://github.com/PyConColombia/website-2019/issues/new
+[prs]: https://github.com/PyConColombia/website-2020/issues/new
