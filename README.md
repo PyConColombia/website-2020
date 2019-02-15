@@ -3,7 +3,7 @@
 # Sitio Web - PyCon Colombia 2020
 
 <a href="https://github.com/PyConColombia">
-  <img width="150" src="assets/static/images/logo.svg">
+  <img width="150" src="https://www.pycon.co/static/images/logo.svg">
 </a>
 
 [![Build Status][build-badge]][build]
