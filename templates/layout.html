@@ -1,3 +1,13 @@
+{%- set base_url = '/'|url(alt='es') -%}
+
+{%- from "macros/translation.html" import transbag -%}
+
+{%- set t_intro_location = transbag('translate', this.alt, 'intro_location') -%}
+{%- set t_intro_date = transbag('translate', this.alt, 'intro_date') -%}
+{%- set t_intro_place = transbag('translate', this.alt, 'intro_place') -%}
+{%- set t_button_talks = transbag('translate', this.alt, 'button_talks') -%}
+{%- set t_button_workshops = transbag('translate', this.alt, 'button_workshops') -%}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -52,15 +62,19 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet" href="static/external-libs/animate/animate.css">
     <link rel="stylesheet" href="static/css/styles.css">
 
     <!-- Javascript -->
-    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="static/external-libs/wow/wow.min.js"></script>
     <script src="static/external-libs/wow/setup.js"></script>
     <script src="static/js/libs/dialog-polyfill.js"></script>
@@ -88,28 +102,56 @@
         <div><!-- class="page-content" -->
 
           <div class="container-fluid container-no-padding wow fadeIn" data-wow-duration="1s">
+            <div class="container">
 
-            <div class="logotype-container wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1.2s">
-              <img src="static/images/logotype.svg" alt="">
+              <div class="logotype-container wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1.2s">
+                <img src="static/images/logotype.svg" alt="">
+              </div>
+  
+              <div class="logo-container wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+                <img src="static/images/logo.svg" alt="">
+              </div>
+  
+              <div class="text-container wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1.2s" data-wow-offset="-1000">
+                <p class="h1">EAFIT UNIVERSITY</p>
+                <p class="h2">MEDELLIN - COLOMBIA</p>
+                <p class="h3">FEBRUARY 7, 8 and 9 - 2020</p>
+  
+                {%- if 'tickets' in this.sections -%}
+                <div class="text-center ticket">
+                  <a href="{{ this.tickets_link }}" target="blank_">
+                    <img
+                      src="{% if this.alt == 'en' %} {{ base_url }}static/images/ticket-eng.svg {% else %} {{ base_url }}static/images/ticket-spa.svg {% endif %}"
+                      class="centered" alt="">
+                  </a>
+                </div>
+                {%- endif -%}
+                <div class="row justify-content-center">
+                  <div class="col-md-6 col-sm-12">
+                    <div class="row apply-buttons">
+                      <div class="col-sm-6">
+                        <a href="https://www.papercall.io/pycon-colombia-2019-talks" target="_blank" class="apply-btn">
+                          <span>{{ t_button_talks }}</span>
+                        </a>
+                      </div>
+                      <div class="col-sm-6">
+                        <a href="https://www.papercall.io/pycon-colombia-2019-workshops" target="_blank" class="apply-btn">
+                          <span>{{ t_button_workshops }}</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clouds-left wow fadeInLeft" data-wow-delay="1s" data-wow-duration="1.2s">
+                <img src="static/images/clouds-left.svg" alt="">
+              </div>
+  
+              <div class="clouds-right wow fadeInRight" data-wow-delay="1s" data-wow-duration="1.2s">
+                <img src="static/images/clouds-right.svg" alt="">
+              </div>
             </div>
 
-            <div class="logo-container wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
-              <img src="static/images/logo.svg" alt="">
-            </div>
-
-            <div class="text-container wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1.2s" data-wow-offset="-1000">
-              <p class="h1">EAFIT UNIVERSITY</p>
-              <p class="h2">MEDELLIN - COLOMBIA</p>
-              <p class="h3">FEBRUARY 7, 8 and 9 - 2020</p>
-            </div>
-            
-            <div class="clouds-left wow fadeInLeft" data-wow-delay="1s" data-wow-duration="1.2s">
-              <img src="static/images/clouds-left.svg" alt="">
-            </div>
-
-            <div class="clouds-right wow fadeInRight" data-wow-delay="1s" data-wow-duration="1.2s">
-              <img src="static/images/clouds-right.svg" alt="">
-            </div>
           
           </div>
 
