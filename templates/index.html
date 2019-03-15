@@ -1,1 +1,43 @@
 {% extends "layout.html" %}
+
+{%- block body -%}
+<div class="logotype-container wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1.2s">
+  <img src="{{ base_url }}static/images/logotype.svg" alt="">
+</div>
+
+<div class="logo-container wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+  <img src="{{ base_url }}static/images/logo.svg" alt="">
+</div>
+
+<div class="text-container wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1.2s" data-wow-offset="-1000">
+  <p class="h1">{{ t_intro_place }}</p>
+  <p class="h2">{{ t_intro_location }}</p>
+  <p class="h3">{{ t_intro_date }}</p>
+
+  {%- if 'tickets' in this.sections -%}
+  <div class="text-center ticket">
+    <a href="{{ this.tickets_link }}" target="blank_">
+      <img
+        src="{% if this.alt == 'en' %} {{ base_url }}static/images/ticket-eng.svg {% else %} {{ base_url }}static/images/ticket-spa.svg {% endif %}"
+        class="centered" alt="">
+    </a>
+  </div>
+  {%- endif -%}
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-sm-12">
+      <div class="row apply-buttons">
+        <div class="col-sm-6">
+          <a href="https://www.papercall.io/pycon-colombia-2019-talks" target="_blank" class="apply-btn">
+            <span>{{ t_button_talks }}</span>
+          </a>
+        </div>
+        <div class="col-sm-6">
+          <a href="https://www.papercall.io/pycon-colombia-2019-workshops" target="_blank" class="apply-btn">
+            <span>{{ t_button_workshops }}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{%- endblock -%}

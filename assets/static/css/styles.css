@@ -33,3 +33,22 @@
   -webkit-animation-name: shake;
   animation-name: shake;
 }
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.6);
+  height: 60px;
+}
+
+.navbar .nav-link {
+  color: #FC3A82 !important;
+}
+
+.navbar .nav-item {
+  padding: 0 5px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: 500;
+}
