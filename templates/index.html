@@ -15,27 +15,20 @@
   <p class="h3">{{ t_intro_date }}</p>
 
   {%- if 'tickets' in this.sections -%}
-  <div class="text-center ticket">
+  <!-- <div class="text-center ticket">
     <a href="{{ this.tickets_link }}" target="blank_">
       <img
         src="{% if this.alt == 'en' %} {{ base_url }}static/images/ticket_en.svg {% else %} {{ base_url }}static/images/ticket-spa.svg {% endif %}"
         class="centered" alt="">
     </a>
-  </div>
+  </div> -->
   {%- endif -%}
   <div class="row justify-content-center">
     <div class="col-md-6 col-sm-12">
       <div class="row apply-buttons">
-        <div class="col-sm-6">
-          <a href="https://www.papercall.io/pycon-colombia-2019-talks" target="_blank" class="apply-btn">
-            <span>{{ t_button_talks }}</span>
-          </a>
-        </div>
-        <div class="col-sm-6">
-          <a href="https://www.papercall.io/pycon-colombia-2019-workshops" target="_blank" class="apply-btn">
-            <span>{{ t_button_workshops }}</span>
-          </a>
-        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfnodEiHZ9dOzmG_x87ALE4xj_N4qF2in5cK21Mh0EfHrvKeQ/viewform" target="_blank" class="apply-btn">
+          <span>{{ t_button_cfp }}</span>
+        </a>
       </div>
     </div>
   </div>
