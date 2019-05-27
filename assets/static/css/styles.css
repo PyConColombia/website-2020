@@ -56,3 +56,16 @@
 .apply-buttons {
   margin: 100px 0;
 }
+
+.footer {
+  color: #fff;
+  margin: 100px 0;
+}
+
+.footer a {
+  margin: 0 10px;
+}
+
+.footer .info {
+  margin: 10px 0;
+}
