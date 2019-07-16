@@ -1,0 +1,45 @@
+{
+  "name": "beyond-campus-landing",
+  "version": "0.0.1",
+  "description": "PyCon Website 2020",
+  "main": "index.js",
+  "scripts": {
+    "build:clean": "rm -Rf node_modules && rm -Rf dist",
+    "build:dev": "yarn && webpack --mode development --progress --watch",
+    "build:prod": "yarn && webpack -p --mode production --progress",
+    "docker:up:clean": "bash docker/docker.sh build:clean",
+    "docker:up:dev": "bash docker/docker.sh build:dev",
+    "docker:up:prod": "bash docker/docker.sh build:prod",
+    "docker:logs:website": "bash docker/docker.sh logs:service website",
+    "docker:logs:webpack": "bash docker/docker.sh logs:service webpack",
+    "docker:stop": "bash docker/docker.sh stop"
+  },
+  "keywords": [
+    "webpack",
+    "boilerplate",
+    "static",
+    "website"
+  ],
+  "author": "Team Pycon Colombia",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "@babel/register": "^7.4.4",
+    "@babel/runtime": "^7.5.4",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "mocha": "^6.1.4",
+    "uglifyjs-webpack-plugin": "^2.1.3",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.6",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "copy-webpack-plugin": "^5.0.3",
+    "mini-css-extract-plugin": "^0.7.0",
+    "css-loader": "3.0.0",
+    "sass-loader": "7.1.0",
+    "node-sass": "4.12.0",
+    "jquery": "3.4.1"
+  }
+}

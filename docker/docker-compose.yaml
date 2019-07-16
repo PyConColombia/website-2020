@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  website:
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+    volumes:
+      - ./..:/app
+    environment:
+      - LC_ALL=en_us.UTF-8
+      - LANG=en_us.UTF-8
+    working_dir: /app
+    ports:
+      - "5000:5000"
+    command:
+      - /bin/sh
+      - -c
+      - |
+        lektor plugins reinstall
+        lektor server --no-prune --host 0.0.0.0 --port 5000
+
+  webpack:
+    image: node:10.16.0-stretch-slim
+    working_dir: /code/js
+    volumes:
+      - ./..:/code/js
+    command:
+      - /bin/sh
+      - -c
+      - |
+        yarn install
+        yarn ${WEBPACK_COMMAND_SCRIPT}
+        chown -R ${PERMISSIONS} /code/js
