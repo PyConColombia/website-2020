@@ -1,39 +1,29 @@
-matrix:
+language: python
+python: 3.6
+cache:
+  directories:
+    - $HOME/node_modules
+    - $HOME/assets/dist
+    - $HOME/.cache/pip
+    - $HOME/.cache/lektor/builds
+install:
+  - "apt-get update && apt-get install nodejs yarn"
+  - "yarn install"
+  - "pip install -U pip"
+# Uncomment when new Lektor package is available
+# - "pip install Lektor"
+  - "pip install git+https://github.com/lektor/lektor#egg=Lektor"
+script: "lektor build --no-prune"
+deploy:
   - stage: build_assets
-    include:
-      - language: node_js
-        node_js:
-        - '10.16.0'
-        cache:
-          directories:
-            - $HOME/node_modules
-            - $HOME/assets/dist
-        install:
-          - "yarn install"
-        deploy:
-          - provider: script
-            script: "yarn build:prod"
-
+    - provider: script
+      script: "yarn build:prod"
   - stage: deploy
-      - language: python
-        python: 3.6
-        cache:
-          directories:
-            - $HOME/.cache/pip
-            - $HOME/.cache/lektor/builds
-        install:
-          - "ls -la"
-          - "pip install -U pip"
-        # Uncomment when new Lektor package is available
-        # - "pip install Lektor"
-          - "pip install git+https://github.com/lektor/lektor#egg=Lektor"
-        script: "lektor build --no-prune"
-        deploy:
-          - provider: script
-            script: "lektor deploy develop"
-            on:
-               branch: develop
-          - provider: script
-            script: "lektor deploy production"
-            on:
-               branch: production
+    - provider: script
+      script: "lektor deploy develop"
+      on:
+         branch: develop
+    - provider: script
+      script: "lektor deploy production"
+      on:
+         branch: production
