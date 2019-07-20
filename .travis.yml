@@ -11,13 +11,7 @@ matrix:
         - "yarn install"
       deploy:
         - provider: script
-          script: "yarn build:dev"
-          on:
-            branch: develop
-        - provider: script
           script: "yarn build:prod"
-          on:
-            branch: production
 
     - language: python
       python: 3.6
@@ -26,6 +20,7 @@ matrix:
           - $HOME/.cache/pip
           - $HOME/.cache/lektor/builds
       install:
+        - "ls -la"
         - "pip install -U pip"
       # Uncomment when new Lektor package is available
       # - "pip install Lektor"
