@@ -1,23 +1,23 @@
 matrix:
   include:
     - language: node_js
-    node_js:
-    - '10.16.0'
-    cache:
-      directories:
-        - $HOME/node_modules
-        - $HOME/assets/dist
-    install:
-      - "yarn install"
-    deploy:
-      - provider: script
-        script: "yarn build:dev"
-        on:
-          branch: develop
-      - provider: script
-        script: "yarn build:prod"
-        on:
-          branch: production
+      node_js:
+      - '10.16.0'
+      cache:
+        directories:
+          - $HOME/node_modules
+          - $HOME/assets/dist
+      install:
+        - "yarn install"
+      deploy:
+        - provider: script
+          script: "yarn build:dev"
+          on:
+            branch: develop
+        - provider: script
+          script: "yarn build:prod"
+          on:
+            branch: production
 
     - language: python
       python: 3.6
