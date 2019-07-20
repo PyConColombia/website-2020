@@ -1,6 +1,6 @@
 {
-  "name": "beyond-campus-landing",
-  "version": "0.0.1",
+  "name": "pycon-website-2020",
+  "version": "0.1.0",
   "description": "PyCon Website 2020",
   "main": "index.js",
   "scripts": {
