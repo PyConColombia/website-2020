@@ -63,6 +63,7 @@ Con lo anterior ya estamos listos para abrir `http://localhost:5000` y empezar a
 
 * A continuación se describe brevemente todos los comandos disponibles para mayor control y debugging.
 ```
+yarn docker:up:clean      # Mocha tests
 yarn docker:up:clean      # Limpiar entorno (Esto limpia node_modules y carpeta dist)
 yarn docker:up:dev        # Correr servicios en modo desarrollo
 yarn docker:up:prod       # Correr servicios en modo producción - Esto compila los assets listos para subir al servidor

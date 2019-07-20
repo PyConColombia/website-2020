@@ -4,9 +4,11 @@
   "description": "PyCon Website 2020",
   "main": "index.js",
   "scripts": {
+    "test": "mocha --require @babel/register test/test.js --timeout 25000 --colors",
     "build:clean": "rm -Rf node_modules && rm -Rf dist",
     "build:dev": "yarn && webpack --mode development --progress --watch",
     "build:prod": "yarn && webpack -p --mode production --progress",
+    "docker:test": "bash docker/docker.sh test",
     "docker:up:clean": "bash docker/docker.sh build:clean",
     "docker:up:dev": "bash docker/docker.sh build:dev",
     "docker:up:prod": "bash docker/docker.sh build:prod",
