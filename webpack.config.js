@@ -49,7 +49,7 @@ module.exports = (env, argv) => {
               limit: 10000,
               name: (absoluteUrl) => {
                 const urlSplit = absoluteUrl.split('/')
-                return `../${urlSplit[urlSplit.length-2]}/[name].[hash].[ext]`
+                return `/${urlSplit[urlSplit.length-2]}/[name].[hash].[ext]`
               }
             }
           }
