@@ -105,3 +105,4 @@ ENV/
 *.config
 yarn.lock
 node_modules
+assets/dist
