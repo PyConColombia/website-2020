@@ -1,37 +1,39 @@
 matrix:
-  include:
-    - language: node_js
-      node_js:
-      - '10.16.0'
-      cache:
-        directories:
-          - $HOME/node_modules
-          - $HOME/assets/dist
-      install:
-        - "yarn install"
-      deploy:
-        - provider: script
-          script: "yarn build:prod"
+  - stage: build_assets
+    include:
+      - language: node_js
+        node_js:
+        - '10.16.0'
+        cache:
+          directories:
+            - $HOME/node_modules
+            - $HOME/assets/dist
+        install:
+          - "yarn install"
+        deploy:
+          - provider: script
+            script: "yarn build:prod"
 
-    - language: python
-      python: 3.6
-      cache:
-        directories:
-          - $HOME/.cache/pip
-          - $HOME/.cache/lektor/builds
-      install:
-        - "ls -la"
-        - "pip install -U pip"
-      # Uncomment when new Lektor package is available
-      # - "pip install Lektor"
-        - "pip install git+https://github.com/lektor/lektor#egg=Lektor"
-      script: "lektor build --no-prune"
-      deploy:
-        - provider: script
-          script: "lektor deploy develop"
-          on:
-             branch: develop
-        - provider: script
-          script: "lektor deploy production"
-          on:
-             branch: production
+  - stage: deploy
+      - language: python
+        python: 3.6
+        cache:
+          directories:
+            - $HOME/.cache/pip
+            - $HOME/.cache/lektor/builds
+        install:
+          - "ls -la"
+          - "pip install -U pip"
+        # Uncomment when new Lektor package is available
+        # - "pip install Lektor"
+          - "pip install git+https://github.com/lektor/lektor#egg=Lektor"
+        script: "lektor build --no-prune"
+        deploy:
+          - provider: script
+            script: "lektor deploy develop"
+            on:
+               branch: develop
+          - provider: script
+            script: "lektor deploy production"
+            on:
+               branch: production
