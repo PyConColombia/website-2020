@@ -2,19 +2,16 @@ language: python
 python: 3.6
 cache:
   directories:
-    - $HOME/node_modules
-    - $HOME/assets/dist
     - $HOME/.cache/pip
     - $HOME/.cache/lektor/builds
+    - $HOME/node_modules
+    - $HOME/assets/dist
 install:
   - "apt-get update && apt-get install nodejs yarn"
-  - "yarn install"
   - "pip install -U pip"
 # Uncomment when new Lektor package is available
 # - "pip install Lektor"
   - "pip install git+https://github.com/lektor/lektor#egg=Lektor"
-build:
-  - "yarn build:prod"
 script: "lektor build --no-prune"
 deploy:
   - provider: script
