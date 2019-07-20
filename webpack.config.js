@@ -41,20 +41,19 @@ module.exports = (env, argv) => {
             ]
           },
         },
-        // {
-        //   test: /\.(jpg|png|woff|eot|ttf|svg|ico|otf)$/,
-        //   use: {
-        //     loader: 'url-loader',
-        //     options: {
-        //       limit: 10000,
-        //       name: (absoluteUrl) => {
-        //         const urlSplit = absoluteUrl.split('/');
-        //         return `${urlSplit[urlSplit.length-2]}/[name].[hash].[ext]`;
-
-        //       }
-        //     }
-        //   }
-        // },
+        {
+          test: /\.(jpg|png|woff|eot|ttf|svg|ico|otf)$/,
+          use: {
+            loader: 'url-loader',
+            options: {
+              limit: 10000,
+              name: (absoluteUrl) => {
+                const urlSplit = absoluteUrl.split('/')
+                return `../${urlSplit[urlSplit.length-2]}/[name].[hash].[ext]`
+              }
+            }
+          }
+        },
         {
           test: /\.scss$/,
           use: [
