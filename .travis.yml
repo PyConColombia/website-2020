@@ -6,19 +6,22 @@ cache:
     - $HOME/.cache/lektor/builds
     - $HOME/node_modules
     - $HOME/assets/dist
+before_install:
+  - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+  - echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+  - sudo apt-get update && sudo apt-get install nodejs yarn -y
 install:
-  - "sudo apt-get update && sudo apt-get install nodejs yarn -y"
-  - "pip install -U pip"
+  - pip install -U pip
 # Uncomment when new Lektor package is available
 # - "pip install Lektor"
-  - "pip install git+https://github.com/lektor/lektor#egg=Lektor"
-script: "lektor build --no-prune"
+  - pip install git+https://github.com/lektor/lektor#egg=Lektor
+script: lektor build --no-prune
 deploy:
   - provider: script
-    script: "lektor deploy develop"
+    script: lektor deploy develop
     on:
        branch: develop
   - provider: script
-    script: "lektor deploy production"
+    script: lektor deploy production
     on:
        branch: production
