@@ -5,7 +5,8 @@
 
 
 .container-fluid {
-  background-image: url('../images/field-bg.jpg');
+  // background-image: url('../images/field-bg.jpg');
+  background-color: #61A9F7;
   background-position: top center;
   background-size: cover;
   min-height: 100vh;
@@ -69,16 +70,69 @@
     }
   }
   .event-description {
-    .pd-wrapper {
-      padding: 1.6rem 0 0 2.4rem;
-      h2 {
-        color: map_get($colors, _white);
-      }
+    .wrapper {
+      padding: 1.6rem 0 20rem 2.4rem;
       p {
         margin-bottom: 0;
-        color: map_get($colors, _white);
-        text-shadow: 0.1rem 0.3rem 1.2rem #847e7e;
       }
+    }
+  }
+}
+
+.key-speakers-info {
+  padding: 15rem 0;
+
+  .speakers-title {
+    h1 {
+      margin-left: 5.5rem;
+    }
+  }
+
+  .speaker-info {
+    padding-top: 6.2rem;
+    .speaker-description {
+      text-align: right;
+      .wrapper {
+        padding: 0 1.2rem;
+        h3 {
+          margin-top: 6.2rem;
+        }
+      }
+    }
+
+    .speaker-avatar {
+      img {
+        width: 23rem;
+        height: 23rem;
+        border-radius: 100%;
+        margin: 0 1.2rem;
+      }
+    }
+
+    &.alt {
+      .speaker-description {
+        text-align: left;
+      }
+      .speaker-avatar {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.call-for-papers {
+  margin-top: 26.5rem;
+  h1 {
+    text-align: center;
+    margin-bottom: 6.5rem;
+  }
+
+  .call-to-actions {
+    .left {
+      text-align: right;
+    }
+    .right {
+
     }
   }
 }

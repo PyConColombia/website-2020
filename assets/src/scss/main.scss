@@ -1,4 +1,10 @@
+// Vars
 @import "config/variables";
+
+// Components
+@import "components/buttons";
+
+// Content
 @import "content/animations";
 @import "content/header";
 @import "content/content";
@@ -26,12 +32,13 @@ a {
 
 
 h1, h2, h3 {
+  color: map_get($colors, _white);
   font-weight: map_get($fonts-weigths, _bold);
-  text-shadow: 0.1rem 0.3rem 1.2rem #847e7e;
+  text-shadow: 0.1rem 0.3rem 1.2rem rgba(132, 126, 126, 0.6);
 }
 
 h1 {
-  font-size: 3.4rem;
+  font-size: 5.1rem;
 }
 
 h2 {
@@ -39,9 +46,11 @@ h2 {
 }
 
 h3 {
-  font-size: 1.9rem;
+  font-size: 3rem;
 }
 
 p {
   font-size: 2.1rem;
+  color: map_get($colors, _white);
+  text-shadow: 0.1rem 0.3rem 1.2rem rgba(132, 126, 126, 0.6);
 }
