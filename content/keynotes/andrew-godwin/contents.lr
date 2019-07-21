@@ -1,0 +1,32 @@
+name: Andrew
+---
+country_residence: us
+---
+github_handle: andrewgodwin
+---
+information:
+
+Andrew is a long-time Django contributor - author of South, Django Migrations, and Channels - and a Principal Engineer at Eventbrite, working on SRE and system architecture. He has been doing backend programming for over 15 years, and Python for over a decade.
+In his spare time, he enjoys piloting light aircraft, archery, writing video games, and trying to see as many mountains and as much snow as he possibly can.
+---
+keynote: yes
+---
+last_name:
+
+ Godwin
+---
+linkedin_handle: andrew-godwin-77b1308
+---
+position_1: Engineer at Eventbrite
+---
+position_2: Django contributor
+---
+prefix: Mr.
+---
+publish: yes
+---
+twitter_handle: andrewgodwin
+---
+web: https://www.aeracode.org/
+---
+image: Andrew-Godwin.jpg
