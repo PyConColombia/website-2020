@@ -1,0 +1,56 @@
+.navbar {
+  padding: 3.2rem 4rem;
+  height: 9rem;
+  background-color: transparent;
+  .navigation {
+    .nav-link {
+      display: inline-block;
+      font-size: 1.4rem;
+      padding: 0.2rem 1.7rem;
+      margin: 0 0.3rem;
+      border-radius: 5rem;
+      color: map_get($colors, _primary);
+      transition: all 0.2s;
+      &:hover {
+        color: map_get($colors, _primary_active);
+      }
+      &.nav-primary {
+        background-color: map_get($colors, _primary);
+        color: map_get($colors, _white);
+        &:hover {
+          background-color: map_get($colors, _primary_active);
+        }
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+  .navbar-collapse {
+    .navbar-nav {
+      .dropdown, .nav-item {
+        & > a {
+          color: map_get($colors, _primary);
+          font-size: 1.4rem;
+          padding: 0.2rem 1.7rem;
+        }
+      }
+      .nav-item {
+        & > a {
+          padding: 0.2rem 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+
+.navbar-dark {
+  .navbar-nav {
+    .nav-link {
+      letter-spacing: 0.2rem;
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+  }
+}

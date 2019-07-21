@@ -1,0 +1,88 @@
+/*
+ * MEDIA QUERYS
+ *
+ * Extra tiny grid  devices Phones  (<350px) = .col-*
+ * Tiny grid  devices Phones  (<450px) = .col-*
+ * Extra small grid  devices Phones  (<576px) = .col-*
+ * Small grid  devices Phones  (<768px) = .col-sm-*
+ * Regular grid devices Tablets (≥768px) = .col-md-*
+ * Medium grid devices Desktops  (≥992px) = .col-lg-*
+ * Large grid devices Desktops  (≥1200px) = .col-xl-*
+ * Extra large grid deivces desktop (≥1400px)
+ */
+
+// Breakpoint: x >= 1400
+@media (min-width: map_get($screen,_xxl)) {
+
+}
+
+// Breakpoint: x >= 1900
+@media (min-width: map_get($screen,_xxxxl)) {
+
+}
+
+
+// Breakpoint: x >= 1600 y >= 700
+@media (min-width: map_get($screen,_xxxl)) and (min-height: 700px) {
+
+}
+
+// Breakpoint: x >= 1600 y >= 850
+@media (min-width: map_get($screen,_xxxl)) and (min-height: 850px) {
+
+}
+
+// Breakpoint: x >= 1600 y >= 900px
+@media (min-width: map_get($screen,_xxxl)) and (min-height: 900px) {
+
+}
+
+// Breakpoint: x >= 1900 y >= 1200
+@media (min-width: map_get($screen,_xxxl)) and (min-height: 1100px) {
+
+}
+
+// Breakpoint: x <= 1399
+@media (max-width: map_get($screen,_xxl-max)) {
+
+}
+
+// Breakpoint: x >= 1200 y >= 700
+@media (min-width: map_get($screen,_xl)) and (max-height: 590px) {
+
+}
+
+// Breakpoint: x <= 1199
+@media (max-width: map_get($screen,_xl-max)) {
+
+}
+
+// Breakpoint:  x <= 991
+@media (max-width: map_get($screen,_lg-max)) {
+
+}
+
+// Breakpoint: x <= 767
+@media (max-width: map_get($screen,_md-max)) {
+
+}
+
+// Breakpoint: x >= 1024 y >= 900px
+@media (min-width: 1024px) and (min-height: 1300px) {
+
+}
+
+// Breakpoint: x < 575
+@media (max-width: map_get($screen,_sm-max)) {
+
+}
+
+// Breakpoint: x <= 449
+@media (max-width: map_get($screen,_xs-max)) {
+
+}
+
+// Breakpoint: x <= 349
+@media (max-width: map_get($screen,_xxs-max)) {
+
+}

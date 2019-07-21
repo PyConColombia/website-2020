@@ -1,5 +1,9 @@
+@import "config/variables";
 @import "content/animations";
+@import "content/header";
 @import "content/content";
+@import "content/footer";
+@import "content/responsive";
 
 
 * {
@@ -7,8 +11,9 @@
   outline: none !important
 }
 
-body {
-  font-family: 'Ubuntu', 'Helvetica', 'Arial', sans-serif
+html, body {
+  font-family: 'Ubuntu', 'Helvetica', 'Arial', sans-serif;
+  font-size: 10px;
 }
 
 a {
