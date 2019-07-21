@@ -1,4 +1,87 @@
 
+.container {
+  max-width: 96rem;
+}
+
+
+.container-fluid {
+  background-image: url('../images/field-bg.jpg');
+  background-position: top center;
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  padding-top: 9rem;
+
+  .container {
+    padding-top: 17.7rem;
+    .logotype-container {
+      margin: 0 auto 6rem auto;
+      width: 54rem;
+      img {
+        display: block;
+      }
+    }
+  }
+
+  .clouds-left {
+    bottom:-30rem;
+    display: block;
+    left: -20%;
+    position: absolute;
+    width: 100rem;
+    z-index: 1;
+    img {
+      display: block;
+    }
+  }
+
+  .clouds-right {
+    bottom:-11rem;
+    display:block;
+    position:
+    absolute;
+    right:-35%;
+    width: 120rem;
+    z-index: 1;
+    img {
+      display: block;
+    }
+}
+}
+
+
+.logo-container{
+  margin: 0 auto 11.5rem auto;
+  width: 25rem;
+  img {
+    display: block
+  }
+}
+
+.event-info {
+  .event-ticket {
+    img {
+      width: 90%;
+      margin: 0 auto;
+      transform: rotate(-15deg);
+      display: block;
+    }
+  }
+  .event-description {
+    .pd-wrapper {
+      padding: 1.6rem 0 0 2.4rem;
+      h2 {
+        color: map_get($colors, _white);
+      }
+      p {
+        margin-bottom: 0;
+        color: map_get($colors, _white);
+        text-shadow: 0.1rem 0.3rem 1.2rem #847e7e;
+      }
+    }
+  }
+}
 
 .container-box {
   margin-left: auto;
@@ -31,170 +114,6 @@
 
 
 
-.container-fluid {
-  background:url('../images/field-bg.jpg') top center no-repeat;
-  background-size: cover;
-  min-height: 100vh;
-  overflow: hidden;
-  position: relative;
-  padding-top: 9rem;
-
-  .container {
-    padding-top: 17.7rem;
-    .logotype-container {
-      margin: 0 auto 6rem auto;
-      width: 54rem;
-      img {
-        display: block;
-      }
-    }
-  }
-
-  .logo-container{
-    margin: 0 auto 6.5rem;
-    width: 25rem;
-    img {
-      display: block
-    }
-  }
-  .text-container {
-    color: #fff;
-    margin: 0 auto 20rem;
-    position: relative;
-    text-align: center;
-    z-index: 2;
-    p {
-      margin: 0 0 1rem;
-      font-weight: 300;
-    }
-    .h1 {
-      font-size:2.9rem;
-      letter-spacing: 2rem;
-    }
-    .h2 {
-      font-size: 2.1rem;
-      letter-spacing: 1.7rem;
-    }
-    .h3 {
-      font-size: 1.9rem;
-      letter-spacing: 1.2rem;
-    }
-  }
-
-  .clouds-left {
-    bottom:-30rem;
-    display: block;
-    left: -20%;
-    position: absolute;
-    width: 100rem;
-    z-index: 1;
-    img {
-      display: block;
-    }
-  }
-
-  .clouds-right {
-    bottom:-11rem;
-    display:block;
-    position:
-    absolute;
-    right:-35%;
-    width: 120rem;
-    z-index: 1;
-    img {
-      display: block;
-    }
-  }
-}
-
-
-
-@media screen and (max-width:1400px) {
-  .container-fluid {
-    .clouds-left {
-      left:-30%;
-    }
-    .clouds-right {
-      bottom:-11rem;
-      right:-45%;
-    }
-  }
-}
-
-@media screen and (max-width:1250px) {
-  .container-fluid {
-    .clouds-left {
-      left: -40%;
-    }
-    .clouds-right {
-      bottom:-11rem;
-      right:-55%;
-    }
-  }
-}
-
-@media screen and (max-width: 1100px) {
-  .container-fluid {
-    .clouds-left {
-      left:-50%;
-    }
-    .clouds-right {
-      bottom:-11rem;
-      right:-65%;
-    }
-  }
-}
-
-@media screen and (max-width: 991px) {
-  .container-fluid {
-    .clouds-left {
-      display: none;
-    }
-    .clouds-right {
-      display: none;
-    }
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .container-fluid {
-    .logotype-container {
-      margin: 8rem auto 6rem;
-      width: 250px;
-      img {
-        display: block;
-      }
-    }
-    .logo-container {
-      margin-bottom: 5rem;
-      width: 180px;
-      img {
-        display: block;
-      }
-    }
-    .text-container {
-      margin-bottom: 6rem;
-      p {
-        margin: 0 0 1rem;
-        font-weight: 300;
-      }
-    }
-    .text-container {
-      .h1 {
-        font-size: 2.2rem;
-        letter-spacing: 0.6rem;
-      }
-      .h2 {
-        font-size: 1.8rem;
-        letter-spacing: 0.4rem;
-      }
-      .h3 {
-        font-size: 1.6rem;
-        letter-spacing: 0.3rem;
-      }
-    }
-  }
-}
 
 .apply-btn {
   background:#fff;

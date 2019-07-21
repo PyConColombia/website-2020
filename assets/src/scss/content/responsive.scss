@@ -44,7 +44,39 @@
 
 // Breakpoint: x <= 1399
 @media (max-width: map_get($screen,_xxl-max)) {
+  .container-fluid {
+    .clouds-left {
+      left:-30%;
+    }
+    .clouds-right {
+      bottom:-11rem;
+      right:-45%;
+    }
+  }
+}
 
+@media screen and (max-width:1250px) {
+  .container-fluid {
+    .clouds-left {
+      left: -40%;
+    }
+    .clouds-right {
+      bottom:-11rem;
+      right:-55%;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .container-fluid {
+    .clouds-left {
+      left:-50%;
+    }
+    .clouds-right {
+      bottom:-11rem;
+      right:-65%;
+    }
+  }
 }
 
 // Breakpoint: x >= 1200 y >= 700
@@ -59,12 +91,55 @@
 
 // Breakpoint:  x <= 991
 @media (max-width: map_get($screen,_lg-max)) {
-
+  .container-fluid {
+    .clouds-left {
+      display: none;
+    }
+    .clouds-right {
+      display: none;
+    }
+  }
 }
 
 // Breakpoint: x <= 767
 @media (max-width: map_get($screen,_md-max)) {
-
+  .container-fluid {
+    .logotype-container {
+      margin: 8rem auto 6rem;
+      width: 250px;
+      img {
+        display: block;
+      }
+    }
+    .logo-container {
+      margin-bottom: 5rem;
+      width: 180px;
+      img {
+        display: block;
+      }
+    }
+    .text-container {
+      margin-bottom: 6rem;
+      p {
+        margin: 0 0 1rem;
+        font-weight: 300;
+      }
+    }
+    .text-container {
+      .h1 {
+        font-size: 2.2rem;
+        letter-spacing: 0.6rem;
+      }
+      .h2 {
+        font-size: 1.8rem;
+        letter-spacing: 0.4rem;
+      }
+      .h3 {
+        font-size: 1.6rem;
+        letter-spacing: 0.3rem;
+      }
+    }
+  }
 }
 
 // Breakpoint: x >= 1024 y >= 900px
