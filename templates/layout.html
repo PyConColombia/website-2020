@@ -164,47 +164,44 @@
   </nav>
 
   <body>
-    <div class="mdl-layout mdl-js-layout layout-home">
-      <main>
-        <div>
-          <div class="container-fluid container-no-padding wow fadeIn" data-wow-duration="1s">
-            <div class="container">
-              {%- block body -%}{%- endblock -%}
-              <div class="footer">
-                <div class="row justify-content-center">
-                  <a href="http://twitter.com/pyconcolombia" target="_blank">
-                    <i class="fab fa-twitter fa-3x"></i>
-                  </a>
-                  <a href="http://facebook.com/pyconcolombia" target="_blank">
-                    <i class="fab fa-facebook-f fa-3x"></i>
-                  </a>
-                  <a href="http://instagram.com/pyconcolombia" target="_blank">
-                    <i class="fab fa-instagram fa-3x"></i>
-                  </a>
-                  <a href="http://medium.com/@pyconcolombia" target="_blank">
-                    <i class="fab fa-medium fa-3x"></i>
-                  </a>
-                  <a href="http://github.com/pyconcolombia" target="_blank">
-                    <i class="fab fa-github-alt fa-3x"></i>
-                  </a>
-                </div>
-                <div class="row justify-content-center">
-                  <div class="info">
-                    <h5>Copyright PyCon 2020</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- <div class="clouds-left wow fadeInLeft" data-wow-delay="1s" data-wow-duration="1.2s">
-              <img src="{{ base_url }}dist/images/clouds-left.svg" alt="">
-            </div>
+    <div class="layout-home">
+      <div class="background-wrapper">
+        {%- block body -%}{%- endblock -%}
+      </div>
 
-            <div class="clouds-right wow fadeInRight" data-wow-delay="1s" data-wow-duration="1.2s">
-              <img src="{{ base_url }}dist/images/clouds-right.svg" alt="">
-            </div> -->
+      <div class="footer">
+        <div class="container">
+          <div class="footer-info">
+            <div class="social-networks">
+              <a href="http://twitter.com/pyconcolombia" target="_blank">
+                <i class="fab fa-twitter fa-3x"></i>
+              </a>
+              <a href="http://facebook.com/pyconcolombia" target="_blank">
+                <i class="fab fa-facebook-f fa-3x"></i>
+              </a>
+              <a href="http://instagram.com/pyconcolombia" target="_blank">
+                <i class="fab fa-instagram fa-3x"></i>
+              </a>
+              <a href="http://medium.com/@pyconcolombia" target="_blank">
+                <i class="fab fa-medium fa-3x"></i>
+              </a>
+              <a href="http://github.com/pyconcolombia" target="_blank">
+                <i class="fab fa-github-alt fa-3x"></i>
+              </a>
+            </div>
+            <div class="copyright">
+              <p>© 2019 Python Colombia. All rights reserved.</p>
+              <p><a href="#">Code of Conduct</a> | <a href="mailto:hello@pycon.co">hello@pycon.co</a></p>
+            </div>
           </div>
         </div>
-      </main>
+        <!-- <div class="clouds-left wow fadeInLeft" data-wow-delay="1s" data-wow-duration="1.2s">
+          <img src="{{ base_url }}dist/images/clouds-left.svg" alt="">
+        </div>
+
+        <div class="clouds-right wow fadeInRight" data-wow-delay="1s" data-wow-duration="1.2s">
+          <img src="{{ base_url }}dist/images/clouds-right.svg" alt="">
+        </div> -->
     </div>
 
   </body>

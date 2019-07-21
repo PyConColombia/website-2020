@@ -4,12 +4,18 @@
 // Components
 @import "components/buttons";
 
+// Header
+@import "content/header";
+
 // Content
 @import "content/animations";
 @import "content/header";
 @import "content/content";
 @import "content/footer";
 @import "content/responsive";
+
+// Footer
+@import "content/footer";
 
 
 * {
@@ -53,4 +59,15 @@ p {
   font-size: 2.1rem;
   color: map_get($colors, _white);
   text-shadow: 0.1rem 0.3rem 1.2rem rgba(132, 126, 126, 0.6);
+}
+
+a {
+  color: map_get($colors, _white);
+  text-shadow: 0.1rem 0.3rem 1.2rem rgba(132, 126, 126, 0.6);
+  transition: all 0.2s;
+  &:hover {
+    text-decoration: underline;
+    color: map_get($colors, _white);
+    transition: all 0.2s;
+  }
 }
