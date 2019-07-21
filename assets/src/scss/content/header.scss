@@ -34,6 +34,14 @@
           font-size: 1.4rem;
           padding: 0.2rem 1.7rem;
         }
+        .dropdown-menu {
+          text-align: center;
+          a {
+            font-size: 1.4rem;
+            width: 19rem;
+            color: map_get($colors, _primary);
+          }
+        }
       }
       .nav-item {
         & > a {
