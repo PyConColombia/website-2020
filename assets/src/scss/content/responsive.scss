@@ -11,10 +11,7 @@
  * Extra large grid deivces desktop (≥1400px)
  */
 
-// Breakpoint: x >= 1400
-@media (min-width: map_get($screen,_xxl)) {
 
-}
 
 // Breakpoint: x >= 1900
 @media (min-width: map_get($screen,_xxxxl)) {
@@ -42,40 +39,26 @@
 
 }
 
+
+// Breakpoint: x <= 1551
+@media (min-width: 1551px) {
+  .layout-home {
+    &:before {
+      height: 110rem;
+      top: -14rem;
+    }
+  }
+}
+
+// Breakpoint: x >= 1400
+@media (min-width: map_get($screen,_xxl)) {
+
+}
+
 // Breakpoint: x <= 1399
 @media (max-width: map_get($screen,_xxl-max)) {
-  .container-fluid {
-    .clouds-left {
-      left:-30%;
-    }
-    .clouds-right {
-      bottom:-11rem;
-      right:-45%;
-    }
-  }
-}
-
-@media screen and (max-width:1250px) {
-  .container-fluid {
-    .clouds-left {
-      left: -40%;
-    }
-    .clouds-right {
-      bottom:-11rem;
-      right:-55%;
-    }
-  }
-}
-
-@media screen and (max-width: 1100px) {
-  .container-fluid {
-    .clouds-left {
-      left:-50%;
-    }
-    .clouds-right {
-      bottom:-11rem;
-      right:-65%;
-    }
+  .footer {
+    margin-bottom: -35rem !important;
   }
 }
 
@@ -86,23 +69,23 @@
 
 // Breakpoint: x <= 1199
 @media (max-width: map_get($screen,_xl-max)) {
-
+  .footer {
+    background-size: 120% !important;
+    margin-bottom: -40rem !important;
+  }
 }
 
 // Breakpoint:  x <= 991
 @media (max-width: map_get($screen,_lg-max)) {
-  .container-fluid {
-    .clouds-left {
-      display: none;
-    }
-    .clouds-right {
-      display: none;
-    }
-  }
+
 }
 
 // Breakpoint: x <= 767
 @media (max-width: map_get($screen,_md-max)) {
+  .footer {
+    margin-bottom: -50rem !important;
+  }
+
   .container-fluid {
     .logotype-container {
       margin: 8rem auto 6rem;

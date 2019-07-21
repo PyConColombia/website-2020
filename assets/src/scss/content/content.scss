@@ -43,33 +43,36 @@
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 90%;
+    position: relative;
+
+    &:before {
+      content: "";
+      background-size: 100%;
+      background-image: url('../images/cloud_1.svg');
+      background-repeat: no-repeat;
+      background-position: top center;
+      position: absolute;
+      position: absolute;
+      left: -10%;
+      width: 120%;
+      height: 70rem;
+    }
+    &.clouds-1 {
+      &:before {
+        top: -52rem;
+      }
+    }
+    &.clouds-2 {
+      &:before {
+        width: 110%;
+        background-image: url('../images/cloud_2.svg');
+        top: 52rem;
+        left: -5%;
+      }
+    }
   }
 }
 
-.clouds-left {
-  bottom:-30rem;
-  display: block;
-  left: -20%;
-  position: absolute;
-  width: 100rem;
-  z-index: 1;
-  img {
-    display: block;
-  }
-}
-
-.clouds-right {
-  bottom:-11rem;
-  display:block;
-  position:
-  absolute;
-  right:-35%;
-  width: 120rem;
-  z-index: 1;
-  img {
-    display: block;
-  }
-}
 
 
 .logo-container{
@@ -101,6 +104,7 @@
 
 .key-speakers-info {
   padding: 15rem 0;
+  position: relative;
 
   .speakers-title {
     h1 {
