@@ -12,9 +12,14 @@
     "docker:up:clean": "bash docker/docker.sh build:clean",
     "docker:up:dev": "bash docker/docker.sh build:dev",
     "docker:up:prod": "bash docker/docker.sh build:prod",
-    "docker:logs:website": "bash docker/docker.sh logs:service website",
-    "docker:logs:webpack": "bash docker/docker.sh logs:service webpack",
-    "docker:stop": "bash docker/docker.sh stop"
+    "docker:logs:website": "bash docker/docker.sh logs website",
+    "docker:logs:webpack": "bash docker/docker.sh logs webpack",
+    "docker:restart": "bash docker/docker.sh restart",
+    "docker:restart:website": "bash docker/docker.sh restart website",
+    "docker:restart:webpack": "bash docker/docker.sh restart webpack",
+    "docker:stop": "bash docker/docker.sh stop",
+    "docker:stop:website": "bash docker/docker.sh stop website",
+    "docker:stop:webpack": "bash docker/docker.sh stop webpack"
   },
   "keywords": [
     "webpack",
@@ -24,6 +29,18 @@
   ],
   "author": "Team Pycon Colombia",
   "license": "MIT",
+  "dependencies": {
+    "wowjs": "^1.1.3",
+    "popper.js": "^1.15.0",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "animate.css": "^3.7.2",
+    "@fortawesome/fontawesome-free": "^5.9.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
   "devDependencies": {
     "@babel/cli": "^7.5.0",
     "@babel/core": "^7.5.4",
@@ -39,11 +56,13 @@
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "copy-webpack-plugin": "^5.0.3",
     "mini-css-extract-plugin": "^0.7.0",
-    "css-loader": "3.0.0",
-    "sass-loader": "7.1.0",
-    "node-sass": "4.12.0",
-    "jquery": "3.4.1",
-    "url-loader": "2.1.0",
-    "file-loader": "4.1.0"
+    "css-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "node-sass": "^4.12.0",
+    "url-loader": "^2.1.0",
+    "file-loader": "^4.1.0",
+    "postcss-loader": "^3.0.0",
+    "autoprefixer": "^9.6.1",
+    "onchange": "^6.0.0"
   }
 }

@@ -1,5 +1,15 @@
-//Wow js activation
-var wow = new WOW(
+import "../scss/vendors.scss"
+
+// ----- jQuery -----
+
+import $ from 'jquery'
+window.jQuery = $
+window.$ = $
+
+// ----- WOW.js -----
+
+import WOW from 'wowjs'
+var wow = new WOW.WOW(
   {
     boxClass:     'wow',      // animated element css class (default is wow)
     animateClass: 'animated', // animation css class (default is animated)
@@ -12,6 +22,18 @@ var wow = new WOW(
     },
     scrollContainer: null // optional scroll container selector, otherwise use window
   }
-);
+)
 
-wow.init();
+wow.init()
+
+
+// ----- Bootstrup -----
+
+import 'bootstrap'
+
+// ----- Vendors -----
+
+import "@fortawesome/fontawesome-free/js/fontawesome"
+import "@fortawesome/fontawesome-free/js/solid"
+import "@fortawesome/fontawesome-free/js/regular"
+import "@fortawesome/fontawesome-free/js/brands"

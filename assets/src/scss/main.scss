@@ -1,0 +1,21 @@
+@import "content/animations";
+@import "content/content";
+
+
+* {
+  font-family: 'Ubuntu', 'Helvetica', 'Arial', sans-serif;
+  outline: none !important
+}
+
+body {
+  font-family: 'Ubuntu', 'Helvetica', 'Arial', sans-serif
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  &:hover {
+    text-decoration:none;
+  }
+}
+

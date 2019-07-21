@@ -63,13 +63,18 @@ Con lo anterior ya estamos listos para abrir `http://localhost:5000` y empezar a
 
 * A continuación se describe brevemente todos los comandos disponibles para mayor control y debugging.
 ```
-yarn docker:up:clean      # Mocha tests
-yarn docker:up:clean      # Limpiar entorno (Esto limpia node_modules y carpeta dist)
-yarn docker:up:dev        # Correr servicios en modo desarrollo
-yarn docker:up:prod       # Correr servicios en modo producción - Esto compila los assets listos para subir al servidor
-yarn docker:logs:website  # Ver logs del contenedor web donde está lektor
-yarn docker:logs:webpack  # Ver logs del contenedor de webpack donde se preprocesan los archivos fuente de la carpeta assets.
-yarn docker:stop          # Para todos los servicios
+yarn docker:up:clean         # Mocha tests
+yarn docker:up:clean         # Limpiar entorno (Esto limpia node_modules y carpeta dist)
+yarn docker:up:dev           # Correr servicios en modo desarrollo
+yarn docker:up:prod          # Correr servicios en modo producción - Esto compila los assets listos para subir al servidor
+yarn docker:logs:website     # Ver logs del contenedor web donde está lektor
+yarn docker:logs:webpack     # Ver logs del contenedor de webpack donde se preprocesan los archivos fuente de la carpeta assets.
+yarn docker:restart          # Reiniciar todos los servicios
+yarn docker:restart:website  # Reiniciar servicio se website (lektor)
+yarn docker:restart:webpack  # Reiniciar servicio de webpack
+yarn docker:stop             # Parar todos los servicios
+yarn docker:stop:website     # Parar servicio se website (lektor)
+yarn docker:stop:webpack     # Parar servicio de webpack
 ```
 
 

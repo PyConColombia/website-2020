@@ -5,17 +5,19 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const webpack = require('webpack')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const CleanWebPackPlugin = require('clean-webpack-plugin')
+const autoprefixer = require('autoprefixer')
 
 
 module.exports = (env, argv) => {
   // Webpack configuration
   let config = {
     entry: {
-      index: path.resolve(__dirname, 'assets/static/index.js')
+      vendors: path.resolve(__dirname, 'assets/src/js/vendors.js'),
+      main: path.resolve(__dirname, 'assets/src/js/main.js')
     },
     output: {
       path: path.resolve(__dirname, 'assets/dist'),
-      filename: 'js/bundle.js',
+      filename: 'js/[name].js',
       publicPath: '/dist/'
     },
     optimization: {
@@ -64,6 +66,12 @@ module.exports = (env, argv) => {
               },
             },
             'css-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: () => [autoprefixer({})]
+              }
+            },
             'sass-loader',
           ],
         }
@@ -71,12 +79,16 @@ module.exports = (env, argv) => {
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: 'css/bundle.css'
+        filename: 'css/[name].css'
       }),
       new webpack.ProvidePlugin({
         $: 'jquery',
         jQuery: 'jquery'
-      })
+      }),
+      new CopyWebpackPlugin([
+        { from: 'assets/src/images', to: 'images' },
+        { from: 'assets/src/favicon', to: 'favicon' }
+      ])
     ]
   }
 

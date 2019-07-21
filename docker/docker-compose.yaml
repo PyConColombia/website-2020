@@ -30,5 +30,6 @@ services:
       - -c
       - |
         yarn install
+        chown -R ${PERMISSIONS} /code/js
         yarn ${WEBPACK_COMMAND_SCRIPT}
         chown -R ${PERMISSIONS} /code/js
