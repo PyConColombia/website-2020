@@ -33,72 +33,64 @@
   </div>
 </div>
 
-<div class="key-speakers-info">
-  <div class="bubbles-background clouds-1">
+{% set speakers = site.query('/keynotes', alt=this.alt).filter(F.keynote).filter(F.publish).order_by('_id') %}
+
+{% if speakers %}
+  <div class="key-speakers-info">
     <div class="container">
       <div class="row">
         <div class="speakers-title col-md-11 offset-md-1 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1.2s">
-          <h1>&lt;KEYNOTE<br/>SPEAKERS/&gt;</h1>
-        </div>
-      </div>
-
-      <div class="row speaker-info wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
-        <div class="speaker-description col-md-6">
-          <div class="wrapper">
-            <h3>Benjamin Lewis</h3>
-            <p>Geospatial Technology Manager <br/>at the Harvard Center for Geographic<br/>Analysis</p>
-          </div>
-        </div>
-        <div class="speaker-avatar col-md-4">
-          <img src="{{ base_url }}dist/images/speaker1.jpg">
-        </div>
-      </div>
-
-      <div class="row speaker-info alt wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
-        <div class="speaker-avatar col-md-4 offset-md-2">
-          <img src="{{ base_url }}dist/images/speaker2.jpg">
-        </div>
-        <div class="speaker-description col-md-6">
-          <div class="wrapper">
-            <h3>Carol Willing</h3>
-            <p>Python Core Developer and PSF Fellow <br/>Research Software Engineer, Project Jupyter</p>
-          </div>
+          <h1>&lt;KEYNOTE<br />SPEAKERS/&gt;</h1>
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="bubbles-background clouds-2">
-    <div class="container">
-      <div class="row speaker-info wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
-        <div class="speaker-description col-md-6">
-          <div class="wrapper">
-            <h3>Jake Vanderplas</h3>
-            <p>Director de Open Software en <br/>Universidad de Washington eScience<br/>Institute</p>
+    <div class="bubbles-background clouds-1">
+      <div class="container">
+        {% for speaker in speakers %}
+          {% if loop.index % 2 == 1 %}
+          <div class="row speaker-info wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="speaker-description col-md-6">
+              <div class="wrapper">
+                <h3>{{ speaker.name }} {{ speaker.last_name }}</h3>
+                <p>{{ speaker.position_1 }}<br />{{ speaker.position_2 }}</p>
+              </div>
+            </div>
+            <div class="speaker-avatar col-md-4">
+              <img src={%- if speaker.image -%} "{%- if speaker.keynote -%}/keynotes/{%- else -%}/ponentes/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}" {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} ">
+            </div>
           </div>
-        </div>
-        <div class="speaker-avatar col-md-4">
-          <img src="{{ base_url }}dist/images/speaker3.jpg">
-        </div>
-      </div>
-
-      <div class="row speaker-info alt wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
-        <div class="speaker-avatar col-md-4 offset-md-2">
-          <img src="{{ base_url }}dist/images/speaker4.jpg">
-        </div>
-        <div class="speaker-description col-md-6">
-          <div class="wrapper">
-            <h3>Kian Katanforoosh</h3>
-            <p>Former Core Developer Django, <br/>Fundador BeeWare Project</p>
+          {% else %}
+          <div class="row speaker-info alt wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="1.2s"
+            data-wow-offset="-1000">
+            <div class="speaker-avatar col-md-4 offset-md-2">
+              <img src={%- if speaker.image -%} "{%- if speaker.keynote -%}/keynotes/{%- else -%}/ponentes/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}" {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} ">
+            </div>
+            <div class="speaker-description col-md-6">
+              <div class="wrapper">
+                <h3>{{ speaker.name }} {{ speaker.last_name }}</h3>
+                <p>{{ speaker.position_1 }}<br />{{ speaker.position_2 }}</p>
+              </div>
+            </div>
           </div>
-        </div>
+          {% endif %}
+          {% if loop.index % 4 == 2 %}
+            </div>
+            </div>
+            <div class="bubbles-background clouds-2">
+              <div class="container">
+          {% elif loop.index % 4 == 0 %}
+            </div>
+            </div>
+            <div class="bubbles-background clouds-1">
+              <div class="container">
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
-  </div>
+  </div> 
+{% endif %}
 </div>
-
   {% set is_speakers_call_enabled = this.accepted_speakers_link and 'speakers-call' in this.sections %}
-
   {% if is_speakers_call_enabled %}
     <div class="call-for-papers  wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1.2s" data-wow-offset="-1000">
       <h1>&lt;CALL FOR PAPERS/&gt;</h1>
