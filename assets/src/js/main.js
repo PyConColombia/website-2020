@@ -1,3 +1,8 @@
 import "../scss/main.scss"
 
-let a = 16
+// Navbar efects
+$(document).scroll(function () {
+    const $nav = $(".navbar");
+
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+});

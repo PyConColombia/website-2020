@@ -71,3 +71,12 @@ a {
     transition: all 0.2s;
   }
 }
+
+.navbar {
+  background-color: rgba($color: #fff, $alpha: 0.1) !important;
+}
+
+.navbar.scrolled {
+  background-color: rgba($color: #fff, $alpha: 0.7) !important;
+  transition: background-color 400ms linear;
+}
