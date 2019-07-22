@@ -1,7 +1,11 @@
 .navbar {
   padding: 3.2rem 4rem;
   height: 9rem;
-  background-color: transparent;
+  background-color: rgba($color: #fff, $alpha: 0.1);
+  &.scrolled {
+    background-color: rgba($color: #fff, $alpha: 0.7) !important;
+    transition: background-color 400ms linear;
+  }
   .navigation {
     .nav-link {
       display: inline-block;
@@ -51,7 +55,6 @@
     }
   }
 }
-
 
 .navbar-dark {
   .navbar-nav {

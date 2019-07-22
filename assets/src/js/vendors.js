@@ -6,6 +6,13 @@ import $ from 'jquery'
 window.jQuery = $
 window.$ = $
 
+// Navbar efects
+$(document).scroll(function () {
+  const $nav = $(".navbar")
+
+  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height())
+})
+
 // ----- WOW.js -----
 
 import WOW from 'wowjs'
@@ -37,3 +44,5 @@ import "@fortawesome/fontawesome-free/js/fontawesome"
 import "@fortawesome/fontawesome-free/js/solid"
 import "@fortawesome/fontawesome-free/js/regular"
 import "@fortawesome/fontawesome-free/js/brands"
+
+
