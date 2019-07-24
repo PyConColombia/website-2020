@@ -1,4 +1,11 @@
 {% extends "layout.html" %}
+{%- from "macros/translation.html" import transbag -%}
+
+{%- set t_intro_location = transbag('translate', this.alt, 'intro_location') -%}
+{%- set t_intro_date = transbag('translate', this.alt, 'intro_date') -%}
+{%- set t_intro_place = transbag('translate', this.alt, 'intro_place') -%}
+{%- set t_button_cfp = transbag('translate', this.alt, 'button_cfp') -%}
+{%- set t_keynote_title = transbag('translate', this.alt, 'keynote_title') -%}
 
 {%- block body -%}
 <div class="container">
@@ -10,9 +17,6 @@
     <img src="{{ base_url }}dist/images/logo.svg" alt="">
   </div>
 
-  {%- if 'tickets' in this.sections -%}
-  {%- endif -%}
-
   {% set is_tickets_section_enabled = this.tickets_link and 'tickets' in this.sections %}
 
   <div class="row event-info">
@@ -23,7 +27,7 @@
         </a>
       </div>
     {% endif %}
-    <div class="event-description {{ 'text-center offset-md-3' if not is_tickets_section_enabled else '' }} col-md-5 wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+    <div class="event-description {{ 'text-center offset-md-3' if not is_tickets_section_enabled else '' }} col-md-{{ '6' if not is_tickets_section_enabled else '5' }} wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
       <div class="wrapper">
         <h2>{{ t_intro_place }}</h2>
         <p>{{ t_intro_location }}</p>
@@ -40,8 +44,8 @@
     <div class="bubbles-background clouds-1">
       <div class="container">
         <div class="row">
-          <div class="speakers-title col-md-11 offset-md-1 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1.2s">
-            <h1>&lt;KEYNOTE<br />SPEAKERS/&gt;</h1>
+          <div class="speakers-title col-md-5 offset-md-1 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1.2s">
+            <h1>&lt;{{ t_keynote_title }}/&gt;</h1>
           </div>
         </div>
         {% for speaker in speakers %}
@@ -96,7 +100,7 @@
       <div class="call-to-actions row">
         <div class="text-center col-md-12">
           <a class="btn btn-primary-alt btn-lg" href="{{ this.accepted_speakers_link }}"  target="_blank">
-            Call for Proposal
+            {{ t_button_cfp }}
           </a>
         </div>
       </div>

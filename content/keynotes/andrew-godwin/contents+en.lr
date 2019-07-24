@@ -1,8 +1,8 @@
-name: Andrew
----
 country_residence: us
 ---
 github_handle: andrewgodwin
+---
+image: Andrew-Godwin.jpg
 ---
 information:
 
@@ -17,9 +17,11 @@ last_name:
 ---
 linkedin_handle: andrew-godwin-77b1308
 ---
-position_1: Ingeniero en Eventbrite
+name: Andrew
 ---
-position_2: Colaborador en Django
+position_1: Engineer at Eventbrite
+---
+position_2: Django contributor
 ---
 prefix: Mr.
 ---
@@ -28,5 +30,3 @@ publish: yes
 twitter_handle: andrewgodwin
 ---
 web: https://www.aeracode.org/
----
-image: Andrew-Godwin.jpg
