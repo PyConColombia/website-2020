@@ -36,6 +36,21 @@
         display: block;
       }
     }
+
+    .logos {
+      background-size: contain;
+      width: auto;
+    }
+
+    .logo {
+      background: url('../images/logo.svg') center center no-repeat;
+      height: 250px;
+    }
+
+    .logotype {
+      background: url('../images/logotype.svg') center center no-repeat;
+      height: 140px;
+    }
   }
 
   .bubbles-background {
