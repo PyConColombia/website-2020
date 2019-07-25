@@ -1,10 +1,11 @@
 .footer {
   margin-top: -20rem;
   margin-bottom: -20rem;
-  min-height: 100rem;
+  min-height: 80rem;
   background-image: url('../images/footer.svg');
   background-size: 100%;
   background-position: top center;
+  background-repeat: no-repeat;
 
   .container {
     padding-top: 0;
