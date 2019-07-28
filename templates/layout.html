@@ -1,6 +1,7 @@
 {%- set base_url = '/'|url(alt='es') -%}
 
 {%- from "macros/translation.html" import transbag -%}
+{%- set t_open_chat = transbag('translate', this.alt, 'open_chat') -%}
 
 {%- macro menu_item(identifier) -%}
   {% set identifier_url = '/' + identifier %}
@@ -140,7 +141,7 @@
       </ul>
     </div>
   </nav>
-
+  <button class="js-gitter-toggle-chat-button gitter-custom-button">{{ t_open_chat }}</button>
   <body>
     <div class="layout-home">
       <div class="background-wrapper">
@@ -173,6 +174,14 @@
             </div>
           </div>
         </div>
+      </div>
     </div>
+    <script>
+      ((window.gitter = {}).chat = {}).options = {
+        room: 'PyConColombia/Lobby',
+        activationElement: '.gitter-button',
+      };
+    </script>
+    <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
   </body>
 </html>
