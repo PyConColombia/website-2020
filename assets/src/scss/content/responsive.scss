@@ -128,6 +128,9 @@
 
 // Breakpoint: x < 575
 @media (max-width: map_get($screen,_sm-max)) {
+  .key-speakers-info .speakers-title h1 {
+    margin-left: 0,
+  }
   .footer {
     background-size: 275%!important;
   }
