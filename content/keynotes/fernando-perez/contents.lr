@@ -18,8 +18,8 @@ twitter_handle: fperez_org
 ---
 image: Fernando Perez.jpg
 ---
-position_1: Profesor Asistente de Estadística, UC Berkeley, científico en LBNL
----
-position_2:
+position_1:
 
 Creador de IPython y Co-fundador de Jupyter 
+---
+position_2: Profesor Asistente de Estadística, UC Berkeley, científico en LBNL
