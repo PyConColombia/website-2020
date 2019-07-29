@@ -1,7 +1,7 @@
 .footer {
   margin-top: -20rem;
   margin-bottom: -20rem;
-  min-height: 100rem;
+  min-height: calc(100rem - 20rem);
   background-image: url('../images/footer.svg');
   background-size: 100%;
   background-position: top center;

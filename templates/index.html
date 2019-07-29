@@ -38,7 +38,7 @@
 
 {% if speakers %}
   <div class="key-speakers-info">
-    <div class="bubbles-background clouds-1">
+    <div class="bubbles-background clouds">
       <div class="container">
         <div class="row">
           <div class="speakers-title col-md-5 offset-md-1 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1.2s">
@@ -47,46 +47,70 @@
         </div>
         {% for speaker in speakers %}
           {% if loop.index % 2 == 1 %}
-          <div class="row speaker-info wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
-            <div class="speaker-description col-md-6 col-sm-6 col-xs-12 order-md-1 order-12">
-              <div class="wrapper">
-                <h3>{{ speaker.name }} {{ speaker.last_name }}</h3>
-                <p>{{ speaker.position_1 }}<br />{{ speaker.position_2 }}</p>
+            <div class="row speaker-info wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+              <div class="speaker-description col-md-6 col-sm-6 col-xs-12 order-md-1 order-12">
+                <div class="wrapper">
+                  <h3>{{ speaker.name }} {{ speaker.last_name }}</h3>
+                  <p>{{ speaker.position_1 }}<br />{{ speaker.position_2 }}</p>
+                </div>
+              </div>
+              <div class="speaker-avatar col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+                <img src={%- if speaker.image -%} "{%- if speaker.keynote -%}/keynotes/{%- else -%}/ponentes/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}" {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} ">
               </div>
             </div>
-            <div class="speaker-avatar col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
-              <img src={%- if speaker.image -%} "{%- if speaker.keynote -%}/keynotes/{%- else -%}/ponentes/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}" {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} ">
+            <div class="row speaker-info alt wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="1.2s"
+              data-wow-offset="-1000">
+              <div class="speaker-avatar col-md-4 offset-md-2">
+                <img src={%- if speaker.image -%} "{%- if speaker.keynote -%}/keynotes/{%- else -%}/ponentes/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}" {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} ">
+              </div>
+              <div class="speaker-description col-md-6">
+                <div class="wrapper">
+                  <h3>{{ speaker.name }} {{ speaker.last_name }}</h3>
+                  <p>{{ speaker.position_1 }}<br />{{ speaker.position_2 }}</p>
+                </div>
+              </div>
             </div>
-          </div>
+            <div class="row speaker-info wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+              <div class="speaker-description col-md-6 col-sm-6 col-xs-12 order-md-1 order-12">
+                <div class="wrapper">
+                  <h3>{{ speaker.name }} {{ speaker.last_name }}</h3>
+                  <p>{{ speaker.position_1 }}<br />{{ speaker.position_2 }}</p>
+                </div>
+              </div>
+              <div class="speaker-avatar col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
+                <img src={%- if speaker.image -%} "{%- if speaker.keynote -%}/keynotes/{%- else -%}/ponentes/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}" {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} ">
+              </div>
+            </div>
+            <div class="row speaker-info alt wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="1.2s"
+              data-wow-offset="-1000">
+              <div class="speaker-avatar col-md-4 offset-md-2">
+                <img src={%- if speaker.image -%} "{%- if speaker.keynote -%}/keynotes/{%- else -%}/ponentes/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}" {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} ">
+              </div>
+              <div class="speaker-description col-md-6">
+                <div class="wrapper">
+                  <h3>{{ speaker.name }} {{ speaker.last_name }}</h3>
+                  <p>{{ speaker.position_1 }}<br />{{ speaker.position_2 }}</p>
+                </div>
+              </div>
+            </div>
           {% else %}
-          <div class="row speaker-info alt wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="1.2s"
-            data-wow-offset="-1000">
-            <div class="speaker-avatar col-md-4 offset-md-2">
-              <img src={%- if speaker.image -%} "{%- if speaker.keynote -%}/keynotes/{%- else -%}/ponentes/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}" {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} ">
-            </div>
-            <div class="speaker-description col-md-6">
-              <div class="wrapper">
-                <h3>{{ speaker.name }} {{ speaker.last_name }}</h3>
-                <p>{{ speaker.position_1 }}<br />{{ speaker.position_2 }}</p>
+            <div class="row speaker-info alt wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="1.2s"
+              data-wow-offset="-1000">
+              <div class="speaker-avatar col-md-4 offset-md-2">
+                <img src={%- if speaker.image -%} "{%- if speaker.keynote -%}/keynotes/{%- else -%}/ponentes/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}" {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} ">
+              </div>
+              <div class="speaker-description col-md-6">
+                <div class="wrapper">
+                  <h3>{{ speaker.name }} {{ speaker.last_name }}</h3>
+                  <p>{{ speaker.position_1 }}<br />{{ speaker.position_2 }}</p>
+                </div>
               </div>
             </div>
-          </div>
-          {% endif %}
-          {% if loop.index % 4 == 2 %}
-            </div>
-            </div>
-            <div class="bubbles-background clouds-2">
-              <div class="container">
-          {% elif loop.index % 4 == 0 %}
-            </div>
-            </div>
-            <div class="bubbles-background clouds-1">
-              <div class="container">
           {% endif %}
         {% endfor %}
       </div>
     </div>
-  </div> 
+  </div>
 {% endif %}
 </div>
   {% set is_speakers_call_enabled = this.accepted_speakers_link and 'speakers-call' in this.sections %}

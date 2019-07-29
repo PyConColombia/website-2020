@@ -3,41 +3,6 @@
   max-width: 96rem;
 }
 
-.gitter-custom-button {
-  color: #fc3a82;
-  background-color: #ffffff;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 1.2;
-  height: 43px;
-  margin: 0 20px;
-  border-radius: 20px 20px 0px 0px;
-  border-bottom-width: 0px;
-  min-width: 130px;
-  position: fixed;
-  bottom: 0;
-  right: 10px;
-  padding: 15px;
-  transition: 0.3s;
-  z-index: 100; 
-
-  &:hover {
-    background-color: #fc3a82;
-    border-color: #fc3a82;
-    color: #ffffff;
-  }
-}
-
-.gitter-chat-embed {
-  top: 90px;
-}
-
-@media (max-width: 768px) {
-  .gitter-custom-button {
-    width: calc(100% - 65px);
-  }
-}
-
 .layout-home {
   &:before {
     content: '';
@@ -64,73 +29,62 @@
     position: relative;
     z-index: 1;
     .logotype-container {
-      margin: 0 auto 6rem auto;
-      width: 54rem;
+      margin: 0 4rem 6rem 4rem;
+      background: url('../images/logotype.svg') center center no-repeat;
+      height: 14rem;
       img {
         display: block;
       }
     }
 
-    .logos {
+    .logo-container{
+      margin: 0 auto 11.5rem auto;
       background-size: contain;
       width: auto;
-    }
-
-    .logo {
       background: url('../images/logo.svg') center center no-repeat;
-      height: 250px;
+      height: 25rem;
+      img {
+        display: block
+      }
     }
 
-    .logotype {
-      background: url('../images/logotype.svg') center center no-repeat;
-      height: 140px;
-    }
   }
 
   .bubbles-background {
     background-image: url('../images/bubles.svg');
-    background-repeat: no-repeat;
     background-position: top center;
-    background-size: 90%;
+    background-size: 85%;
     position: relative;
 
-    &:before {
-      content: "";
+    &:before, &:after {
+      content: '';
       background-size: 100%;
-      background-image: url('../images/cloud_1.svg');
       background-repeat: no-repeat;
       background-position: top center;
       position: absolute;
       position: absolute;
+    }
+
+    &:before {
       left: -10%;
       width: 120%;
       height: 70rem;
+      top: -52rem;
+      background-image: url('../images/cloud_1.svg');
     }
-    &.clouds-1 {
-      &:before {
-        top: -52rem;
-      }
-    }
-    &.clouds-2 {
-      &:before {
-        width: 110%;
-        background-image: url('../images/cloud_2.svg');
-        top: 52rem;
-        left: -5%;
-      }
+    &:after {
+      left: -5%;
+      width: 110%;
+      height: 70rem;
+      bottom: -60rem;
+      background-image: url('../images/cloud_2.svg');
     }
   }
 }
 
 
 
-.logo-container{
-  margin: 0 auto 11.5rem auto;
-  width: 25rem;
-  img {
-    display: block
-  }
-}
+
 
 .event-info {
   .event-ticket {
