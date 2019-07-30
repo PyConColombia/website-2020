@@ -48,3 +48,68 @@
     }
   }
 }
+
+
+// Breakpoint: x <= 1399
+@media (max-width: map_get($screen,_xxl-max)) {
+  .footer {
+    background-size: 120%!important;
+  }
+}
+
+// Breakpoint: x <= 1199
+@media (max-width: map_get($screen,_xl-max)) {
+  .footer {
+    background-size: 140%!important;
+  }
+}
+
+
+// Breakpoint:  x <= 991
+@media (max-width: map_get($screen,_lg-max)) {
+  .footer {
+    background-size: 180%!important;
+  }
+}
+
+// Breakpoint: x <= 767
+@media (max-width: map_get($screen,_md-max)) {
+  .footer {
+    background-size: 240%!important;
+  }
+}
+
+// Breakpoint: x < 575
+@media (max-width: map_get($screen,_sm-max)) {
+  .footer {
+    background-size: 275%!important;
+  }
+}
+
+// Breakpoint: x < 520
+@media (max-width: 520px) {
+  .footer {
+    background-size: 320%!important;
+  }
+}
+
+// Breakpoint: x <= 449
+@media (max-width: map_get($screen,_xs-max)) {
+  .footer {
+    background-size: 400%!important;
+  }
+}
+
+// Breakpoint: x <= 349
+@media (max-width: map_get($screen,_xxs-max)) {
+  .footer {
+    background-size: 460%!important;
+  }
+}
+
+// Breakpoint: x < 320
+@media (max-width: 320px) {
+  .footer {
+    background-size: 500%!important;
+  }
+}

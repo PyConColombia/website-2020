@@ -17,7 +17,7 @@
   }
   background-color: #99F2D6;
   .background-wrapper {
-    padding-top: 26.7rem;
+    padding-top: 22rem;
     background-image: linear-gradient(#b0fed1, #66a6ff, #99F2D6);
   }
   background-position: top center;
@@ -29,16 +29,16 @@
     position: relative;
     z-index: 1;
     .logotype-container {
-      margin: 0 4rem 6rem 4rem;
-      background: url('../images/logotype.svg') center center no-repeat;
-      height: 14rem;
+      margin: 0 2rem 6rem 2rem;
       img {
+        margin: 0 auto;
+        max-width: 46rem;
         display: block;
       }
     }
 
     .logo-container{
-      margin: 0 auto 11.5rem auto;
+      margin: 0 auto 6rem auto;
       background-size: contain;
       width: auto;
       background: url('../images/logo.svg') center center no-repeat;
@@ -66,9 +66,9 @@
     }
 
     &:before {
-      left: -10%;
-      width: 120%;
-      height: 70rem;
+      left: -5%;
+      width: 110%;
+      height: 80rem;
       top: -52rem;
       background-image: url('../images/cloud_1.svg');
     }

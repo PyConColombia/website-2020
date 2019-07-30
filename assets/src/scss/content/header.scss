@@ -65,3 +65,11 @@
     }
   }
 }
+
+
+// Breakpoint: x < 575
+@media (max-width: map_get($screen,_sm-max)) {
+  .navbar {
+    padding: 2rem 3rem;
+  }
+}

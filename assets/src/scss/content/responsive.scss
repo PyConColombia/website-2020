@@ -39,141 +39,12 @@
 
 }
 
-// Breakpoint: x <= 1399
-@media (max-width: 1800px) {
-
-}
-
-// Breakpoint: x >= 1400
-@media (min-width: map_get($screen,_xxl)) {
-
-}
-
-// Breakpoint: x <= 1399
-@media (max-width: map_get($screen,_xxl-max)) {
-  .footer {
-    background-size: 120%!important;
-  }
-}
-
-// Breakpoint: x >= 1200 y >= 700
-@media (min-width: map_get($screen,_xl)) and (max-height: 590px) {
-
-}
-
-// Breakpoint: x <= 1199
-@media (max-width: map_get($screen,_xl-max)) {
-  .footer {
-    background-size: 140%!important;
-  }
-}
-
-// Breakpoint:  x <= 991
-@media (max-width: map_get($screen,_lg-max)) {
-
-  .footer {
-    background-size: 180%!important;
-  }
-}
-
-// Breakpoint: x <= 767
-@media (max-width: map_get($screen,_md-max)) {
-  .footer {
-    background-size: 240%!important;
-  }
-
-  .container-fluid {
-    .logotype-container {
-      margin: 8rem auto 6rem;
-      width: 250px;
-      img {
-        display: block;
-      }
-    }
-    .logo-container {
-      margin-bottom: 5rem;
-      width: 180px;
-      img {
-        display: block;
-      }
-    }
-    .text-container {
-      margin-bottom: 6rem;
-      p {
-        margin: 0 0 1rem;
-        font-weight: 300;
-      }
-    }
-    .text-container {
-      .h1 {
-        font-size: 2.2rem;
-        letter-spacing: 0.6rem;
-      }
-      .h2 {
-        font-size: 1.8rem;
-        letter-spacing: 0.4rem;
-      }
-      .h3 {
-        font-size: 1.6rem;
-        letter-spacing: 0.3rem;
-      }
-    }
-  }
-}
-
-// Breakpoint: x >= 1024 y >= 900px
-@media (min-width: 1024px) and (min-height: 1300px) {
-
-}
-
-// Breakpoint: x < 575
-@media (max-width: map_get($screen,_sm-max)) {
-  .footer {
-    background-size: 275%!important;
-  }
-}
-
-// Breakpoint: x < 520
-@media (max-width: 520px) {
-  .footer {
-    background-size: 320%!important;
-  }
-}
-
-// Breakpoint: x <= 449
-@media (max-width: map_get($screen,_xs-max)) {
-  .footer {
-    background-size: 400%!important;
-  }
-}
-
-// Breakpoint: x <= 349
-@media (max-width: map_get($screen,_xxs-max)) {
-  .footer {
-    background-size: 460%!important;
-  }
-}
-
-// Breakpoint: x < 320
-@media (max-width: 320px) {
-  .footer {
-    background-size: 500%!important;
-  }
-}
-
-
-
-
-
-
-
-
 // Breakpoint: x <= 1551
 @media (min-width: 1551px) {
   .layout-home {
     &:before {
       height: 110rem;
-      top: -13rem !important;
+      top: -20rem !important;
     }
   }
 }
@@ -206,10 +77,9 @@
     }
     .container {
       .logotype-container {
-        height: 12rem;
         margin-bottom: 5rem;
         img {
-          display: block;
+          max-width: 40rem;
         }
       }
       .logo-container{
@@ -219,3 +89,104 @@
     }
   }
 }
+
+// Breakpoint: x <= 1399
+@media (max-width: 1800px) {
+
+}
+
+// Breakpoint: x >= 1400
+@media (min-width: map_get($screen,_xxl)) {
+
+}
+
+// Breakpoint: x <= 1399
+@media (max-width: map_get($screen,_xxl-max)) {
+
+}
+
+// Breakpoint: x >= 1200 y >= 700
+@media (min-width: map_get($screen,_xl)) and (max-height: 590px) {
+
+}
+
+// Breakpoint: x <= 1199
+@media (max-width: map_get($screen,_xl-max)) {
+
+}
+
+// Breakpoint:  x <= 991
+@media (max-width: map_get($screen,_lg-max)) {
+
+}
+
+// Breakpoint: x <= 767
+@media (max-width: map_get($screen,_md-max)) {
+  .layout-home {
+    &:before {
+      top: -23rem !important;
+    }
+    .background-wrapper {
+      padding-top: 10rem;
+    }
+    .container {
+      .logotype-container {
+        margin-bottom: 4rem;
+        img {
+          max-width: 36rem;
+        }
+      }
+      .logo-container {
+        height: 18rem;
+        margin-bottom: 2rem !important;
+      }
+    }
+
+    .bubbles-background {
+      &:before {
+        top: -45rem;
+      }
+      &:after {
+        bottom: -60rem;
+      }
+    }
+  }
+}
+
+// Breakpoint: x >= 1024 y >= 900px
+@media (min-width: 1024px) and (min-height: 1300px) {
+
+}
+
+// Breakpoint: x < 575
+@media (max-width: map_get($screen,_sm-max)) {
+
+}
+
+// Breakpoint: x < 520
+@media (max-width: 520px) {
+
+}
+
+// Breakpoint: x <= 449
+@media (max-width: map_get($screen,_xs-max)) {
+
+}
+
+// Breakpoint: x <= 349
+@media (max-width: map_get($screen,_xxs-max)) {
+
+}
+
+// Breakpoint: x < 320
+@media (max-width: 320px) {
+
+}
+
+
+
+
+
+
+
+
