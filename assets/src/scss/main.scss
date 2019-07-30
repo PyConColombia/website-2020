@@ -45,7 +45,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 5.1rem;
+  font-size: 4rem;
 }
 
 h2 {
@@ -70,5 +70,30 @@ a {
     text-decoration: underline;
     color: map_get($colors, _white);
     transition: all 0.2s;
+  }
+}
+
+
+
+
+// Breakpoint:  x <= 991
+@media (max-width: map_get($screen,_lg-max)) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  // h2 {
+  //   font-size: 3.4rem;
+  // }
+
+  // h3 {
+  //   font-size: 3rem;
+  // }
+}
+
+// Breakpoint: x <= 449
+@media (max-width: map_get($screen,_xs-max)) {
+  h1 {
+    font-size: 2.4rem;
   }
 }

@@ -54,7 +54,7 @@
   .layout-home {
     &:before {
       height: 90rem;
-      top: -16rem !important;
+      top: -18rem !important;
     }
     .background-wrapper {
       padding-top: 11rem;
@@ -70,7 +70,7 @@
 @media (max-width: 1440px) {
   .layout-home {
     &:before {
-      top: -22rem !important;
+      top: -24rem !important;
     }
     .background-wrapper {
       padding-top: 10rem;
@@ -112,19 +112,34 @@
 
 // Breakpoint: x <= 1199
 @media (max-width: map_get($screen,_xl-max)) {
-
+  .layout-home {
+    .bubbles-background {
+      &:before {
+        top: -40rem;
+      }
+      // &:after {
+      //   bottom: -60rem;
+      // }
+    }
+  }
 }
 
 // Breakpoint:  x <= 991
 @media (max-width: map_get($screen,_lg-max)) {
-
+  .layout-home {
+    .bubbles-background {
+      &:before {
+        top: -35rem !important;
+      }
+    }
+  }
 }
 
 // Breakpoint: x <= 767
 @media (max-width: map_get($screen,_md-max)) {
   .layout-home {
     &:before {
-      top: -23rem !important;
+      top: -27rem !important;
     }
     .background-wrapper {
       padding-top: 10rem;
@@ -170,7 +185,16 @@
 
 // Breakpoint: x <= 449
 @media (max-width: map_get($screen,_xs-max)) {
-
+  .layout-home {
+    &:before {
+      top: -30rem !important;
+    }
+    .container {
+      .logo-container{
+        height: 15rem;
+      }
+    }
+  }
 }
 
 // Breakpoint: x <= 349

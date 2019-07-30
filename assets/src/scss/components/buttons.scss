@@ -5,7 +5,7 @@
   box-shadow: 0.1rem 0.3rem 1.2rem rgba(132, 126, 126, 0.6);
   transition: all 0.2s;
   &.btn-lg {
-    font-size: 3rem;
+    font-size: 2.4rem;
     line-height: 1.5;
     padding: 0.5rem 4.5rem;
   }
@@ -21,6 +21,26 @@
     background-color: map_get($colors, _white);
     &:hover {
       box-shadow: 0.1rem 0.6rem 1.2rem rgba(132, 126, 126, 1);
+    }
+  }
+}
+
+
+// Breakpoint:  x <= 991
+@media (max-width: map_get($screen,_lg-max)) {
+  .btn {
+    &.btn-lg {
+      font-size: 2rem;
+    }
+  }
+}
+
+// Breakpoint: x <= 449
+@media (max-width: map_get($screen,_xs-max)) {
+  .btn {
+    &.btn-lg {
+      font-size: 1.8rem;
+      padding: 0.5rem 2.5rem;
     }
   }
 }
