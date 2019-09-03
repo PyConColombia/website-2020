@@ -82,7 +82,27 @@
   }
 }
 
-
+.layout-page {
+  // &:before {
+  //   content: '';
+  //   width: 100%;
+  //   height: 90rem;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   background-image: url('../images/intro_complete.svg');
+  //   background-size: cover;
+  //   background-position: top center;
+  // }
+  .background-wrapper {
+    background-image: linear-gradient(to top, #89d0e9, #77baf5 35%, #6aabfc 71%, #66a6ff);
+    min-height: 100vh;
+  }
+  background-position: top center;
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
+}
 
 
 

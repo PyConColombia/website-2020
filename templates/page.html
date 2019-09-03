@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{%- from "macros/translation.html" import transbag -%}
+
+{%- block body -%}
+    <div class="layout-page">
+        <div class="background-wrapper">
+            <div class="container">
+                <h1>{{ this.title }}</h1>
+                {{ this.body }}
+            </div>
+        </div>
+    </div>
+{%- endblock -%}
