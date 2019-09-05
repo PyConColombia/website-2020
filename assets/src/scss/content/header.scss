@@ -1,10 +1,9 @@
 .navbar {
   padding: 3.2rem 4rem;
   height: 9rem;
-  background-color: rgba($color: #fff, $alpha: 0.1);
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
   &.scrolled {
-    background-color: rgba($color: #fff, $alpha: 0.7) !important;
-    transition: background-color 400ms linear;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7));
   }
   .navigation {
     .nav-link {
