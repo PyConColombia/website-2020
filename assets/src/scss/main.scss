@@ -56,7 +56,7 @@ h3 {
   font-size: 3rem;
 }
 
-p {
+p, ol, ul {
   font-size: 2.1rem;
   color: map_get($colors, _white);
   text-shadow: 0.1rem 0.3rem 1.2rem rgba(132, 126, 126, 0.6);
