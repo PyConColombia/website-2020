@@ -203,3 +203,31 @@
     }
   }
 }
+
+.speaker-social {
+  margin: 0 auto;
+  .social-networks {
+    margin: 5rem 0;
+    a {
+      margin: 0rem 1rem;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      .svg-inline--fa {
+        color: map_get($colors, _primary);
+        padding: 0.5rem;
+        background-color: map_get($colors, _white);
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
+}
+
+.speaker-info {
+  padding: 0 1rem;
+}
