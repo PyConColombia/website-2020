@@ -19,7 +19,7 @@
       }
       &.nav-primary {
         background-color: map_get($colors, _primary);
-        color: map_get($colors, _white);
+        color: map_get($colors, _white) !important;
         &:hover {
           background-color: map_get($colors, _primary_active);
         }

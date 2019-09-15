@@ -8,34 +8,27 @@
   {% set trans_url = identifier_url|url(alt=this.alt) %}
   {% set this_is_child = this.is_child_of(identifier_url) %}
 
-  <a href="{{ trans_url }}" class="nav-link {% if this_is_child %}nav-primary{% endif %}">
-    {{ transbag('menu', this.alt, identifier) }}
-  </a>
+  <li class="dropdown">
+    <a href="{{ trans_url }}" class="nav-link {% if this_is_child %}nav-primary{% endif %}">
+      {{ transbag('menu', this.alt, identifier) }}
+    </a>
+  </li>
 {%- endmacro -%}
 
 {%- macro menu_item_list(identifier, items) -%}
-<div class="collapse navbar-collapse" id="navbarSupportedContent navigation">
-  <ul class="navbar-nav ml-auto">
-    <li class="dropdown">
-      <a href="/" class="nav-link">
-        PyCon Colombia
-      </a>
-    </li>
-    <li class="dropdown">
-      <a class="nav-link dropdown-toggle {% if item_this_is_child %} nav-primary{% endif %}" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">{{ transbag('menu', this.alt, identifier) }}</a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        {%- for item in items -%}
-        {% set item_url = '/' + item %}
-        {% set item_trans_url = item_url|url(alt=this.alt) %}
-        {% set item_this_is_child = this.is_child_of(item_url) %}
-        <a class="dropdown-item{% if item_this_is_child %} nav-primary{% endif %}"
-          href="{{ item_trans_url }}">{{ transbag('menu', this.alt, item) }}</a>
-        {%- endfor -%}
-      </div>
-    </li>
-  </ul>
-</div>
+  <li class="dropdown">
+    <a class="nav-link dropdown-toggle {% if item_this_is_child %} nav-primary{% endif %}" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">{{ transbag('menu', this.alt, identifier) }}</a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      {%- for item in items -%}
+      {% set item_url = '/' + item %}
+      {% set item_trans_url = item_url|url(alt=this.alt) %}
+      {% set item_this_is_child = this.is_child_of(item_url) %}
+      <a class="dropdown-item{% if item_this_is_child %} nav-primary{% endif %}"
+        href="{{ item_trans_url }}">{{ transbag('menu', this.alt, item) }}</a>
+      {%- endfor -%}
+    </div>
+  </li>
 {%- endmacro -%}
 
 <!DOCTYPE html>
@@ -116,14 +109,24 @@
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
 
     <div class="navigation justify-content-center">
-      {{ menu_item_list('title_speakers', ['keynotes']) }}
-      <!-- {{ menu_item('venue') }}
-      {{ menu_item('code-of-conduct') }}
-      {{ menu_item('talks') }}
-      {{ menu_item('volunteers') }}
-      {{ menu_item('sponsors') }}
-      {{ menu_item('equipo') }}
-      {{ menu_item('cronograma') }} -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent navigation">
+        <ul class="navbar-nav ml-auto">
+          <li class="dropdown">
+            <a href="{{ '/'|url(alt=this.alt) }}" class="nav-link">
+              PyCon Colombia
+            </a>
+          </li>
+          {{ menu_item_list('title_speakers', ['keynotes']) }}
+          {{ menu_item('codigo-de-conducta') }}
+          <!-- {{ menu_item('venue') }}
+          {{ menu_item('code-of-conduct') }}
+          {{ menu_item('talks') }}
+          {{ menu_item('volunteers') }}
+          {{ menu_item('sponsors') }}
+          {{ menu_item('equipo') }}
+          {{ menu_item('cronograma') }} -->
+        </ul>
+      </div>
     </div>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">

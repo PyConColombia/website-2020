@@ -4,6 +4,7 @@
   border: 0;
   box-shadow: 0.1rem 0.3rem 1.2rem rgba(132, 126, 126, 0.6);
   transition: all 0.2s;
+  text-decoration: none !important;
   &.btn-lg {
     font-size: 2.4rem;
     line-height: 1.5;
@@ -17,7 +18,7 @@
     }
   }
   &.btn-primary-alt {
-    color: map_get($colors, _primary);
+    color: map_get($colors, _primary) !important;
     background-color: map_get($colors, _white);
     &:hover {
       box-shadow: 0.1rem 0.6rem 1.2rem rgba(132, 126, 126, 1);
