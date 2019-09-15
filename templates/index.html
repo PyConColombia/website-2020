@@ -37,7 +37,7 @@
             {% if not is_speakers_call_section_closed %}
               <div class="call-to-actions row">
                 <div class="text-center col-md-12">
-                  <a class="btn btn-primary-alt btn-lg hidden" href="{{ this.accepted_speakers_link }}" target="_blank">
+                  <a class="btn btn-primary-alt btn-lg hidden" href="{{ '/call-for-proposals'|url(alt=this.alt) }}">
                     {{ t_button_cfp }}
                   </a>
                 </div>
