@@ -191,8 +191,32 @@
 }
 
 .venue {
-  padding-top: 26.5rem;
+  padding-top: 15.5rem;
   padding-bottom: 30rem;
+
+  .map {
+    &:before, &:after {
+      content: '';
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: top center;
+      position: absolute;
+      position: absolute;
+    }
+
+    &:before {
+      width: 100%;
+      height: 80rem;
+      top: -52rem;
+      background-image: url('../images/clouds-top.svg');
+    }
+    &:after {
+      width: 100%;
+      height: 70rem;
+      bottom: -5rem;
+      background-image: url('../images/clouds-bottom.svg');
+    }
+  }
 }
 
 .call-for-papers {
@@ -208,6 +232,7 @@
     }
   }
 }
+
 
 .speaker-social {
   margin: 0 auto;
@@ -240,4 +265,9 @@
 
 .speaker-info {
   padding: 0 1rem;
+}
+
+.title {
+  text-transform: uppercase;
+  margin-bottom: 100px;
 }
