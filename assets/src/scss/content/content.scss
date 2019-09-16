@@ -88,12 +88,12 @@
     min-height: 100vh;
     
     .background-image-wrapper {
-        padding: 80px 0;
-        background-image: url('../images/background-clouds.svg');
-        background-position: top center;
-        background-size: 1366px;
-        background-repeat: repeat-y;
-        margin: 0 auto;
+      padding: 80px 0;
+      background-image: url('../images/background-clouds.svg');
+      background-position: top center;
+      background-size: 1366px;
+      background-repeat: repeat-y;
+      margin: 0 auto;
       .content {
         margin-bottom: 150px;
 
@@ -117,6 +117,7 @@
         .sponsor-web {
           img {
             width: 95%;
+          }
         }
       }
       .footer {
