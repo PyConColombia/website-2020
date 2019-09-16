@@ -18,7 +18,7 @@
   background-color: #99F2D6;
   .background-wrapper {
     padding-top: 22rem;
-    background-image: linear-gradient(#b0fed1, #66a6ff, #99F2D6);
+    background-image: linear-gradient(#89d0e9, #66a6ff, #99F2D6);
   }
   background-position: top center;
   background-size: cover;
@@ -88,12 +88,12 @@
     min-height: 100vh;
     
     .background-image-wrapper {
-        padding: 80px 0;
-        background-image: url('../images/background-clouds.svg');
-        background-position: top center;
-        background-size: 1366px;
-        background-repeat: repeat-y;
-        margin: 0 auto;
+      padding: 80px 0;
+      background-image: url('../images/background-clouds.svg');
+      background-position: top center;
+      background-size: 1366px;
+      background-repeat: repeat-y;
+      margin: 0 auto;
       .content {
         margin-bottom: 150px;
 
@@ -107,6 +107,17 @@
         .title {
           text-transform: uppercase;
           margin: 100px 0;
+        }
+
+        hr {
+          padding: 2rem 0;
+          border-top: 1px solid map_get($colors, _white);;
+        }
+
+        .sponsor-web {
+          img {
+            width: 95%;
+          }
         }
       }
       .footer {
@@ -190,10 +201,35 @@
   }
 }
 
-.venue {
+.venue  {
   padding-top: 26.5rem;
-  padding-bottom: 30rem;
+  padding-bottom: 10rem;
 }
+
+.sponsors  {
+  padding-top: 10rem;
+  padding-bottom: 30rem;
+  background-image: url('../images/background-clouds.svg');
+  background-position: top center;
+  background-repeat: repeat-y;
+  margin: 0 auto;
+  .container {
+    .title {
+      text-transform: uppercase;
+      margin: 100px 0;
+    }
+    .row-sponsor {
+      padding: 2rem 0;
+    }
+    .sponsor-ini {
+      img {
+        width: 95%;
+        padding: 10px 0;
+      }
+    }
+  }
+}
+
 
 .call-for-papers {
   h1 {
