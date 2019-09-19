@@ -38,7 +38,7 @@ a {
 }
 
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   color: map_get($colors, _white);
   font-weight: map_get($fonts-weigths, _bold);
   text-shadow: 0.1rem 0.3rem 1.2rem rgba(132, 126, 126, 0.6);
@@ -54,6 +54,10 @@ h2 {
 
 h3 {
   font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.4rem;
 }
 
 p, ol, ul {

@@ -20,11 +20,9 @@
             </div>
             <div class="copyright">
                 <p>© 2019 <a href="https://python.org.co" target="blank_">Python Colombia</a>. All rights reserved.</p>
-                <p>{% if this.alt == 'en' %}
-                <a href="https://pycon.co/en/code-of-conduct">Code of Conduct</a>
-                {% else %}
-                <a href="https://pycon.co/codigo-de-conducta">Código de Conducta</a>
-                {% endif %} | <a
+                <p>
+                <a href="{{ '/codigo-de-conducta'|url(alt=this.alt) }}">{{ 'Code of Conduct' if this.alt == 'en' else 'Código de Conducta' }}</a>
+                 | <a
                         href="mailto:hello@pycon.co">hello@pycon.co</a></p>
             </div>
         </div>
