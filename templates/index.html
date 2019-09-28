@@ -1,101 +1,147 @@
 {% extends "layout.html" %}
 {%- from "macros/translation.html" import transbag -%}
+{%- from "macros/speakers.html" import render_keynote_speaker -%}
+{%- from "macros/sponsors.html" import render_sponsors -%}
 
 {%- set t_intro_location = transbag('translate', this.alt, 'intro_location') -%}
 {%- set t_intro_date = transbag('translate', this.alt, 'intro_date') -%}
 {%- set t_intro_place = transbag('translate', this.alt, 'intro_place') -%}
+{%- set t_title_cfp = transbag('translate', this.alt, 'title_cfp') -%}
 {%- set t_message_cfp = transbag('translate', this.alt, 'message_cfp') -%}
 {%- set t_button_cfp = transbag('translate', this.alt, 'button_cfp') -%}
 {%- set t_keynote_title = transbag('translate', this.alt, 'keynote_title') -%}
+{%- set t_sponsor_title = transbag('translate', this.alt, 'sponsor_title') -%}
+
+{# Sponsors #}
+{% set venue = site.query('/patrocinadores', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'venue').order_by('_id') %}
+{% set diamond = site.query('/patrocinadores', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'diamond').order_by('_id') %}
+{% set platinum = site.query('/patrocinadores', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'platinum').order_by('_id') %}
+{% set gold = site.query('/patrocinadores', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'gold').order_by('_id') %}
+{% set silver = site.query('/patrocinadores', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'silver').order_by('_id') %}
+{% set bronze = site.query('/patrocinadores', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'bronze').order_by('_id') %}
+{% set startup = site.query('/patrocinadores', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'startup').order_by('_id') %}
+{% set partner = site.query('/patrocinadores', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'partner').order_by('_id') %}
+{% set support = site.query('/patrocinadores', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'support').order_by('_id') %}
 
 {%- block body -%}
-<div class="container">
-  <div class="logotype-container logotype logos wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1.2s">
-    <img src="{{ base_url }}dist/images/logotype.svg">
-  </div>
-
-  <div class="logo-container logo logos wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000"></div>
-
-  {% set is_tickets_section_enabled = this.tickets_link and 'tickets' in this.sections %}
-
-  <div class="row event-info">
-    {% if is_tickets_section_enabled %}
-      <div class="event-ticket col-md-4 offset-md-2 wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
-        <a href="{{ this.tickets_link }}" target="blank_">
-          <img src="{{ base_url }}dist/images/ticket_en.svg">
-        </a>
+<div class="layout-home">
+  <div class="background-wrapper">
+    <div class="container">
+      <div class="logotype-container logotype logos wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1.2s">
+        <img src="{{ base_url }}dist/images/logotype.svg">
       </div>
-    {% endif %}
-    <div class="event-description call-for-papers {{ 'text-center' if not is_tickets_section_enabled else '' }} col-md-{{ '12' if not is_tickets_section_enabled else '5' }} wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
-      <div class="wrapper">
-        <h1>&lt;{{ t_message_cfp }}/&gt;</h1>
-      
-        <div class="call-to-actions row">
-          <div class="text-center col-md-12">
-            <a class="btn btn-primary-alt btn-lg" href="{{ this.accepted_speakers_link }}" target="_blank">
-              {{ t_button_cfp }}
+
+      <div class="logo-container logo logos wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000"></div>
+
+      {% set is_tickets_section_enabled = this.tickets_link and 'tickets' in this.sections %}
+      {% set is_speakers_call_section_closed = 'speakers-call' in this.closed_sections %}
+
+      <div class="row event-info">
+        {% if is_tickets_section_enabled %}
+          <div class="event-ticket col-md-4 offset-md-2 wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <a href="{{ this.tickets_link }}" target="blank_">
+              <img src="{{ base_url }}dist/images/ticket_en.svg">
             </a>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-{% set speakers = site.query('/keynotes', alt=this.alt).filter(F.keynote).filter(F.publish).order_by('_id') %}
-
-{% if speakers %}
-  <div class="key-speakers-info">
-    <div class="bubbles-background clouds">
-      <div class="container">
-        <div class="row">
-          <div class="speakers-title col-md-5 offset-md-1 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1.2s">
-            <h1>&lt;{{ t_keynote_title }}/&gt;</h1>
+        {% endif %}
+        <div class="event-description call-for-papers {{ 'text-center' if not is_tickets_section_enabled else '' }} col-md-{{ '12' if not is_tickets_section_enabled else '5' }} wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+          <div class="wrapper">
+            <h1>&lt;{{ t_title_cfp }}/&gt;</h1>
+            {% if not is_speakers_call_section_closed %}
+              <div class="call-to-actions row">
+                <div class="text-center col-md-12">
+                  <a class="btn btn-primary-alt btn-lg hidden" href="{{ '/call-for-proposals'|url(alt=this.alt) }}">
+                    {{ t_button_cfp }}
+                  </a>
+                </div>
+              </div>
+            {% else %}
+              <div class="text-center col-md-12">
+                <p>{{ t_message_cfp }}</p>
+              </div>
+            {% endif %}
           </div>
         </div>
-        {% for speaker in speakers %}
-          {% if loop.index % 2 == 1 %}
-            <div class="row speaker-info wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
-              <div class="speaker-description col-md-6 col-sm-6 col-xs-12 order-md-1 order-12">
-                <div class="wrapper">
-                  <h3>{{ speaker.name }} {{ speaker.last_name }}</h3>
-                  <p>{{ speaker.position_1 }}<br />{{ speaker.position_2 }}</p>
-                </div>
-              </div>
-              <div class="speaker-avatar col-md-4 col-sm-4 col-xs-12 order-md-12 order-1">
-                <img src={%- if speaker.image -%} "{%- if speaker.keynote -%}/keynotes/{%- else -%}/ponentes/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}" {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} ">
-              </div>
-            </div>
-          {% else %}
-            <div class="row speaker-info alt wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="1.2s"
-              data-wow-offset="-1000">
-              <div class="speaker-avatar col-md-4 offset-md-2">
-                <img src={%- if speaker.image -%} "{%- if speaker.keynote -%}/keynotes/{%- else -%}/ponentes/{%- endif -%}{{ speaker._id }}/{{ speaker.image }}" {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} ">
-              </div>
-              <div class="speaker-description col-md-6">
-                <div class="wrapper">
-                  <h3>{{ speaker.name }} {{ speaker.last_name }}</h3>
-                  <p>{{ speaker.position_1 }}<br />{{ speaker.position_2 }}</p>
-                </div>
-              </div>
-            </div>
-          {% endif %}
-        {% endfor %}
       </div>
     </div>
-  </div>
-{% endif %}
-</div>
-  {% set is_speakers_call_enabled = this.accepted_speakers_link and 'speakers-call' in this.sections %}
-  {% if is_speakers_call_enabled %}
-    <div class="venue wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1.2s" data-wow-offset="-1000">
-      <div class="call-to-actions row">
-        <div class="text-center col-md-12">
-          <h2>{{ t_intro_place }}</h2>
-          <p>{{ t_intro_location }}</p>
-          <p>{{ t_intro_date }}</p>
+
+    {% set speakers = site.query('/keynotes', alt=this.alt).filter(F.keynote).filter(F.publish).order_by('_id') %}
+
+    {% if speakers %}
+      <div class="key-speakers-info">
+        <div class="bubbles-background clouds">
+          <div class="container">
+            <div class="row">
+              <div class="speakers-title col-md-5 offset-md-1 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1.2s">
+                <h1>&lt;{{ t_keynote_title }}/&gt;</h1>
+              </div>
+            </div>
+            {% for speaker in speakers %}
+                {{ render_keynote_speaker(speaker, index=loop.index, details=True) }}
+            {%endfor %}
+          </div>
         </div>
-      </div> 
+      </div>
+    {% endif %}
+    
+    {% set is_speakers_call_enabled = this.accepted_speakers_link and 'speakers-call' in this.sections %}
+    {% if is_speakers_call_enabled %}
+      <div class="venue wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1.2s" data-wow-offset="-1000">
+        <div class="call-to-actions row">
+          <div class="text-center col-md-12">
+            <h2>{{ t_intro_place }}</h2>
+            <p>{{ t_intro_location }}</p>
+            <p>{{ t_intro_date }}</p>
+          </div>
+        </div> 
+      </div>
+    {% endif %}
+
+      <div class="sponsors">
+        <div class=" wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1.2s" data-wow-offset="-1000">
+          <div class="container">
+            <div class="row">
+              <div class="text-center col-md-12">
+                <h1 class="title">&lt;{{ t_sponsor_title }}/&gt;</h1>
+              </div>
+            </div>
+            {% if venue %}
+            {{ render_sponsors(venue, 8) }}
+            {% endif %}
+            {% if diamond %}
+            {{ render_sponsors(diamond, 6) }}
+            {% endif %}
+            {% if platinum %}
+            {{ render_sponsors(platinum, 5) }}
+            {% endif %}
+            {% if gold %}
+            {{ render_sponsors(gold, 4) }}
+            {% endif %}
+            {% if silver %}
+            {{ render_sponsors(silver, 3) }}
+            {% endif %}
+            {% if startup %}
+            {{ render_sponsors(startup, 2) }}
+            {% endif %}
+            {% if partner %}
+            {{ render_sponsors(partner, 2) }}
+            {% endif %}
+            {% if support %}
+            {{ render_sponsors(support, 2) }}
+            {% endif %}
+          </div>
+        </div>
+      </div>
     </div>
-  {% endif %}
+    {% include 'partials/_footer.html' %}
+  </div>
 {%- endblock -%}

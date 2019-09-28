@@ -13,7 +13,8 @@ module.exports = (env, argv) => {
   let config = {
     entry: {
       vendors: path.resolve(__dirname, 'assets/src/js/vendors.js'),
-      main: path.resolve(__dirname, 'assets/src/js/main.js')
+      main: path.resolve(__dirname, 'assets/src/js/main.js'),
+      navbar: path.resolve(__dirname, 'assets/src/js/navbar.js')
     },
     output: {
       path: path.resolve(__dirname, 'assets/dist'),
