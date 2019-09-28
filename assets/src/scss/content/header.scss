@@ -55,7 +55,7 @@
   }
 }
 
-.navbar-dark {
+.navbar-light {
   .navbar-nav {
     .nav-link {
       letter-spacing: 0.2rem;
@@ -70,5 +70,53 @@
 @media (max-width: map_get($screen,_sm-max)) {
   .navbar {
     padding: 2rem 3rem;
+  }
+}
+
+@media (max-width: map_get($screen, _lg-max)) {
+  .navbar {
+    background-color: #fff;
+
+    .navbar-toggler {
+      font-size: 2.4rem;
+    }
+
+    ul.navbar-nav {
+      li {
+        padding: 20px;
+      }
+    }
+
+    .navbar-collapse {
+      .scrollable-menu {
+        height: auto;
+        max-height: 500px;
+        overflow-x: hidden;
+        margin: 0 -40px;
+
+        .dropdown-menu {
+          a {
+            font-size: 2.4rem !important;
+            margin: 0 auto;
+            padding: 10px 0;
+            text-transform: uppercase;
+            width: auto !important;
+          }
+        }
+      }
+      li {
+        background-color: #fff;
+        font-weight: 300;
+        letter-spacing: 5px;
+        line-height: 1.2;
+        opacity: 0.98;
+        text-align: center;
+        text-transform: uppercase;
+
+        .nav-link {
+          font-size: 2.4rem !important;
+        }
+      }
+    }
   }
 }
