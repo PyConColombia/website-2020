@@ -178,13 +178,17 @@
         h3 {
           margin-top: 6.2rem;
         }
+        .speaker-title {
+          margin-top: 0;
+        }
       }
     }
 
     .speaker-avatar {
       img {
-        width: 23rem;
-        height: 23rem;
+        width: 100%;
+        max-width: 23rem;
+        height: auto;
         border-radius: 100%;
         margin: 0 1.2rem;
       }
