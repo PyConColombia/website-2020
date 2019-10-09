@@ -4,7 +4,7 @@
         {% for item in sponsor_list %}
         <div class="col-md-{{size}} col-sm-12 col-xs-12 mx-auto">
             <div class="sponsor-ini">
-                <a href={%- if item.web -%}"{{ item.web }}" {%- else -%} "" {%- endif -%} target="blank_">
+                <a href="{{ item | url }}">
                     <img src={%- if item.image -%} "/patrocinadores/{{ item._id }}/{{ item.image }}"{%- else -%} "/static/images/empty-photo.svg" {%- endif -%} />
                 </a>
             </div>
@@ -20,7 +20,7 @@
     <div class="row">
         <div class="col-sm-12 mx-auto">
             <div class="sponsor-web">
-                <a href={%- if item.web -%}"{{ item.web }}" {%- else -%} "" {%- endif -%} target="blank_">
+                <a href="{{ item | url }}">
                     <img src={%- if item.image -%} "/patrocinadores/{{ item._id }}/{{ item.image }}"{%- else -%} "/static/images/empty-photo.svg" {%- endif -%} />
                 </a>
             </div>
