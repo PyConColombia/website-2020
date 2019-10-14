@@ -147,6 +147,13 @@
       transform: rotate(-15deg);
       display: block;
     }
+
+    &:hover {
+      -webkit-animation-duration: 0.5s;
+      animation-duration: 0.5s;
+      -webkit-animation-name: shake;
+      animation-name: shake;
+    }
   }
   .event-description {
     .wrapper {
