@@ -27,6 +27,10 @@ deploy:
     on:
        branch: develop
   - provider: script
+    script: lektor deploy www
+    on:
+       branch: production
+  - provider: script
     script: lektor deploy production
     on:
        branch: production
