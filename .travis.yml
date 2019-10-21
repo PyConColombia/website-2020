@@ -12,6 +12,7 @@ before_install:
   - sudo apt-get update && sudo apt-get install curl -y
   - curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
   - sudo apt install nodejs -y
+  - node --version
   - sudo apt-get install yarn -y
 install:
   - yarn install

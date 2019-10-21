@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 {%- from "macros/translation.html" import transbag -%}
 {%- from "macros/speakers.html" import render_keynote_speaker -%}
+{%- from "macros/sponsors.html" import render_sponsors -%}
 
 {%- set t_intro_location = transbag('translate', this.alt, 'intro_location') -%}
 {%- set t_intro_date = transbag('translate', this.alt, 'intro_date') -%}
@@ -10,6 +11,28 @@
 {%- set t_message_cfp = transbag('translate', this.alt, 'message_cfp') -%}
 {%- set t_button_cfp = transbag('translate', this.alt, 'button_cfp') -%}
 {%- set t_keynote_title = transbag('translate', this.alt, 'keynote_title') -%}
+{%- set t_sponsor_title = transbag('translate', this.alt, 'sponsor_title') -%}
+{%- set t_venue_title = transbag('translate', this.alt, 'venue_title') -%}
+
+{# Sponsors #}
+{% set venue = site.query('/patrocinadores', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'venue').order_by('_id') %}
+{% set diamond = site.query('/patrocinadores', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'diamond').order_by('_id') %}
+{% set platinum = site.query('/patrocinadores', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'platinum').order_by('_id') %}
+{% set gold = site.query('/patrocinadores', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'gold').order_by('_id') %}
+{% set silver = site.query('/patrocinadores', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'silver').order_by('_id') %}
+{% set bronze = site.query('/patrocinadores', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'bronze').order_by('_id') %}
+{% set startup = site.query('/patrocinadores', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'startup').order_by('_id') %}
+{% set partner = site.query('/patrocinadores', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'partner').order_by('_id') %}
+{% set support = site.query('/patrocinadores', alt=this.alt).filter(F.confirmed).filter(F.category ==
+'support').order_by('_id') %}
 
 {%- block body -%}
 <div class="layout-home">
@@ -22,13 +45,14 @@
       <div class="logo-container logo logos wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000"></div>
 
       {% set is_tickets_section_enabled = this.tickets_link and 'tickets' in this.sections %}
+      {% set is_speakers_call_enabled = this.accepted_speakers_link and 'speakers-call' in this.sections %}
       {% set is_speakers_call_section_closed = 'speakers-call' in this.closed_sections %}
 
-      <div class="row event-info">
+      <div class="row event-info justify-content-center">
         {% if is_tickets_section_enabled %}
-          <div class="event-ticket col-md-4 offset-md-2 wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+          <div class="event-ticket col-md-4 {{ 'offset-md-2' if is_speakers_call_enabled else '' }} wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
             <a href="{{ this.tickets_link }}" target="blank_">
-              <img src="{{ base_url }}dist/images/ticket_en.svg">
+              <img src="{% if this.alt == 'en' %} {{ base_url }}dist/images/ticket_en.svg {% else %} {{ base_url }}dist/images/ticket_es.svg {% endif %}">
             </a>
           </div>
         {% endif %}
@@ -40,7 +64,7 @@
               {% if not is_speakers_call_section_closed %}
                 <div class="call-to-actions row">
                   <div class="text-center col-md-12">
-                    <a class="btn btn-primary-alt btn-lg hidden" href="{{ this.accepted_speakers_link }}" target="_blank">
+                    <a class="btn btn-primary-alt btn-lg hidden" href="{{ '/call-for-proposals'|url(alt=this.alt) }}">
                       {{ t_button_cfp }}
                     </a>
                   </div>
@@ -74,27 +98,63 @@
         </div>
       </div>
     {% endif %}
-    </div>
-    <div class="venue wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1.2s" data-wow-offset="-1000">
-      <div class="container-fluid">
-        <div class="row">
+
+    {% if is_speakers_call_enabled %}
+      <div class="venue wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1.2s" data-wow-offset="-1000">
+        <div class="call-to-actions row">
           <div class="text-center col-md-12">
-            <div class="wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1.2s">
-              <h1 class="title">&lt;{{ t_title_venue }}/&gt;</h1>
-            </div>
-            <h2>{{ t_intro_place }}</h2>
+            <h1 class="title">&lt;{{ t_venue_title }}/&gt;</h1>
+          </div>
+          <div class="text-center col-md-12">
+            {# <h2>{{ t_intro_place }}</h2> #}
             <p>{{ t_intro_location }}</p>
             <p>{{ t_intro_date }}</p>
           </div>
-        </div> 
+        </div>
         <div class="map row">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.485088353733!2d-75.58152868507172!3d6.199553328563958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e46827ce55554cf%3A0xab8ed474ed2c00a9!2sEAFIT!5e0!3m2!1sen!2sco!4v1568501525646!5m2!1sen!2sco"
-            width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+      </div>
+    {% endif %}
+
+      <div class="sponsors">
+        <div class=" wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1.2s" data-wow-offset="-1000">
+          <div class="container">
+            <div class="row">
+              <div class="text-center col-md-12">
+                <h1 class="title">&lt;{{ t_sponsor_title }}/&gt;</h1>
+              </div>
+            </div>
+            {% if venue %}
+            {{ render_sponsors(venue, 8) }}
+            {% endif %}
+            {% if diamond %}
+            {{ render_sponsors(diamond, 6) }}
+            {% endif %}
+            {% if platinum %}
+            {{ render_sponsors(platinum, 5) }}
+            {% endif %}
+            {% if gold %}
+            {{ render_sponsors(gold, 4) }}
+            {% endif %}
+            {% if silver %}
+            {{ render_sponsors(silver, 3) }}
+            {% endif %}
+            {% if startup %}
+            {{ render_sponsors(startup, 2) }}
+            {% endif %}
+            {% if partner %}
+            {{ render_sponsors(partner, 2) }}
+            {% endif %}
+            {% if support %}
+            {{ render_sponsors(support, 2) }}
+            {% endif %}
+          </div>
         </div>
       </div>
     </div>
-    
     {% include 'partials/_footer.html' %}
   </div>
 {%- endblock -%}
