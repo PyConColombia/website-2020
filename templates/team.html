@@ -60,22 +60,24 @@
                             <h1 class="title text-center">&lt;{{ this.title }}/&gt;</h1>
                             <div class="key-speakers-info">
                                 {% for name, categories in [['Organizers', ['Organizer', 'Co-Organizer']], ['Collaborators', ['Collaborator']], ['Volunteers', ['Volunteer']]] %}
-                                    <h2>{{ name }}</h2>
-                                    {% for category in categories %}
-                                        {% set members = site.query('/equipo', alt=this.alt).filter(F.category==category).filter(F.publish) %}
-                                            
-                                        {% for member in members %}
-                                            {%- if loop.index % 4 == 1 or loop.index % 4 == 3 -%}
-                                                <div class="row">
-                                            {%- endif -%}
-                                                <div class="col-md-6 col-sm-12">
-                                                    {{ render_team(member, index=loop.index, details=True) }}
+                                    <div class="row">
+                                        <h2>{{ name }}</h2>
+                                        {% for category in categories %}
+                                            {% set members = site.query('/equipo', alt=this.alt).filter(F.category==category).filter(F.publish) %}
+                                                
+                                            {% for member in members %}
+                                                {%- if loop.index % 4 == 1 or loop.index % 4 == 3 -%}
+                                                    <div class="row">
+                                                {%- endif -%}
+                                                    <div class="col-md-6 col-sm-12">
+                                                        {{ render_team(member, index=loop.index, details=True) }}
+                                                    </div>
+                                                {%- if loop.index % 4 == 2 or loop.index % 4 == 4 -%}
                                                 </div>
-                                            {%- if loop.index % 4 == 2 or loop.index % 4 == 4 -%}
-                                            </div>
-                                            {%- endif -%}
+                                                {%- endif -%}
+                                            {% endfor %}
                                         {% endfor %}
-                                    {% endfor %}
+                                    </div>
                                 {% endfor %}
                             </div>
                         </div>
