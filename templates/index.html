@@ -34,116 +34,122 @@
 
 {%- block body -%}
 <div class="layout-home">
-  <div class="background-wrapper">
-    <div class="container">
-      <div class="logotype-container logotype logos wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1.2s">
-        <img src="{{ base_url }}dist/images/logotype.svg">
-      </div>
+    <div class="background-wrapper">
+        <div class="container">
+            <div class="logotype-container logotype logos wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1.2s">
+                <img src="{{ base_url }}dist/images/logotype.svg">
+            </div>
 
-      <div class="logo-container logo logos wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000"></div>
+            <div class="logo-container logo logos wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1.2s"
+                data-wow-offset="-1000"></div>
 
-      {% set is_tickets_section_enabled = this.tickets_link and 'tickets' in this.sections %}
-      {% set is_speakers_call_enabled = this.accepted_speakers_link and 'speakers-call' in this.sections %}
-      {% set is_speakers_call_section_closed = 'speakers-call' in this.closed_sections %}
+            {% set is_tickets_section_enabled = this.tickets_link and 'tickets' in this.sections %}
+            {% set is_speakers_call_enabled = this.accepted_speakers_link and 'speakers-call' in this.sections %}
+            {% set is_speakers_call_section_closed = 'speakers-call' in this.closed_sections %}
 
-      <div class="row event-info justify-content-center">
-        {% if is_tickets_section_enabled %}
-          <div class="event-ticket col-md-4 {{ 'offset-md-2' if is_speakers_call_enabled else '' }} wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
-            <a href="{{ this.tickets_link }}" target="blank_">
-              <img src="{% if this.alt == 'en' %} {{ base_url }}dist/images/ticket_en.svg {% else %} {{ base_url }}dist/images/ticket_es.svg {% endif %}">
-            </a>
-          </div>
-        {% endif %}
-        {% if is_speakers_call_enabled %}
-          <div class="event-description call-for-papers {{ 'text-center' if not is_tickets_section_enabled else '' }} col-md-{{ '12' if not is_tickets_section_enabled else '5' }} wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
-            <div class="wrapper">
-              <h1>&lt;{{ t_title_cfp }}/&gt;</h1>
-              {% if not is_speakers_call_section_closed %}
-                <div class="call-to-actions row">
-                  <div class="text-center col-md-12">
-                    <a class="btn btn-primary-alt btn-lg hidden" href="{{ '/call-for-proposals'|url(alt=this.alt) }}">
-                      {{ t_button_cfp }}
+            <div class="row event-info justify-content-center">
+                {% if is_tickets_section_enabled %}
+                <div class="event-ticket col-md-4 {{ 'offset-md-2' if is_speakers_call_enabled else '' }} wow fadeInLeft"
+                    data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+                    <a href="{{ this.tickets_link }}" target="blank_">
+                        <img
+                            src="{% if this.alt == 'en' %} {{ base_url }}dist/images/ticket_en.svg {% else %} {{ base_url }}dist/images/ticket_es.svg {% endif %}">
                     </a>
-                  </div>
                 </div>
-              {% else %}
-                <div class="text-center col-md-12">
-                  <p>{{ t_message_cfp }}</p>
+                {% endif %}
+                {% if is_speakers_call_enabled %}
+                <div class="event-description call-for-papers {{ 'text-center' if not is_tickets_section_enabled else '' }} col-md-{{ '12' if not is_tickets_section_enabled else '5' }} wow fadeInRight"
+                    data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+                    <div class="wrapper">
+                        <h1>&lt;{{ t_title_cfp }}/&gt;</h1>
+                        {% if not is_speakers_call_section_closed %}
+                        <div class="call-to-actions row">
+                            <div class="text-center col-md-12">
+                                <a class="btn btn-primary-alt btn-lg hidden"
+                                    href="{{ '/call-for-proposals'|url(alt=this.alt) }}">
+                                    {{ t_button_cfp }}
+                                </a>
+                            </div>
+                        </div>
+                        {% else %}
+                        <div class="text-center col-md-12">
+                            <p>{{ t_message_cfp }}</p>
+                        </div>
+                        {% endif %}
+                    </div>
                 </div>
-              {% endif %}
+                {% endif %}
             </div>
-          </div>
+        </div>
+
+        {% set speakers = site.query('/keynotes', alt=this.alt).filter(F.keynote).filter(F.publish).order_by('_id') %}
+
+        {% if speakers %}
+        <div class="key-speakers-info">
+            <div class="bubbles-background clouds">
+                <div class="container">
+                    <div class="row">
+                        <div class="speakers-title col-md-5 offset-md-1 wow fadeInUp" data-wow-delay="0.4s"
+                            data-wow-duration="1.2s">
+                            <h1>&lt;{{ t_keynote_title }}/&gt;</h1>
+                        </div>
+                    </div>
+                    {% for speaker in speakers %}
+                    {{ render_keynote_speaker(speaker, index=loop.index, details=True) }}
+                    {%endfor %}
+                </div>
+            </div>
+        </div>
         {% endif %}
-      </div>
-    </div>
 
-    {% set speakers = site.query('/keynotes', alt=this.alt).filter(F.keynote).filter(F.publish).order_by('_id') %}
-
-    {% if speakers %}
-      <div class="key-speakers-info">
-        <div class="bubbles-background clouds">
-          <div class="container">
-            <div class="row">
-              <div class="speakers-title col-md-5 offset-md-1 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1.2s">
-                <h1>&lt;{{ t_keynote_title }}/&gt;</h1>
-              </div>
+        {% if is_speakers_call_enabled %}
+        <div class="venue wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="call-to-actions row">
+                <div class="text-center col-md-12">
+                    {# <h2>{{ t_intro_place }}</h2> #}
+                    <p>{{ t_intro_location }}</p>
+                    <p>{{ t_intro_date }}</p>
+                </div>
             </div>
-            {% for speaker in speakers %}
-                {{ render_keynote_speaker(speaker, index=loop.index, details=True) }}
-            {%endfor %}
-          </div>
         </div>
-      </div>
-    {% endif %}
+        {% endif %}
 
-    {% if is_speakers_call_enabled %}
-      <div class="venue wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1.2s" data-wow-offset="-1000">
-        <div class="call-to-actions row">
-          <div class="text-center col-md-12">
-            {# <h2>{{ t_intro_place }}</h2> #}
-            <p>{{ t_intro_location }}</p>
-            <p>{{ t_intro_date }}</p>
-          </div>
-        </div> 
-      </div>
-    {% endif %}
-
-      <div class="sponsors">
-        <div class=" wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1.2s" data-wow-offset="-1000">
-          <div class="container">
-            <div class="row">
-              <div class="text-center col-md-12">
-                <h1 class="title">&lt;{{ t_sponsor_title }}/&gt;</h1>
-              </div>
+        <div class="sponsors">
+            <div class=" wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1.2s" data-wow-offset="-1000">
+                <div class="container">
+                    <div class="row">
+                        <div class="text-center col-md-12">
+                            <h1 class="title">&lt;{{ t_sponsor_title }}/&gt;</h1>
+                        </div>
+                    </div>
+                    {% if venue %}
+                    {{ render_sponsors(venue, 8) }}
+                    {% endif %}
+                    {% if diamond %}
+                    {{ render_sponsors(diamond, 6) }}
+                    {% endif %}
+                    {% if platinum %}
+                    {{ render_sponsors(platinum, 5) }}
+                    {% endif %}
+                    {% if gold %}
+                    {{ render_sponsors(gold, 4) }}
+                    {% endif %}
+                    {% if silver %}
+                    {{ render_sponsors(silver, 3) }}
+                    {% endif %}
+                    {% if startup %}
+                    {{ render_sponsors(startup, 2) }}
+                    {% endif %}
+                    {% if partner %}
+                    {{ render_sponsors(partner, 2) }}
+                    {% endif %}
+                    {% if support %}
+                    {{ render_sponsors(support, 2) }}
+                    {% endif %}
+                </div>
             </div>
-            {% if venue %}
-            {{ render_sponsors(venue, 8) }}
-            {% endif %}
-            {% if diamond %}
-            {{ render_sponsors(diamond, 6) }}
-            {% endif %}
-            {% if platinum %}
-            {{ render_sponsors(platinum, 5) }}
-            {% endif %}
-            {% if gold %}
-            {{ render_sponsors(gold, 4) }}
-            {% endif %}
-            {% if silver %}
-            {{ render_sponsors(silver, 3) }}
-            {% endif %}
-            {% if startup %}
-            {{ render_sponsors(startup, 2) }}
-            {% endif %}
-            {% if partner %}
-            {{ render_sponsors(partner, 2) }}
-            {% endif %}
-            {% if support %}
-            {{ render_sponsors(support, 2) }}
-            {% endif %}
-          </div>
         </div>
-      </div>
     </div>
     {% include 'partials/_footer.html' %}
-  </div>
+</div>
 {%- endblock -%}
