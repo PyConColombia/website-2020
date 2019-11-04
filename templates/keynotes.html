@@ -1,6 +1,32 @@
-
-
 {% set speakers = site.query('/keynotes', alt=this.alt).filter(F.keynote).filter(F.publish).order_by('_id') %}
+{% extends "layout.html" %}
+{%- from "macros/translation.html" import transbag -%}
+{%- from "macros/speakers.html" import render_keynote_speaker -%}
 
+{%- block body -%}
+    <div class="layout-page">
+        <div class="background-wrapper">
+            <div class="background-image-wrapper">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 col-sm-12">
+                            <h1 class="title text-center">&lt;{{ this.title }}/&gt; ({{ speakers.count()}})</h1>
+                            {% set speakers = site.query('/keynotes', alt=this.alt).filter(F.keynote).filter(F.publish).order_by('_id') %}
+                            
+                            {% if speakers %}
+                                <div class="key-speakers-info">
+                                    
+                                    {% for speaker in speakers %}
+                                        {{ render_keynote_speaker(speaker, index=loop.index, details=True) }}
+                                    {%endfor %}
 
-<h1 class="title-subscribe">{{ this.title }} ({{ speakers.count()}})</h1>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% include 'partials/_footer.html' %}
+            </div>
+        </div>
+    </div>
+{%- endblock -%}

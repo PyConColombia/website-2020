@@ -26,5 +26,9 @@ target = ghpages+https://pyconcolombia/website-develop?cname=develop.pycon.co
 [servers.production]
 name = Production
 enabled = yes
-target = ghpages+https://pyconcolombia/website-2020?cname=www.pycon.co
-# target = ghpages+https://pyconcolombia/website-2020?cname=2020.pycon.co
+target = ghpages+https://pyconcolombia/website-2020?cname=2020.pycon.co
+
+[servers.www]
+name = Production
+enabled = yes
+target = ghpages+https://pyconcolombia/website-www?cname=www.pycon.co

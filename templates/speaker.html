@@ -1,88 +1,73 @@
+
 {%- set complete_name = this.name + " " + this.last_name -%}
 
-  <div class="mdl-layout mdl-js-layout layout-home">
-    <main>
-      <!-- class="mdl-layout__content" -->
-      <div>
-        <!-- class="page-content" -->
-        <div class="container-fluid container-no-padding header-content background-speakers">
-          <div class="container">
-            <div class="col-md-10 col-sm-12 col-xs-12 mx-auto">
-              <div class="keynotes">
-                <div class="section" style="margin-bottom: 100px;">
-                  <div class="row justify-content-center align-self-center">
-                    <div class="col-md-3 col-sm-4 col-xs-12">
-                      <div class="speaker-image-container row justify-content-center align-self-center">
-                        <div class="shadow overlay square">
-                          <img id="speaker-image-link-{{ index }}" alt="{{ complete_name }}" src={%- if this.image -%}
-                            "{%- if this.keynote -%}/keynotes/{%- else -%}/ponentes/{%- endif -%}{{ this._id }}/{{ this.image }}"
-                            {%- else -%} "/static/images/empty-photo.svg" {%- endif -%} onclick="openNav('{{ this._id }}')" class="img-fluid blend" />
+{% extends "layout.html" %}
+{%- from "macros/translation.html" import transbag -%}
+
+{% set title_id = 'keynote' if this.keynote else 'speaker' %}
+{%- set title = transbag('translate', this.alt, title_id) -%}
+
+{%- block body -%}
+    <div class="layout-page">
+        <div class="background-wrapper">
+            <div class="background-image-wrapper">
+                <div class="container">
+                    <div class="content">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10 col-sm-12">
+                                <h1 class="title text-center">&lt;{{ title }}/&gt;</h1>
+                                
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-12">
+                                        <img src={%- if this.image -%} "{%- if this.keynote -%}/keynotes/{%- else -%}/ponentes/{%- endif -%}{{ this._id }}/{{ this.image }}"
+            {%- else -%} "{{ base_url }}dist/images/empty-photo.svg" {%- endif -%} " class="img-fluid rounded-circle" />
+                                        <div class="row">
+                                            <div class="speaker-social">
+                                                <div class="social-networks">
+                                                    {% if this.twitter_handle %}
+                                                        <a href="http://twitter.com/{{ this.twitter_handle }}" target="_blank">
+                                                            <i class="fab fa-twitter fa-3x"></i>
+                                                        </a>
+                                                    {% endif %}
+                                                    {% if this.facebook_handle %}
+                                                        <a href="http://facebook.com/{{ this.facebook_handle }}" target="_blank">
+                                                            <i class="fab fa-facebook-f fa-3x"></i>
+                                                        </a>
+                                                    {% endif %}
+                                                    {% if this.linkedin_handle %}
+                                                        <a href="http://linkedin.com/in/{{ this.linkedin_handle }}" target="_blank">
+                                                            <i class="fab fa-linkedin-in fa-3x"></i>
+                                                        </a>
+                                                    {% endif %}
+                                                    {% if this.github_handle %}
+                                                        <a href="http://github.com/{{ this.github_handle }}" target="_blank">
+                                                            <i class="fab fa-github-alt fa-3x"></i>
+                                                        </a>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 col-sm-12">
+                                        <div class="speaker-info">
+                                            <h2>{{ complete_name }}</h2>
+                                            <h4>
+                                                {{ this.position_1 }}<br />
+                                                {{ this.position_2 }}
+                                            </h4>
+
+                                            {% if this.information %}
+                                                <p>{{ this.information }}</p>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
-                  <div class="row justify-content-center align-self-center">
-                    <div class="col-md-8 col-sm-10 col-xs-12">
-                      <div class="speaker-details text-center">
-                        <h1 class="speaker-name">{{ complete_name }}</h1>
-                        <h2 class="speaker-info-2">{{ this.position_2 }}</h2>
-                        <h2 class="speaker-info-1">{{ this.position_1 }}</h2>
-                        <div src="/images/blank.gif" class="flag flag-{{ this.country_residence }}">
-                        </div>
-                        <div class="social-container-speaker">
-                          <div class="row justify-content-center align-self-center">
-                            <div class="col-xs-1">
-                              {% if this.github_handle %}
-                              <a href="https://github.com/{{ this.github_handle }}" target="_blank">
-                                <div class="social-icon fab fa-github-alt"></div>
-                              </a>
-                              {% endif %}
-                            </div>
-                            <div class="col-xs-1">
-                              {% if this.facebook_handle %}
-                              <a href="https://facebook.com/{{ this.facebook_handle }}" target="_blank">
-                                <div class="social-icon fab fa-facebook-f"></div>
-                              </a>
-                              {% endif %}
-                            </div>
-                            <div class="col-xs-1">
-                              {% if this.twitter_handle %}
-                              <a href="https://twitter.com/{{ this.twitter_handle }}" target="_blank">
-                                <div class="social-icon fab fa-twitter"></div>
-                              </a>
-                              {% endif %}
-                            </div>
-                            <div class="col-xs-1">
-                              {% if this.linkedin_handle %}
-                              <a href="http://linkedin.com/in/{{ this.linkedin_handle }}" target="_blank">
-                                <div class="social-icon fab fa-linkedin-in"></div>
-                              </a>
-                              {% endif %}
-                            </div>
-                            <div class="col-xs-1">
-                              {% if this.web %}
-                              <a href="{{ this.web }}" target="_blank">
-                                <div class="social-icon fas fa-globe"></div>
-                              </a>
-                              {% endif %}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row justify-content-center align-self-center">
-                        <div class="col-md-12 col-sm-12">
-                          <div class="speaker-summary">
-                            {% if this.information %}
-                            <p>{{ this.information }}</p>
-                            {% endif %}
-                          </div>
-                        </div>
-                      </div>
-                  </div>
+                    {% include 'partials/_footer.html' %}
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-    </main>
-  </div>
+    </div>
+{%- endblock -%}

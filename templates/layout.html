@@ -8,25 +8,27 @@
   {% set trans_url = identifier_url|url(alt=this.alt) %}
   {% set this_is_child = this.is_child_of(identifier_url) %}
 
-  <a href="{{ trans_url }}" class="nav-link {% if this_is_child %}nav-primary{% endif %}">
-    {{ transbag('menu', this.alt, identifier) }}
-  </a>
+  <li class="dropdown">
+    <a href="{{ trans_url }}" class="nav-link {% if this_is_child %}nav-primary{% endif %}">
+      {{ transbag('menu', this.alt, identifier) }}
+    </a>
+  </li>
 {%- endmacro -%}
 
 {%- macro menu_item_list(identifier, items) -%}
-<li class="dropdown">
-  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-    aria-haspopup="true" aria-expanded="false">{{ transbag('menu', this.alt, identifier) }}</a>
-  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-    {%- for item in items -%}
-    {% set item_url = '/' + item %}
-    {% set item_trans_url = item_url|url(alt=this.alt) %}
-    {% set item_this_is_child = this.is_child_of(item_url) %}
-    <a class="dropdown-item{% if item_this_is_child %} active{% endif %}"
-      href="{{ item_trans_url }}">{{ transbag('menu', this.alt, item) }}</a>
-    {%- endfor -%}
-  </div>
-</li>
+  <li class="dropdown">
+    <a class="nav-link dropdown-toggle {% if item_this_is_child %} nav-primary{% endif %}" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">{{ transbag('menu', this.alt, identifier) }}</a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      {%- for item in items -%}
+      {% set item_url = '/' + item %}
+      {% set item_trans_url = item_url|url(alt=this.alt) %}
+      {% set item_this_is_child = this.is_child_of(item_url) %}
+      <a class="dropdown-item{% if item_this_is_child %} nav-primary{% endif %}"
+        href="{{ item_trans_url }}">{{ transbag('menu', this.alt, item) }}</a>
+      {%- endfor -%}
+    </div>
+  </li>
 {%- endmacro -%}
 
 <!DOCTYPE html>
@@ -104,27 +106,24 @@
 
   </head>
 
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
-
-    <div class="navigation justify-content-center">
-      <a href="/" class="nav-link nav-primary">
-        PyCon Colombia
-      </a>
-      <!-- {{ menu_item('venue') }}
-      {{ menu_item_list('title_speakers', ['keynotes', 'speakers']) }}
-      {{ menu_item('code-of-conduct') }}
-      {{ menu_item('talks') }}
-      {{ menu_item('volunteers') }}
-      {{ menu_item('sponsors') }}
-      {{ menu_item('equipo') }}
-      {{ menu_item('cronograma') }} -->
-    </div>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="{{ '/'|url(alt=this.alt) }}">
+      <img src="{{ base_url }}dist/images/logo.svg" alt="" width="auto" height="50">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav scrollable-menu">
+        {{ menu_item_list('title_speakers', ['keynotes', 'ponentes']) }}
+        {{ menu_item('patrocinadores') }}
+        {{ menu_item('equipo') }}
+
         <li class="dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">Previous versions</a>
+            aria-haspopup="true" aria-expanded="false">v.2020</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="http://2019.pycon.co">v.2019</a>
             <a class="dropdown-item" href="http://2018.pycon.co">v.2018</a>
@@ -145,39 +144,7 @@
     {{ t_open_chat }}
   </button>
   <body>
-    <div class="layout-home">
-      <div class="background-wrapper">
-        {%- block body -%}{%- endblock -%}
-      </div>
-
-      <div class="footer">
-        <div class="container">
-          <div class="footer-info">
-            <div class="social-networks">
-              <a href="http://twitter.com/pyconcolombia" target="_blank">
-                <i class="fab fa-twitter fa-3x"></i>
-              </a>
-              <a href="http://facebook.com/pyconcolombia" target="_blank">
-                <i class="fab fa-facebook-f fa-3x"></i>
-              </a>
-              <a href="http://instagram.com/pyconcolombia" target="_blank">
-                <i class="fab fa-instagram fa-3x"></i>
-              </a>
-              <a href="http://medium.com/@pyconcolombia" target="_blank">
-                <i class="fab fa-medium fa-3x"></i>
-              </a>
-              <a href="http://github.com/pyconcolombia" target="_blank">
-                <i class="fab fa-github-alt fa-3x"></i>
-              </a>
-            </div>
-            <div class="copyright">
-              <p>© 2019 <a href="https://python.org.co" target="blank_">Python Colombia</a>. All rights reserved.</p>
-              <p><a href="https://2019.pycon.co/codigo-de-conducta/" target="blank">Code of Conduct</a> | <a href="mailto:hello@pycon.co">hello@pycon.co</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    {%- block body -%}{%- endblock -%}
     <script>
       ((window.gitter = {}).chat = {}).options = {
         room: 'PyConColombia/Lobby',
@@ -185,5 +152,6 @@
       };
     </script>
     <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+    <script src="{{ base_url }}dist/js/navbar.js"></script>
   </body>
 </html>
