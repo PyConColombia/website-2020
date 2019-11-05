@@ -12,10 +12,10 @@ date_end: 2020-02-09
 ---
 datetime: 2020-02-07 08:00:00 -0500
 ---
-sections: speakers-call
+sections: tickets
 ---
 accepted_speakers_link: https://docs.google.com/forms/d/e/1FAIpQLSfnodEiHZ9dOzmG_x87ALE4xj_N4qF2in5cK21Mh0EfHrvKeQ/viewform
 ---
-tickets_link: 
+tickets_link: https://www.eventbrite.com/e/pycon-colombia-2020-tickets-56463397542
 ---
-closed_sections: speakers-call
+closed_sections: 
