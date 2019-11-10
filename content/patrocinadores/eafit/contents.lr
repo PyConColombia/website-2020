@@ -6,4 +6,4 @@ web: http://www.eafit.edu.co/
 ---
 image: eafit.svg
 ---
-confirmed: no
+confirmed: yes

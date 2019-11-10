@@ -27,6 +27,6 @@ deploy:
     on:
        branch: develop
   - provider: script
-    script: lektor deploy production
+    script: bash scripts/deploy.sh
     on:
        branch: production

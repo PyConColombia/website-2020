@@ -1,0 +1,75 @@
+{%- set complete_name = this.name + " " + this.last_name -%}
+
+{% extends "layout.html" %}
+{%- from "macros/translation.html" import transbag -%}
+
+{%- set title = transbag('translate', this.alt, 'team') -%}
+
+{%- block body -%}
+    <div class="layout-page">
+        <div class="background-wrapper">
+            <div class="background-image-wrapper">
+                <div class="container">
+                    <div class="content">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10 col-sm-12">
+                                <h1 class="title text-center">&lt;{{ title }}/&gt;</h1>
+                                
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-12">
+                                        <img src={%- if this.image -%} "/equipo/{{ this._id }}/{{ this.image }}"{%- else -%} "{{ base_url }}dist/images/empty-photo.svg" {%- endif -%} " class="img-fluid rounded-circle" />
+                                        <div class="row">
+                                            <div class="speaker-social">
+                                                <div class="social-networks">
+                                                    {% if this.twitter_handle %}
+                                                        <a href="http://twitter.com/{{ this.twitter_handle }}" target="_blank">
+                                                            <i class="fab fa-twitter fa-3x"></i>
+                                                        </a>
+                                                    {% endif %}
+                                                    {% if this.facebook_handle %}
+                                                        <a href="http://facebook.com/{{ this.facebook_handle }}" target="_blank">
+                                                            <i class="fab fa-facebook-f fa-3x"></i>
+                                                        </a>
+                                                    {% endif %}
+                                                    {% if this.linkedin_handle %}
+                                                        <a href="http://linkedin.com/in/{{ this.linkedin_handle }}" target="_blank">
+                                                            <i class="fab fa-linkedin-in fa-3x"></i>
+                                                        </a>
+                                                    {% endif %}
+                                                    {% if this.github_handle %}
+                                                        <a href="http://github.com/{{ this.github_handle }}" target="_blank">
+                                                            <i class="fab fa-github-alt fa-3x"></i>
+                                                        </a>
+                                                    {% endif %}
+                                                    {% if this.web %}
+                                                        <a href="{{ this.web }}" target="_blank">
+                                                            <i class="fas fa-globe fa-3x"></i>
+                                                        </a>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 col-sm-12">
+                                        <div class="speaker-info">
+                                            <h2>{{ complete_name }}</h2>
+                                            <h4>
+                                                {{ this.position_1 }}<br />
+                                                {{ this.position_2 }}
+                                            </h4>
+
+                                            {% if this.information %}
+                                                <p>{{ this.information }}</p>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% include 'partials/_footer.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+{%- endblock -%}

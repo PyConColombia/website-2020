@@ -121,6 +121,23 @@
           }
         }
       }
+
+      .video-talk {
+        position: relative;
+        width: 100%;
+        height: 0;
+        margin: 3rem 0;
+        padding-bottom: 56.25%;
+      }
+      
+      .video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
       .footer {
         background-image: none;
       }
@@ -169,6 +186,10 @@
 .key-speakers-info {
   padding: 15rem 0;
   position: relative;
+
+  .category-title {
+    margin-top: 5rem;
+  }
 
   .speakers-title {
     h1 {

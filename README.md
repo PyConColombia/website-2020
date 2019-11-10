@@ -2,20 +2,22 @@
 
 # Fuentes del Sitio Web de PyCon Colombia 2020
 
-<a href="https://github.com/PyConColombia">
-  <img width="150" src="https://pyconcolombia.github.io/website-2020/static/images/logo.svg">
-</a>
-
 [![Build Status][build-badge]][build]
 [![PRs Welcome][prs-badge]][prs]
 [![GitHub issues](https://img.shields.io/github/issues/PyConColombia/website-2020.svg?style=flat-square)](https://github.com/PyConColombia/website-2020/issues)
-[![Twitter Jopmi](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/pyconcolombia)
+[![Twitter PyCon Colombia](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/pyconcolombia)
 
-Este es el repositorio del sitio web de la PyCon Colombia 2020 servido por
-Github, y
-construido utilizando [lektor](https://www.getlektor.com). Diseño original por [Edwin Jerez (El Hijo)
+Este es el repositorio del sitio web de la PyCon Colombia 2020 servido por Github, y construido utilizando [lektor](https://www.getlektor.com). Diseño original por [Edwin Jerez (El Hijo)
 ](https://github.com/soyelhijo).
 </div>
+
+# 🧰 Requerimientos
+
+- [Bootstrap 4](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
+- [NodeJS ](https://nodejs.org/)
+- [NPM 📦](https://www.npmjs.com/)
+- [Python 3 🐍](https://www.python.org/)
+- [Docker 🐳](https://www.docker.com/get-started)
 
 # 🔀 Flujo de trabajo
 
