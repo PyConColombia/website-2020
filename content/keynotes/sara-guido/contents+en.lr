@@ -8,7 +8,7 @@ last_name: Guido
 ---
 linkedin_handle: sarahguido
 ---
-name: Sara
+name: Sarah
 ---
 position_1: Co-author of the book "Introduction to Machine Learning with Python"
 ---
@@ -21,3 +21,5 @@ publish: yes
 twitter_handle: sarah_guido
 ---
 image: sara.jpeg
+---
+information: Sarah is a Senior Data Scientist at InVision where she studies user collaboration through data. She is an accomplished conference speaker and O'Reilly Media author, and enjoys making data science as accessible as possible to a broad audience. Sarah attended graduate school at the University of Michigan's School of Information.
