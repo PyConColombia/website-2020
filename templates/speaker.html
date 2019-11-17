@@ -29,9 +29,9 @@
                                                             <i class="fab fa-twitter fa-3x"></i>
                                                         </a>
                                                     {% endif %}
-                                                    {% if this.facebook_handle %}
-                                                        <a href="http://facebook.com/{{ this.facebook_handle }}" target="_blank">
-                                                            <i class="fab fa-facebook-f fa-3x"></i>
+                                                    {% if this.web %}
+                                                        <a href="{{ this.web }}" target="_blank">
+                                                            <i class="fas fa-globe fa-3x"></i>
                                                         </a>
                                                     {% endif %}
                                                     {% if this.linkedin_handle %}

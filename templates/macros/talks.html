@@ -1,0 +1,35 @@
+{%- set base_url = '/'|url(alt='es') -%}
+{%- from "macros/translation.html" import transbag -%}
+
+{% macro render_talk(talk) %}
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="{{ talk|url }}">{{ talk.name }}</a></h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul>
+                        {%- for tag in talk.topic -%}
+                            <li class="{{ tag }} tag">{{ tag }}</li>
+                        {%- endfor -%}
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+              {%- for author in talk.authors -%}
+                {%- set current_author = site.get('/ponentes/'+ author, alt='es') -%}
+                <div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="{{ author | url }}">
+                            <img
+                            src={%- if author.image -%} "{%- if author.keynote -%}/keynotes/{%- else -%}/ ponentes/{%- endif -%}{{ author._id }}/{{ author.image }}"
+                            {%- else -%} "{{ base_url }}dist/images/empty-photo.svg" {%- endif -%} ">
+                        </a>
+                    </div>
+                </div>
+              {%- endfor -%}
+            </div>
+        </div>
+    </div>
+{% endmacro %}
