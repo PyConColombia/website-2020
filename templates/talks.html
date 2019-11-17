@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{%- from "macros/translation.html" import transbag -%}
+{%- from "macros/talks.html" import render_talk -%}
+
+{%- set t_talks = transbag('translate', this.alt, 'title_talks') -%}
+{%- set t_workshops = transbag('translate', this.alt, 'title_workshops') -%}
+
+{%- block body -%}
+    <div class="layout-page">
+        <div class="background-wrapper">
+            <div class="background-image-wrapper">
+                <div class="container">
+                    <div class="content">
+                        <div class="row justify-content-center">
+                            {% set talks = site.query('/ponencias', alt=this.alt).filter(F.type == 'talk').order_by('name') %}
+                            {% if talks %}
+                                <div class="col-sm-12">
+                                    <h1 class="title text-center">&lt;{{ t_talks }}/&gt; ({{ talks.count()}})</h1>
+                                    <div class="row">
+                                        {% for talk in talks %}
+                                            <div class="col-md-6 col-sm-12">
+                                                {{ render_talk(talk) }}
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% endif %}
+
+                            {% set workshops = site.query('/ponencias', alt=this.alt).filter(F.type == 'workshop').order_by('name') %}
+                            {% if True %}
+                                <div class="col-sm-12">
+                                    <h1 class="title text-center">&lt;{{ t_workshops }}/&gt; ({{ workshops.count()}})</h1>
+                                    <div class="row">
+                                        {% for workshop in workshops %}
+                                        <div class="col-md-6 col-sm-12">
+                                            {{ render_talk(workshop) }}
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% include 'partials/_footer.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+{%- endblock -%}
