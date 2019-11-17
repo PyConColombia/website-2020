@@ -20,7 +20,6 @@
                                     <h2 class="category-title">{{ title }}</h2>
                                     {% for category in categories %}
                                         {% set members = site.query('/equipo', alt=this.alt).filter(F.category==category).filter(F.publish) %}
-                                            
                                         {% for member in members %}
                                             {%- if loop.index % 4 == 1 or loop.index % 4 == 3 -%}
                                                 <div class="row">
