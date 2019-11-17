@@ -51,8 +51,7 @@
 
             <div class="row event-info justify-content-center">
                 {% if is_tickets_section_enabled %}
-                <div class="event-ticket col-md-4 {{ 'offset-md-2' if is_speakers_call_enabled else '' }} wow fadeInLeft"
-                    data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+                <div class="event-ticket col-md-4 {{ 'offset-md-2' if is_speakers_call_enabled else '' }}">
                     <a href="{{ this.tickets_link }}" target="blank_">
                         <img
                             src="{% if this.alt == 'en' %} {{ base_url }}dist/images/ticket_en.svg {% else %} {{ base_url }}dist/images/ticket_es.svg {% endif %}">
