@@ -7,10 +7,12 @@
 {%- set t_intro_date = transbag('translate', this.alt, 'intro_date') -%}
 {%- set t_intro_place = transbag('translate', this.alt, 'intro_place') -%}
 {%- set t_title_cfp = transbag('translate', this.alt, 'title_cfp') -%}
+{%- set t_title_venue = transbag('translate', this.alt, 'title_venue') -%}
 {%- set t_message_cfp = transbag('translate', this.alt, 'message_cfp') -%}
 {%- set t_button_cfp = transbag('translate', this.alt, 'button_cfp') -%}
 {%- set t_keynote_title = transbag('translate', this.alt, 'keynote_title') -%}
 {%- set t_sponsor_title = transbag('translate', this.alt, 'sponsor_title') -%}
+{%- set t_venue_title = transbag('translate', this.alt, 'venue_title') -%}
 
 {# Sponsors #}
 {% set venue = site.query('/patrocinadores', alt=this.alt).filter(F.confirmed).filter(F.category ==
@@ -105,11 +107,15 @@
         <div class="venue wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1.2s" data-wow-offset="-1000">
             <div class="call-to-actions row">
                 <div class="text-center col-md-12">
+                    <h1 class="title">&lt;{{ t_venue_title }}/&gt;</h1>
+                </div>
+                <div class="text-center col-md-12">
                     <h2>{{ t_intro_place }}</h2>
                     <p>{{ t_intro_location }}</p>
                     <p>{{ t_intro_date }}</p>
                 </div>
             </div>
+            {% include 'partials/_location.html' %}
         </div>
 
         <div class="sponsors">

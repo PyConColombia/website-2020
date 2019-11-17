@@ -133,6 +133,17 @@
       }
     }
   }
+
+  .venue  {
+    .map {
+      &:before {
+        margin-top: -60px;
+      }
+      &:after {
+        margin-top: 340px;
+      }
+    }
+  }
 }
 
 // Breakpoint: x <= 767
@@ -166,6 +177,17 @@
       }
     }
   }
+
+  .venue  {
+    .map {
+      &:before {
+        margin-top: -40px;
+      }
+      &:after {
+        margin-top: 360px;
+      }
+    }
+  }
 }
 
 // Breakpoint: x >= 1024 y >= 900px
@@ -175,7 +197,16 @@
 
 // Breakpoint: x < 575
 @media (max-width: map_get($screen,_sm-max)) {
-
+  .venue  {
+    .map {
+      &:before {
+        margin-top: -30px;
+      }
+      &:after {
+        margin-top: 370px;
+      }
+    }
+  }
 }
 
 // Breakpoint: x < 520
@@ -192,6 +223,17 @@
     .container {
       .logo-container{
         height: 15rem;
+      }
+    }
+  }
+  
+  .venue  {
+    .map {
+      &:before {
+        margin-top: -20px;
+      }
+      &:after {
+        margin-top: 380px;
       }
     }
   }

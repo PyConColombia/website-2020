@@ -238,6 +238,32 @@
 .venue  {
   padding-top: 26.5rem;
   padding-bottom: 10rem;
+
+  .map {
+    padding-top: 20rem;
+
+    &:before, &:after {
+      content: '';
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: top center;
+      margin-left: 15px;
+      position: absolute;
+    }
+
+    &:before {
+      width: 100%;
+      height: 80rem;
+      background-image: url('../images/clouds-top.svg');
+      margin-top: -80px;
+    }
+    &:after {
+      width: 100%;
+      height: 70rem;
+      background-image: url('../images/clouds-bottom.svg');
+      margin-top: 320px;
+    }
+  }
 }
 
 .sponsors  {
@@ -279,6 +305,7 @@
   }
 }
 
+
 .speaker-social {
   margin: 0 auto;
   .social-networks {
@@ -310,4 +337,9 @@
 
 .speaker-info {
   padding: 0 1rem;
+}
+
+.title {
+  text-transform: uppercase;
+  margin-bottom: 100px;
 }
