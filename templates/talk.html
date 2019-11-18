@@ -1,6 +1,16 @@
 {% extends "layout.html" %}
 {%- from "macros/translation.html" import transbag -%}
 
+{%- set t_talks = transbag('translate', this.alt, 'title_talks') -%}
+{%- set t_workshops = transbag('translate', this.alt, 'title_workshops') -%}
+{% set title = t_talks if this.type == 'talk' else t_workshops %}
+{%- set st_authors = transbag('translate', this.alt, 'subtitle_authors') -%}
+{%- set st_date = transbag('translate', this.alt, 'subtitle_date') -%}
+{%- set st_summary = transbag('translate', this.alt, 'subtitle_summary') -%}
+{%- set st_resources = transbag('translate', this.alt, 'subtitle_resources') -%}
+{%- set st_about_talk = transbag('translate', this.alt, 'subtitle_about_talk') -%}
+{%- set t_slides = transbag('translate', this.alt, 'subtitle_slides') -%}
+
 {%- block body -%}
     <div class="layout-page">
         <div class="background-wrapper">
@@ -9,8 +19,82 @@
                     <div class="content">
                         <div class="row justify-content-center">
                             <div class="col-md-10 col-sm-12">
-                                <h1 class="title text-center">&lt;{{ this.title }}/&gt;</h1>
-                                {{ this.body }}
+                                <h1 class="title text-center">&lt;{{ title }}/&gt;</h1>
+                                <h2>{{ this.name }}</h2>
+                                <div class="row">
+                                    <div class="tags">
+                                        <ul>
+                                            {%- for tag in this.topic -%}
+                                            <li class="{{ tag }} tag">{{ tag }}</li>
+                                            {%- endfor -%}
+                                        </ul>
+                                    </div>
+                                </div>
+                                {% if this.video_code %}
+                                    <div class="row justify-content-center align-self-center">
+                                        <div class="video-talk">
+                                        <iframe src="https://www.youtube.com/embed/{{ this.video_code }}" frameborder="0" allowfullscreen class="video">
+                                        </iframe>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                {% if this.authors %}
+                                    <div class="row">
+                                        <h3>{{ st_authors }}</h3>
+                                    </div>
+                                    <div class="row">
+                                        {%- for author in this.authors -%}
+                                            {%- set current_author = site.get('/ponentes/'+ author, alt='es') -%}
+                                            <div class="col-sm-2">
+                                                <div class="speaker-avatar">
+                                                    <a href="{{ current_author | url }}">
+                                                        <img
+                                                        src={%- if current_author.image -%} "{%- if current_author.keynote -%}/keynotes/{%- else -%}/ ponentes/{%- endif -%}{{ current_author._id }}/{{ current_author.image }}"
+                                                        {%- else -%} "{{ base_url }}dist/images/empty-photo.svg" {%- endif -%} ">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        {%- endfor -%}
+                                    </div>
+                                {% endif %}
+                                {%- if this.datetime -%}
+                                    <div class="row">
+                                        <h3>{{ st_date }}</h3>
+                                    </div>
+                                    <div class="row">
+                                        {%- set t_day = transbag('translate', this.alt, this.datetime.strftime('%A')) -%}
+                                        <p>{{ t_day }} {{ this.datetime.strftime("%d, %H:%M") }}</p>
+                                    </div>
+                                {%- endif -%}
+                                {%- if this.summary -%}
+                                    <div class="row">
+                                        <h3>{{ st_summary }}</h3>
+                                    </div>
+                                    <div class="row">
+                                        {{ this.summary }}
+                                    </div>
+                                {%- endif -%}
+                                {%- if this.description -%}
+                                    <div class="row">
+                                        <h3>{{ st_about_talk }}</h3>
+                                    </div>
+                                    <div class="row">
+                                        {{ this.description }}
+                                    </div>
+                                {%- endif -%}
+                                {%- if this.url or this.file -%}
+                                    <div class="row">
+                                        <h3>{{ st_resources }}</h3>
+                                    </div>
+                                    <ul>
+                                        {% if this.file %}
+                                            <li><a class="link" href="{{- this.file | url(alt='es') -}}">{{ t_slides }}</a></li>
+                                        {% endif %}
+                                        {%- if this.url -%}
+                                            <li><a href="{{ this.url }}" target="blank_">{{ this.url }}</a></li>
+                                        {%- endif -%}
+                                    </ul>
+                                {%- endif -%}
                             </div>
                         </div>
                     </div>
