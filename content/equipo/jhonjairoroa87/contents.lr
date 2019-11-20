@@ -2,7 +2,7 @@ name:
 
 Jhon Jairo 
 ---
-category: Organizer
+category: Co-Organizer
 ---
 github_handle: jhonjairoroa87
 ---
@@ -24,3 +24,5 @@ responsibility: Organizador Principal
 twitter_handle: jhonjairoroa87
 ---
 image: john.jpeg
+---
+sort_key: 0
