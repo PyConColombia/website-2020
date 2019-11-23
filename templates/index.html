@@ -50,11 +50,9 @@
             {% set is_speakers_call_section_closed = 'speakers-call' in this.closed_sections %}
 
             <div class="row event-info justify-content-center">
-                <button id="eventbrite-widget-modal-trigger-56463397542" type="button">Buy Tickets</button>
-                <noscript></a>Buy Tickets on Eventbrite</noscript>
                 {% if is_tickets_section_enabled %}
                 <div class="event-ticket col-md-4 {{ 'offset-md-2' if is_speakers_call_enabled else '' }}">
-                    <a href="{{ this.tickets_link }}" target="blank_">
+                    <a id="eventbrite-widget-modal-trigger-56463397542">
                         <img
                             src="{% if this.alt == 'en' %} {{ base_url }}dist/images/ticket_en.svg {% else %} {{ base_url }}dist/images/ticket_es.svg {% endif %}">
                     </a>

@@ -159,6 +159,10 @@
 
 .event-info {
   .event-ticket {
+    a {
+      cursor: pointer;
+    }
+
     img {
       width: 90%;
       margin: 0 auto;
