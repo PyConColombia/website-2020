@@ -13,9 +13,10 @@
                     <div class="content">
                         <div class="row justify-content-center">
                             {% set talks = site.query('/ponencias', alt=this.alt).filter(F.type == 'talk').order_by('name') %}
-                            {% if talks %}
-                                <div class="col-sm-12">
-                                    <h1 class="title text-center">&lt;{{ t_talks }}/&gt; ({{ talks.count()}})</h1>
+                            
+                            <div class="col-sm-12">
+                                <h1 class="title text-center">&lt;{{ t_talks }}/&gt; ({{ talks.count()}})</h1>
+                                {% if talks %}
                                     <div class="row">
                                         {% for talk in talks %}
                                             <div class="col-md-6 col-sm-12">
@@ -23,13 +24,13 @@
                                             </div>
                                         {% endfor %}
                                     </div>
-                                </div>
-                            {% endif %}
+                                {% endif %}
+                            </div>
 
                             {% set workshops = site.query('/ponencias', alt=this.alt).filter(F.type == 'workshop').order_by('name') %}
-                            {% if True %}
-                                <div class="col-sm-12">
-                                    <h1 class="title text-center">&lt;{{ t_workshops }}/&gt; ({{ workshops.count()}})</h1>
+                            <div class="col-sm-12">
+                                <h1 class="title text-center">&lt;{{ t_workshops }}/&gt; ({{ workshops.count()}})</h1>
+                                {% if workshops %}
                                     <div class="row">
                                         {% for workshop in workshops %}
                                         <div class="col-md-6 col-sm-12">
@@ -37,8 +38,8 @@
                                         </div>
                                         {% endfor %}
                                     </div>
-                                </div>
-                            {% endif %}
+                                {% endif %}
+                            </div>
                         </div>
                     </div>
                     {% include 'partials/_footer.html' %}
