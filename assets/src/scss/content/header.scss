@@ -46,11 +46,6 @@
           }
         }
       }
-      .nav-item {
-        & > a {
-          padding: 0.2rem 0.5rem;
-        }
-      }
     }
   }
 }
@@ -58,9 +53,22 @@
 .navbar-light {
   .navbar-nav {
     .nav-link {
+      cursor: pointer;
       letter-spacing: 0.2rem;
-      font-size: 1.6rem;
       font-weight: 500;
+      font-size: 1.4rem;
+      padding: 0.2rem 1.7rem;
+      margin: 0 0.3rem;
+      border-radius: 5rem;
+      color: map_get($colors, _primary);
+      transition: all 0.2s;
+      &:hover, &.nav-primary {
+        background-color: map_get($colors, _primary);
+        color: map_get($colors, _white) !important;
+        &:hover {
+          background-color: map_get($colors, _primary_active);
+        }
+      }
     }
   }
 }

@@ -17,15 +17,15 @@
 
 {%- macro menu_item_list(identifier, items) -%}
   <li class="dropdown">
-    <a class="nav-link dropdown-toggle {% if item_this_is_child %} nav-primary{% endif %}" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
       aria-haspopup="true" aria-expanded="false">{{ transbag('menu', this.alt, identifier) }}</a>
     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
       {%- for item in items -%}
-      {% set item_url = '/' + item %}
-      {% set item_trans_url = item_url|url(alt=this.alt) %}
-      {% set item_this_is_child = this.is_child_of(item_url) %}
-      <a class="dropdown-item{% if item_this_is_child %} nav-primary{% endif %}"
-        href="{{ item_trans_url }}">{{ transbag('menu', this.alt, item) }}</a>
+        {% set item_url = '/' + item %}
+        {% set item_trans_url = item_url|url(alt=this.alt) %}
+        {% set item_this_is_child = this.is_child_of(item_url) %}
+        <a class="dropdown-item"
+          href="{{ item_trans_url }}">{{ transbag('menu', this.alt, item) }}</a>
       {%- endfor -%}
     </div>
   </li>
@@ -103,24 +103,6 @@
     <script>
       $(document).ready(function() {});
     </script>
-
-    <!-- Noscript content for added SEO -->
-    <noscript><a href="https://www.eventbrite.com/e/pycon-colombia-2020-tickets-56463397542" rel="noopener noreferrer"
-        target="_blank"></noscript>
-    <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
-    <script type="text/javascript">
-      var exampleCallback = function () {
-        console.log('Order complete!');
-      };
-      window.EBWidgets.createWidget({
-        widgetType: 'checkout',
-        eventId: '56463397542',
-        modal: true,
-        modalTriggerElementId: 'eventbrite-widget-modal-trigger-56463397542',
-        onOrderComplete: exampleCallback
-      });
-    </script>
-
   </head>
 
   <nav class="navbar fixed-top navbar-expand-lg navbar-light">
@@ -139,6 +121,13 @@
         {{ menu_item('patrocinadores') }}
         {{ menu_item('equipo') }}
 
+        {% set url = this|url(alt=this.alt) %}
+
+        {% if url != '/' and url != '/en/' %}
+          <li class="nav-item">
+            <a class="nav-link nav-primary" id="eventbrite-widget-modal-trigger-56463397542">Tickets</a>
+          </li>
+        {% endif %}
         <li class="dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">v.2020</a>
@@ -171,5 +160,21 @@
     </script>
     <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
     <script src="{{ base_url }}dist/js/navbar.js"></script>
+    <!-- Noscript content for added SEO -->
+    <noscript><a href="https://www.eventbrite.com/e/pycon-colombia-2020-tickets-56463397542" rel="noopener noreferrer"
+        target="_blank"></noscript>
+    <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+    <script type="text/javascript">
+      var exampleCallback = function () {
+        console.log('Order complete!');
+      };
+      window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '56463397542',
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-56463397542',
+        onOrderComplete: exampleCallback
+      });
+    </script>
   </body>
 </html>
