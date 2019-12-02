@@ -106,3 +106,4 @@ ENV/
 yarn.lock
 node_modules
 assets/dist
+.vscode
