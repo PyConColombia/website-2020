@@ -81,28 +81,28 @@ def process_csv(path):
         csv_reader = csv.DictReader(csv_file)
         line_count = 0
         for row in csv_reader:
-            if line_count == 0:
-                # Social Networks
-                facebook_handle = get_username(row['Facebook'])
-                github_handle = get_username(row['Git'])
-                linkedin_handle = get_username(
-                    row['Linkedin'])
-                twitter_handle = get_username(row['Twitter'])
+            # Social Networks
+            facebook_handle = get_username(row['Facebook'])
+            github_handle = get_username(row['Git'])
+            linkedin_handle = get_username(
+                row['Linkedin'])
+            twitter_handle = get_username(row['Twitter'])
 
-                username = github_handle or linkedin_handle or facebook_handle or twitter_handle
-                name = row['First_name']
-                last_name = row['Last_name']
-                country_residence = get_country(row['Country_residence'])
-                email = row['Email']
-                information = row['Biography']
-                position_1 = row['Affiliation']
-                photo_url = row['Photo']
+            name = row['First_name']
+            last_name = row['Last_name']
+            username = name.replace(' ', '-') + '-' + \
+                last_name.replace(' ', '-')
+            country_residence = get_country(row['Country_residence'])
+            email = row['Email']
+            information = row['Biography']
+            position_1 = row['Affiliation']
+            photo_url = row['Photo']
 
-                create_folder('../content/ponentes/', username)
-                create_info_file('../content/ponentes/' + username + '/contents.lr', name, country_residence, email,
-                                 facebook_handle, github_handle, information, last_name, linkedin_handle, position_1, twitter_handle)
-                download_photo(get_file_id(photo_url),
-                               '../content/ponentes/' + username + '/profile.png')
+            create_folder('../content/ponentes/', username)
+            create_info_file('../content/ponentes/' + username + '/contents.lr', name, country_residence, email,
+                             facebook_handle, github_handle, information, last_name, linkedin_handle, position_1, twitter_handle)
+            download_photo(get_file_id(photo_url),
+                           '../content/ponentes/' + username + '/profile.png')
 
             line_count += 1
         print(f'Processed {line_count} lines.')
