@@ -1,0 +1,15 @@
+name: Luces, MicroPython... ¡Acción!: Arte interactiva con MicroPython y leds neopixel programables.
+---
+authors: jhon-paulo-merchan-morales
+---
+description: Aprenderemos los principios básicos de IoT con micropython y leds neopixel programables para crear aplicaciones artísticas utilizando el protocolo ArtNet desarrollado en micropython para transmitir bits de colores a través de WiFi hacia el microcontrolador.
+---
+language: es
+---
+summary: 
+---
+topic: IoT, Other
+---
+type: workshop
+---
+    

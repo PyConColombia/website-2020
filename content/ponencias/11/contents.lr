@@ -1,0 +1,31 @@
+name: Creando aplicaciones de MicroPython para módulos ESP01 y ESP32
+---
+authors: jose-luis-laica-cornejo
+---
+description: Nosotros como comunidad tecnologica “FunPython” creemos en dar a conocer herramientas como MicroPython y otras herramientas libres al público en general para que ellos se empoderen de estas herramientas y puedan generar soluciones tecnologicas que permitan facilitar o mejorar sus actividades cotidianas. Deseamos mostrar a la comunidad de python como de manera fácil y rápida puede desarrollar dispositivos para el internet de las cosas con MicroPython.
+
+MicroPython está repleto de características avanzadas, como un promt interactivo, enteros de precisión arbitrarios, comprensión de listas, generadores, manejo de excepciones y más. Sin embargo, es lo suficientemente compacto como para caber y funcionar en solo 256k de espacio de código y 16k de RAM.
+
+A continuación describo una tabla de contenido tentativa, que puede ser modificada , si así lo considera el consejo de selección.
+Tabla de contenido tentativa
+1.- Presentación.
+2.- Python para todos y para todo.
+3.- Python para microcontroladores.
+4.- ¿ Por qué MicroPython ? 
+5.- Plarfaformas de hardware para micropython.
+ 6.- Entornos de desarrollo para micropyhton 
+7.- Comparativa de la sintaxis de Python y MicroPython
+7.1 .- Demostración de sentencias básicas.
+8.- Ejecución de scripts de MicroPython
+8.1 Conexión Wifi
+8.2 Conexión a la nube
+---
+language: es
+---
+summary: 
+---
+topic: IoT, Other
+---
+type: talk
+---
+    

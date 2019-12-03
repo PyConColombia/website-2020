@@ -1,0 +1,19 @@
+name: Deep Learning as a Service – Building cloud-based intelligent solutions
+---
+authors: rodolfo-ferro
+---
+description: In this workshop, we will create a service that uses a trained deep learning model, through a REST API. All with the power of Tensorflow 2.0, NumPy and Flask.
+
+The idea will be to introduce what DLaaS is and train a neural network to solve a specific problem using Tensorflow 2.0 (with the Keras module) and Google Colab, after this, save the trained weights to load the architecture locally and mount the system through an API built with Flask.
+
+This workshop requires intermediate-advanced knowledge about Python programming, especially with the use of scientific packages (NumPy and, if possible, Flask and Keras). Part of the objectives is that after the workshop there will be material and knowledge to develop AI models as a service; with Python, of course. For the workshop base code will be provided to start developing the service from that checkpoint.
+---
+language: en
+---
+summary: 
+---
+topic: Other
+---
+type: workshop
+---
+    

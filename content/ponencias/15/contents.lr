@@ -1,0 +1,19 @@
+name: Enhancing Data Privacy through Federated (Machine) Learning
+---
+authors: sebastian-arango
+---
+description: "Standard machine learning approaches require centralizing the training data in a central data store. Now for models trained from user interaction with mobile and IoT devices, there is an additional approach: Federated Learning. 
+
+This enables mobile devices to collaboratively learn a shared prediction model while keeping all the training data on device, decoupling the ability to do Machine Learning from the need to store the data in the cloud. This goes beyond the use of local models that make predictions on mobile devices by bringing model training to the device as well. Federated Learning thus allows for smarter models, lower latency, and less power consumption, all while ensuring privacy".
+
+This talk aims at explaining the fundamentals behind implementing Federated Learning capabilities, along with presenting some Python tools which serve to this purpose.
+---
+language: es
+---
+summary: 
+---
+topic: Other, IoT, Machine Learning
+---
+type: talk
+---
+    

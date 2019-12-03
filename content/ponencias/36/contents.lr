@@ -1,0 +1,19 @@
+name: Agile Data Science with pyspark and optimus
+---
+authors: andres-david-rios-ramirez
+---
+description: El workshop consta con 2 fases:
+La primera es dar una breve introducción de PySpark, consta de mostrar rapidamente como es el workflow de data science usando pyspark.
+Luego en la segunda parte se presentará a Optimus, una herramienta open source que facilita el workflow de data science con bondades como mostrar los dataframe en formato HTML (como los muestra pandas), generar gráficos desde pyspark, funciones cortas que describen un dataframe y sus columnas de una forma ágil. 
+Este workshop va a ser lleva a cabo usando los datos de la competencia de categorización de items de MercadoLibre.com (https://ml-challenge.mercadolibre.com/downloads)
+
+---
+language: es
+---
+summary: 
+---
+topic: Other, Machine Learning
+---
+type: workshop
+---
+    

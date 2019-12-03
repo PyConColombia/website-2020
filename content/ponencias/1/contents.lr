@@ -1,0 +1,28 @@
+name: Building a Scalable Food Delivery Service Using ElasticSearch Geo Queries
+---
+authors: kevin-sarmiento-mendoza
+---
+description: **** Submission description ****
+
+With the rise of food delivery services in Colombia, it’s a good time to discuss the technical aspects involved in their operation. How do they manage to provide a list of the nearest available restaurants to your location within seconds? How do they manage to handle thousands of request and still display updated information taking into account schedules? With ElasticSearch Geo Queries we can set up a fully functional service that can scale to satisfy the growing demand of users that want their lunch delivered to their home in a reasonable amount of time.
+
+**** Why are you the right person to give this talk? ****
+(Answering here because the field has a weird bug regarding punctuation)
+
+I worked at Domicilios.com for over two years. I started there in 2016 as a backend engineer for the company's internal tools, but given the increased demand of users and the inability of our stack to provide reasonable response times, I was moved to the core team. In this new phase we were responsible of providing scalable solutions to handle the incredible expansion the market was suffering back in 2017. 
+
+We started optimizing the API, both in code and infrastructure but it was not enough: an increase of order cancellations and bad reviews in our app and in social networks told us that our efforts were not sufficient. That's when we decided to move our geolocation service from code and traditional databases to ElasticSearch. We did several spikes with different geolocation technologies and we loved the Elastic solution. We spent months trying to setup the right architecture and coordinating data between our main database and ES to avoid displaying outdated information. 
+
+But then the results came. We managed to decrease the load time in our application by several seconds. Now our users were able to locate within a second or two their favorite restaurants and place and order without the hassle of waiting for the information to load.
+
+
+---
+language: es
+---
+summary: 
+---
+topic: Web, Other
+---
+type: talk
+---
+    

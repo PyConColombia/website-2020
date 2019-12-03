@@ -4,6 +4,46 @@ import os
 from google_drive_downloader import GoogleDriveDownloader as gdd
 
 
+def normalize_string(string):
+    replacements = (
+        ("á", "a"),
+        ("é", "e"),
+        ("í", "i"),
+        ("ó", "o"),
+        ("ú", "u"),
+        ("ñ", "n")
+    )
+    for a, b in replacements:
+        string = string.replace(a, b).replace(a.upper(), b.upper())
+    return string.lower()
+
+
+def check_file(path):
+    if os.path.isfile(path):
+        return True
+    return False
+
+
+def get_topic(string_topic):
+    topics = ["Blockchain", "Computer Vision", "Data Science", "Scientific Computing", "Artifial Intelligence", "Machine Learning",
+              "Deep Learning", "DevOps", "IoT", "Web", "Python Core", "Video Games", "Infrastructure", "Performance", "Community", "Other"]
+
+    if string_topic in topics:
+        return string_topic
+    return "Other"
+
+
+def fcount(path, map={}):
+  count = 0
+  for f in os.listdir(path):
+    child = os.path.join(path, f)
+    if os.path.isdir(child):
+        child_count = fcount(child, map)
+        count += child_count + 1  # unless include self
+  map[path] = count
+  return count
+
+
 def get_country(country):
     choices = ["af", "ax", "al", "dz", "as", "ad", "ao", "ai", "aq", "ag", "ar", "am", "aw", "au", "at", "az", "bh", "bs", "bd", "bb", "by", "be", "bz", "bj", "bm", "bt", "bo", "bq", "ba", "bw", "bv", "br", "io", "bn", "bg", "bf", "bi", "kh", "cm", "ca", "cv", "ky", "cf", "td", "cl", "cn", "cx", "cc", "co", "km", "cg", "cd", "ck", "cr", "ci", "hr", "cu", "cw", "cy", "cz", "dk", "dj", "dm", "do", "ec", "eg", "sv", "gq", "er", "ee", "et", "fk", "fo", "fj", "fi", "fr", "gf", "pf", "tf", "ga", "gm", "ge", "de", "gh", "gi", "gr", "gl", "gd", "gp", "gu", "gt", "gg", "gn", "gw", "gy", "ht", "hm", "va", "hn", "hk", "hu", "is", "in", "id", "ir", "iq", "ie", "im", "il", "it", "jm", "jp", "je", "jo", "kz", "ke", "ki", "kp", "kr", "kw", "kg", "la", "lv", "lb",
                "ls", "lr", "ly", "li", "lt", "lu", "mo", "mk", "mg", "mw", "my", "mv", "ml", "mt", "mh", "mq", "mr", "mu", "yt", "mx", "fm", "md", "mc", "mn", "me", "ms", "ma", "mz", "mm", "na", "nr", "np", "nl", "nc", "nz", "ni", "ne", "ng", "nu", "nf", "mp", "no", "om", "pk", "pw", "ps", "pa", "pg", "py", "pe", "ph", "pn", "pl", "pt", "pr", "qa", "re", "ro", "ru", "rw", "bl", "sh", "kn", "lc", "mf", "pm", "vc", "ws", "sm", "st", "sa", "sn", "rs", "sc", "sl", "sg", "sx", "sk", "si", "sb", "so", "za", "gs", "ss", "es", "lk", "sd", "sr", "sj", "sz", "se", "ch", "sy", "tw", "tj", "tz", "th", "tl", "tg", "tk", "to", "tt", "tn", "tr", "tm", "tc", "tv", "ug", "ua", "ae", "gb", "us", "um", "uy", "uz", "vu", "ve", "vn", "vg", "vi", "wf", "eh", "ye", "zm", "zw"]
@@ -58,6 +98,30 @@ image: profile.png
     file.close()
 
 
+def create_talk_file(path, title, authors, description, language, summary, topic, type):
+    topic = ', '.join(topic)
+
+    info = """name: {0}
+---
+authors: {1}
+---
+description: {2}
+---
+language: {3}
+---
+summary: {4}
+---
+topic: {5}
+---
+type: {6}
+---
+    """.format(title, authors, description, language, summary, topic, type)
+
+    file = open(path, "w")
+    file.write(info)
+    file.close()
+
+
 def get_file_id(drive_url):
     url_splitted = drive_url.split('id=')
     return url_splitted[1]
@@ -76,7 +140,17 @@ def get_username(string_to_search):
     return username
 
 
-def process_csv(path):
+def get_language(string_language):
+    language = {
+        'Spanish / Español': 'es',
+        'English / Inglés': 'en'
+    }
+    return language[string_language]
+
+
+def process_csv(path, talk_type):
+    total_talks = fcount('../content/ponencias') + 1
+
     with open(path) as csv_file:
         csv_reader = csv.DictReader(csv_file)
         line_count = 0
@@ -90,8 +164,8 @@ def process_csv(path):
 
             name = row['First_name']
             last_name = row['Last_name']
-            username = name.replace(' ', '-') + '-' + \
-                last_name.replace(' ', '-')
+            username = normalize_string(name.replace(' ', '-')) + '-' + \
+                normalize_string(last_name.replace(' ', '-'))
             country_residence = get_country(row['Country_residence'])
             email = row['Email']
             information = row['Biography']
@@ -99,17 +173,40 @@ def process_csv(path):
             photo_url = row['Photo']
 
             create_folder('../content/ponentes/', username)
+
+            # Create Speakers
             create_info_file('../content/ponentes/' + username + '/contents.lr', name, country_residence, email,
                              facebook_handle, github_handle, information, last_name, linkedin_handle, position_1, twitter_handle)
-            download_photo(get_file_id(photo_url),
-                           '../content/ponentes/' + username + '/profile.png')
+            if not check_file('../content/ponentes/' + username + '/profile.png'):
+                download_photo(get_file_id(photo_url),
+                            '../content/ponentes/' + username + '/profile.png')
+
+            Create Talks
+            create_folder('../content/ponencias/', str(total_talks))
+            title = row['Title']
+            description = row['Description']
+            language = get_language(row['Spoken_language'])
+            topics_form = row['Tags'].split(', ')
+            topics = []
+
+            for topic in topics_form:
+                topic = get_topic(topic)
+
+                if topic not in topics:
+                    topics.append(topic)
+
+            create_talk_file('../content/ponencias/' + str(total_talks) + '/contents.lr', title, username,
+                             description, language, '', topics, talk_type)
+
+            total_talks += 1
 
             line_count += 1
         print(f'Processed {line_count} lines.')
 
 
 def main():
-    process_csv('./talks.csv')
+    process_csv('./talks.csv', 'talk')
+    process_csv('./workshops.csv', 'workshop')
 
 
 if __name__ == '__main__':

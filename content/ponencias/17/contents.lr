@@ -1,0 +1,15 @@
+name: Movie Genre Classification Using Deep Multimodal Neural Networks
+---
+authors: jesus-solano
+---
+description: The classification of films according to their genre is of main interest for various multimedia companies (Netflix, YouTube, etc.). In order to perform the classification it is possible to analyze two types of data: The images of the posters and the text of the synopsis. Currently, both types of data are easily understood by a human being, but for a machine it is a challenge to analyze and correlate them. Additionally, the problem of the genre classification of films is a challenge in the Machine Learning area because it is a multi-class problem and at the same time multi-genre, that is, the same film can belong to several genres simultaneously. This talk will explain how to make use of deep learning to automate the classification of films thanks to the interpretation of text and images. In detail, the operation and use of convolutional neural networks and transfer learning for image processing on posters will be explained. And, on the other hand, recurrent neural networks will be explained in combination with unsupervised methods (Word2Vec) for the pre-processing and training of the synopsis classification algorithms. Finally, we will talk about how to add the information of both types of data - images and text - in a multi modal neural network to find the genres to which a movie belongs.
+---
+language: es
+---
+summary: 
+---
+topic: Other, Machine Learning
+---
+type: talk
+---
+    

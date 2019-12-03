@@ -1,0 +1,41 @@
+name: Perceiving Python Programming Paradigms
+---
+authors: jigyasa-grover
+---
+description: The soaring popularity of Python and its assorted applications can be attributed to its simplicity and flexibility. In this talk, I will review the modern bloom & dominance of Python and discuss four major coding styles often used: Imperative, Procedural, Functional, and Object-Oriented. I will go over the fundamentals of each programming paradigm and discuss their positives, limitations and use cases especially in Python setting along-with a very simple hands-on example to illustrate how one routine can be coded in a different style. The talk will conclude with some pointers on how to choose a coding style for a given situation to make the code more readable, testable and coherent.
+
+This talk aims to introduce different programming styles of Python and encourage Pythonistas to reflect on the implications of each corresponding to their domain viz. data visualisation, machine learning, functional programming, or embedded systems, web development. By better understanding these styles attendees will be empowered to design efficient solutions.
+
+
+Outline of the proposed talk
+
+Introduction
+The rise of Python and its many applications: Reason for its bloom & dominance
+Reflecting on the simplicity and flexibility providing comfort and independence
+
+Overview of programming styles with positives & limitations in each
+Imperative Programming: Sequential, Direct change to program state, Data structure manipulation, Harder debugging, Limited abstraction, Complex semantics
+Procedural Programming: Sequential, Iterative, Modularized, Tasks’ function calling, Inefficient hardware usage especially for complex problems
+Functional Programming: Stateless functions, Immutable data, Independent of order of execution, More modularity, Useful for - Recursion, Lambda Functions, Parallel Processing
+Object-oriented Programming: Object manipulation via methods only, Code reusability, Limited support by Python (currently)
+
+One example coded in different programming styles for illustration
+Task definition, say average of a list of numbers
+Code in different styles: Imperative, Procedural, Functional, Object-oriented
+Usage of lambda functions, class creation, method creation, etc.
+Discussing speed, efficiency, reusability, simplicity of each style
+
+Conclusion & Takeaways
+Pointers on how to select a programming paradigm based on the application
+Discussing pros and cons of combining, interleaving multiple styles
+Some personal anecdotes, recommendations for different use cases
+---
+language: en
+---
+summary: 
+---
+topic: Other, Machine Learning
+---
+type: talk
+---
+    

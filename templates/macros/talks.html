@@ -23,7 +23,7 @@
                     <div class="speaker-avatar">
                         <a href="{{ current_author | url }}">
                             <img
-                            src={%- if current_author.image -%} "{%- if current_author.keynote -%}/keynotes/{%- else -%}/ ponentes/{%- endif -%}{{ current_author._id }}/{{ current_author.image }}"
+                            src={%- if current_author.image -%} "{%- if current_author.keynote -%}/keynotes/{%- else -%}/ponentes/{%- endif -%}{{ current_author._id }}/{{ current_author.image }}"
                             {%- else -%} "{{ base_url }}dist/images/empty-photo.svg" {%- endif -%} ">
                         </a>
                     </div>

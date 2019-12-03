@@ -1,0 +1,22 @@
+name: Antes mi servicio se demoraba 5 seg y ahora 300 miliseg, veamos que es profiling en diferentes capas, Base de datos, aplicación, cache, mobile, para llevar a tus aplicaciones a otro nivel de velocidad.
+---
+authors: gustavo-andres-angulo-morales
+---
+description: Esta charla es para un público intermedio-avanzado.
+
+Se realizará en dos secciones (Optimizaciones y posibles degradaciones) y muestra como se realiza profiling de aplicaciones en ambientes de desarrollo y luego como se puede realizar optimizaciones en producción, reduciendo tiempos de respuesta en diferentes capas (Base de datos, aplicación, cache, contenido estático) 
+En cada capa se mostrará un ejemplo normal de uso y el tiempo de consumo en respuesta en un ambiente de producción y luego con la optimización como se encuentran cambios y se optimiza reduciendo tiempo, memoria o CPU de uso..
+
+Luego seguirá una sección de como identificar, encontrar y monitorear degradamientos de sistemas en producción y por que es tan importante el profiling, ahorrando dinero en sistemas de producción.
+
+Se usará como base para el taller flask y django, y se abordará otros frameworks como Sanic.
+---
+language: es
+---
+summary: 
+---
+topic: Other
+---
+type: talk
+---
+    

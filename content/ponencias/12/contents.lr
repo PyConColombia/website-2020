@@ -1,0 +1,17 @@
+name: Y is X but X is not always Y: An introduction to Python internals
+---
+authors: kevin-hernandez
+---
+description: Python es un lenguaje que tiene características muy interesantes y hay ciertos aspectos que parecen magia, sobre todo cuando se trata de su funcionamiento interno. En esta charla hablo sobre las diferencias entre los diferentes intérpretes y de como Python emplea el uso de singletons para mejorar la productividad, porque los diccionarios son mucho mas rápidos para conseguir un valor que una lista o como es que los generators recuerdan el estado de las variables al hacer yield, además hablo sobre las razones que los Core Developers tuvieron para tomar ciertas decisiones. Todo esto con ejemplos interesantes que levantarán más de una ceja.
+
+Conocer como funcionan los intérpretes de Python nos puede ayudar a escribir mejor código, CPython es el mas común de los intérpretes de python y es por esta razón que durante la charla me enfoco en este, explico las decisiones de diseño mostrando parte del código del intérprete y finalizo explicando como se pueden realizar contribuciones y como comenzar 🚀
+---
+language: es
+---
+summary: 
+---
+topic: Other
+---
+type: talk
+---
+    
