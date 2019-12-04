@@ -1,0 +1,23 @@
+name: Ocultando datos en datos
+---
+authors: manuel-alejandro-alvarado-cobo
+---
+description: Cuando se habla de comunicaciones secretas en la era digital se suele pensar primero en comunicaciones cifradas, criptografía. Sin embargo existen otras técnicas que pretenden mantener la confidencialidad de los mensajes, incluso a plena vista. En esta charla se introduce el concepto de esteganografía y sus diversas formas y usos en el entorno digital al igual que algunas librerías y ejemplos en Python para tratar archivos de imágenes y sonido con el fin de embeber y extraer mensajes de los mismos.
+
+En palabras simples, la esteganografía es es arte de ocultar datos en otros datos. Hoy por hoy todo es información, es decir, datos; lo que implica que virtualmente es posible embeber mensajes ocultos casi en cualquier parte siempre y cuando existan unas reglas de comunicación definidas entre el emisor y el receptor, es decir, un lenguaje.
+
+Al terminar la charla, la audiencia podrá definir qué es esteganografía, cuál es su utilidad y estará en capacidad de identificar canales potenciales de comunicación en los que se puedan aplicar técnicas de esteganografía.
+
+Palabras Clave
+Esteganografía, criptografía, confidencialidad, malware, comunicación
+
+---
+language: es
+---
+summary: 
+---
+topic: Other
+---
+type: talk
+---
+    

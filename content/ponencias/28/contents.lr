@@ -1,0 +1,15 @@
+name: Concurrency in Python
+---
+authors: jorge-galvis
+---
+description: Concepts like parallelism, multiprocessing, threading and concurrency are confused. This workshop aims to clarify them and moreover, to get you started with concurrency in Python. We'll port a synchronous program to an asynchronous one, explaining patterns, best practices and common pitfalls. Come and join me on this adventure.
+---
+language: es
+---
+summary: 
+---
+topic: Web
+---
+type: workshop
+---
+    

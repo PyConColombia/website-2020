@@ -1,0 +1,19 @@
+name: Probabilistic Programming: Using Python to Simplify Statistical Inference
+---
+authors: carlos-miguel-patino
+---
+description: The rise of big data and machine learning has led to the development of models capable of making accurate predictions when trained with large amounts of data. However, machine learning models still struggle with a critical element: interpretability. In other words, it is difficult to tell why a machine learning model is making a particular prediction. 
+
+As an alternative to pure machine learning models, statistical inference is a field that provides interpretable models that also quantify the uncertainty of the prediction. Statistical inference can sometimes be challenging to perform, so probabilistic programming is a paradigm that seeks to perform statistical analyses using the tools of computer science. Notably, these computer science tools simplify conducting inference by providing intuitive and efficient implementations of statistical methods.
+
+This talk is about leveraging probabilistic programming to perform statistical inference in a simplified way using Python. In particular, I will cover how to use PyMC3 and Pyro in examples that illustrate the importance of probabilistic programming to solve challenges in the current data-driven world.
+---
+language: en
+---
+summary: 
+---
+topic: Other, Machine Learning, Scientific Computing
+---
+type: talk
+---
+    

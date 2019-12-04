@@ -1,0 +1,27 @@
+name: Debugging: A Senior's Skill
+---
+authors: milton-lenis
+---
+description: Have you ever find yourself trying to discover what's the bug in the codebase you're working for, running and restarting the application with print statements all over the place? Perhaps you've realized how difficult and time costing it is, and in some situations, very frustrating.
+
+Most Senior developers have some things in common, and one of them is their ability to debug problems the proper way (Using the correct tools).
+
+If you've ever found like debuggers are gruesome tools that you should avoid at all cost and stick to your print statements, as I did some time, please come to my talk and maybe I'll help you out to change this mindset and give you the motivation to become a master debugger.
+
+Talk Outline:
+1. How people use to debug problems (5 mins)
+2. Why should you use a debugger (5 mins)
+3. Introduction to ipdb (10 mins)
+4. Real Troubleshooting using ipdb (8 mins)
+5. Conclusions, Final Thoughts (2 mins)
+6. Q & A (10 mins)
+---
+language: en
+---
+summary: 
+---
+topic: Other
+---
+type: talk
+---
+    

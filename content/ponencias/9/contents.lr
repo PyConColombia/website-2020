@@ -1,0 +1,15 @@
+name: High Performance Pandas 2: Time series data analysis
+---
+authors: luis-david-camacho-gonzalez
+---
+description: Pandas is an standard data handling library commonly misused, however, this powerful library includes a set of APIs created for high speed data manipulation hidden to most of people. This talk will show how to make the most of the date time internals in combination with pandas API to make the time series data analysis easier, faster and cleaner. This talk aims to help making data analysis work easier and cleaner by exploiting the full power of pandas.
+---
+language: es
+---
+summary: 
+---
+topic: Other, Machine Learning, Scientific Computing
+---
+type: talk
+---
+    

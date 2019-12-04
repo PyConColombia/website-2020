@@ -1,0 +1,17 @@
+name: Creando una aplicación web en el ecosistema Jupyter
+---
+authors: edward-yesid-villegas-pulgarin
+---
+description: Dado el gran impacto que ha tenido el proyecto Jupyter en la ciencia de datos y la computación científica, generar aplicaciones web desde un Jupyter Notebook es un paso deseable para reducir los tiempos de desarrollo, sacando ventaja del proceso de exploración que normalmente ya recurre a usar componentes interactivas. En este taller aprenderemos como usar componentes desarrolladas en el ecosistema Jupyter para crear aplicaciones web para prototipos o incluso destinadas directamente a producción. Usaremos para este taller Jupyter Notebook, Ipywidgets, Voila y repo2docker (o mybinder).
+La sesión tiene una componente de teoría sobre las características, ventajas y limitantes de los módulos a usar, y un especial énfasis en los elementos interactivos y algunos elementos que se pueden personalizar.
+La segunda parte, es el taller guiado, donde el participante puede usar el espacio para un caso propio o seguir el ejemplo sugerido.
+---
+language: es
+---
+summary: 
+---
+topic: Other, Scientific Computing, Web
+---
+type: workshop
+---
+    

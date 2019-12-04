@@ -1,0 +1,19 @@
+name: Developing a Crawler API with Scrapy and Klein
+---
+authors: betina-costa
+---
+description: In this tutorial you will build an API to fetch data crawled by a Scrapy Spider and handle the Scrapy asynchrony with Klein. After this tutorial you will learn:
+
+- How to build a simple Scrapy Spider
+- How to send parameters to a Spider;
+- How to get the data collected by the Spider;
+---
+language: en
+---
+summary: 
+---
+topic: Other
+---
+type: workshop
+---
+    

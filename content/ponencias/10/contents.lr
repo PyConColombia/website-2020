@@ -1,0 +1,16 @@
+name: Breaking the Enigma: what if Turing had Python? 
+
+---
+authors: maria-camila-remolina-gutierrez
+---
+description: In this talk I want to bring back all the cryptographic work done during the World War II regarding the deciphering of the nazi communication system. In particular, I will present a python re-creation of the Enigma machine used to encrypt messages during the war, but most importantly I will present a historically accurate python simulator of the Bombe machine used to crack this cipher. I want to present, with our current technology and architecture, how did the researchers at Bletchley Park engineered an electro-mechanical device, key to end the war. And how by doing that, they contribute to setting the bases for the first computers. I am going to present the technical challenges and the human efforts involved in breaking a code such as Enigma, as well as the key flaws that doomed it. Finally, I will try to obtain a replica of the Enigma machine in order for the audience to experiment the cipher process and elements first hand. 
+---
+language: en
+---
+summary: 
+---
+topic: Other
+---
+type: talk
+---
+    

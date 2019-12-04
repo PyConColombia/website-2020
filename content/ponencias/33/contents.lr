@@ -1,0 +1,17 @@
+name: Real time Django + Vue.js 
+---
+authors: andres-gonzalez
+---
+description: In this workshop we will learn to configure a Django Project with channels and a VueJS client application  that uses websockets to communicate.
+We will configure a basic application with  a form to add data that is stored into  a database model and  transmits  the information to all  the clients. The client app is able to transmit  the information to all the clients and visualize  the data from all the other users in a real time chart.
+We will discuss performance, show alternatives and deploy the application to a live server in  AWS to test it with the assistants.
+---
+language: es
+---
+summary: 
+---
+topic: Other, Web
+---
+type: workshop
+---
+    

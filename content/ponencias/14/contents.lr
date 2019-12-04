@@ -1,0 +1,16 @@
+name: Did you know it’s possible to avoid bugs only by using types? Meet “Type Driven Development”, a strong approach used to get rid of common bugs in the code and it can be used in Python
+---
+authors: carlos-villavicencio
+---
+description: Did you know there is another TDD? Type Driven Development can increase the performance, accuracy, and readability of your code by taking advantage of the Python’s type system. A strongly typed language has a huge incidence in software design and quality, and being Python a dynamic and strongly-typed language, we can take advantage of the type system to implement an early bug-detection mechanism by using the support for type hints. 
+In this talk, we are going to discuss the benefits of using Python’s type annotations, how to use them on our daily basis and the tooling available to perform static check analysis. I’m going to share some code samples based on real-life scenarios where some bugs can be detected/prevented. We’ll see why specific unit tests are not necessary by using this practice.
+---
+language: es
+---
+summary: 
+---
+topic: Other
+---
+type: talk
+---
+    

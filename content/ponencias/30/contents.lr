@@ -1,0 +1,15 @@
+name: Introducción a Rest API con Django Rest Framework
+---
+authors: juan-sebastian-parada-celis
+---
+description: Es posible pensar en Internet como una torre de babel. Un montón de empresas y aplicaciones utilizan tecnologías distintas entre sí. Pero para lograr solventar estos problemas de comunicación existe REST api. Un conjunto de reglas que definen un medio de comunicación común a través del cual podemos compartir gatitos, hasta controlar un sistema IoT.  Utilizando python y django, entenderemos que definen estas reglas,  y cuales son las mejores practicas para que la comunicación sea amena. 
+---
+language: es
+---
+summary: 
+---
+topic: Web
+---
+type: workshop
+---
+    

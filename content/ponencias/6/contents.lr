@@ -1,0 +1,15 @@
+name: It takes some engineering ⚙️ to serve 41679 users 💡
+---
+authors: miguel-alejandro-bolivar-portilla
+---
+description: Starting in a new position, in a new job is always a rollercoaster of emotions 🎢 a thrill of goodwill and a lot of thinking on “please don’t screw this” 🤦‍♂️ any job! And most of times we could enter a startup, or a new project, but these projects could be already started, they can have an already built architecture 🏗 they made some decisions along the way and as engineers we should care about that, to know where and why we’re heading that way, we should care about history 🤓 This is a story on how the company where I work now used Python to handle its architecture and engineers to give service 41679 clients 🔥 some story on when to split apps, which framework we choose and why 🤔 and some cover on important engineering topics like microservices, queueing, blocking operations and testing, oh yes, we have testing 🧐 Come and check out how to scale, or at least not die trying 🚀
+---
+language: es
+---
+summary: 
+---
+topic: Other, Web
+---
+type: talk
+---
+    

@@ -1,0 +1,29 @@
+name: Procesamiento de datos en sistemas distribuidos con python
+---
+authors: angel-galicia
+---
+description: Antecedentes
+Hoy en dia es muy común escuchar que python se usa en el análisis de datos, lo cual es cierto, lo que casi nunca nos detenemos a pensar es ¿De donde vienen esos datos?, ¿Cómo se generaron?, ¿Cómo se guardan?, ¿Cómo se actualizan y con qué frecuencia?, etc.
+En esta charla explicaré estos puntos y nos enfocaremos en un caso muy específico (Real-Time Data Sources) que cada vez más han ido adoptando diferentes industrias en la era de la información .
+
+Intrducción - 5 min
+    Hablo acerca de cómo surgió la necesidad de implementar una solución custom y los problemas de los productos del mercado 
+
+Panorama general - 5 min
+    Explicación de los componentes principales de la arquitectura del sistema.
+
+Procesamiento de datos - 15 min
+    Es la parte principal de la charla y mostraré como podemos utilizar python (con ayuda de la biblioteca de Faust) para sistemas críticos que requieren procesamiento a gran velocidad de grandes volúmenes de información, desmintiendo el mito de que python es muy lento para usarlo en este tipo de sistemas.
+
+Conclusiones - 5 min 
+    Benchmarks realizados y consideraciones. 
+---
+language: es
+---
+summary: 
+---
+topic: Other, IoT
+---
+type: talk
+---
+    

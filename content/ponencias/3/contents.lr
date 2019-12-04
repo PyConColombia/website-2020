@@ -1,0 +1,21 @@
+name: My voice is my passport. Verify me?
+---
+authors: ben-dechrai
+---
+description: Security is hard. Using the same password for everything is easy.
+
+Over the years, we've made it easier for users to do the right thing, from email-based verification to one-time passwords via email and security tokens. But nearly all these solutions require you to have your mobile phone, or security device with you. And if you're overseas, you might have additional problems.
+
+Let's look at mechanisms for biometric authentication with web applications. There are a few out here, and this talk will help you understand the options and implementation, together with a live demo.
+
+Biometric security? Because you rarely leave your face and voice at home!
+---
+language: en
+---
+summary: 
+---
+topic: Web, Other
+---
+type: talk
+---
+    

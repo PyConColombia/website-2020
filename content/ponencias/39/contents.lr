@@ -1,0 +1,32 @@
+name: Title: "ASyncio microTelegram Bot" - Attendees will learn the usage and importance of asyncio by creating a Telegram Bot with it and the use of MicroPython, the future emerging language for microcontrollers.
+---
+authors: steven-alexander-silva-mendoza
+---
+description: In this workshop, the attendee will learn and follow the process on how to use the asyncio library for MicroPython and ESP32 microcontroller, and how to create a Telegram Bot with these two tools and a library developed with asyncio to control the Bot. Meaning this workshop will consist in two parts, the usage of asyncio with MicroPython and then the creation and manage of a Telegram Bot with a library developed with asyncio. These two sections are detailed below:
+
+Asyncio
+
+At first basic examples on how to use this library will be shown and run. For this the attendees will need each to have at least an ESP32 and some electronics. They will be taught really fast how to flash MicroPython in the ESP32 with a specific tool developed by the FunPython community and then will be given a Jupyter notebook that they will be able to use in order to run the examples in a specific order assuring everything is learnt as best as possible.
+
+By the end of this parts, they will know the importance and cases of use of asyncio and how to use it when it comes to microcontrollers.
+
+Telegram Bot
+
+Afterwards, the attendees will learn about how to use a library to control a Telegram Bot developed with asyncio. Basically they will follow another example from a Jupyter notebook in which they will create a Telegram bot and then write a MicroPython script to control this Bot. This will include the use of sensor and actuators if possible. 
+
+All the material like the Jupyter notebooks and the installation of MicroPython will be uploaded in a repository in FunPython’s GitHub account. Right now, the repository needs yet to be created, which will be done soon. So far what I have uploaded and can share with you is in the following link:
+    • https://github.com/FunPythonEC/uPy_TelegramBot
+
+Have in mind that for this workshop at least a ESP32 is needed for the attendees, any other electronics like jumpers, sensors, and actuators are actually secondary. I would like to know if PyCon Colombia would get the materials. I could be able to hand the attendees about 4 ESP32 but no more than that. Also consider I am one of the FunPython Community member from Ecuador, and not the only one submitting a workshop, two other colleagues named Jhon Merchán and José Laica are submitting workshops in which they would use the same electronics as me, meaning we can reuse the hardware components.
+
+You can contact me through my email in order to confirm the materials for the workshop.
+---
+language: en
+---
+summary: 
+---
+topic: Community, IoT, Other
+---
+type: workshop
+---
+    

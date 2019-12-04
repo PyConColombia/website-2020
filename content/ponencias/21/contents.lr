@@ -1,0 +1,19 @@
+name: Hablemos de voz
+---
+authors: mauricio-collazos
+---
+description: Desde que creamos los ordenadores nos hemos preguntado si serán inteligentes, Alan Turing en la prueba que lleva su nombre describió inteligencia como la capacidad de mantener una "conversación" con un agente y que sea indiferenciado con un humano. ¡Y la mayoría de seres humanos nos comunicamos hablando!
+
+Desde los años 60, en los laboratorios de IBM y AT&T prototipos capaces de reconocer palabras han sido desarrollados y ochenta años después, los reconocedores automáticos de voz hacen parte de nuestra vida: Google Assistant, Siri, Alexa, Cortana y muchos otros.
+
+En esta charla vamos a hablar de voz, desde lo teórico hasta lo práctico, entendiendo como esta señal de audio es muy característica dependiendo de nuestro cuerpo y nuestro idioma, como extraemos características y generamos modelos para predecir y producir voz, desde casi cero y con Python puro y duro
+---
+language: es
+---
+summary: 
+---
+topic: Other, Machine Learning, Scientific Computing
+---
+type: talk
+---
+    

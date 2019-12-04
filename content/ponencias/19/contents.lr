@@ -1,0 +1,26 @@
+name: Como migrar mi proyecto de Python 2 a Python 3 
+---
+authors: jonathan-vallejo-munoz
+---
+description: El 1 de Enero del 2020 es la fecha oficial del final del soporte de Python 2. Si tienes proyectos desarrollados en Python 2, si quieres mejorar tus conocimientos en Python 3 o si te interesa liderar proyectos de transformación tecnológica en la compañía o en los proyectos donde haces parte, esta charla es la indicada para ti. Hablaremos a cerca de las estrategias que en Lendingfront nos permitieron enfrentar los retos técnicos y procedimentales que hacen posible esta migración como te las describo a continuación:
+1. Identificando y Migrando librerías sin soporte en Python 3 en mi proyecto (caniusepython3, pipcheck, suds)
+2. Python 3.6, Python 3.7 o Python 3.8 ? Cual es la versión más adecuada ? Pros y Contras.
+3. Desarrollando tu código compatible con Python 2 y Python 3 al mismo tiempo (six, contexter, python-modernize, python-future)
+4. Creando pruebas automatizadas usando Tox.
+5. Automatizando la transformación de tu código a Python 3 (2to3)
+6. Aprendiendo las diferencias más importantes entre Python 2 y Python 3 en tiempo record (Excepciones, División de enteros, Enteros Largos, Manejo de strings, Diccionarios)
+7. Caso de estudio: Migrando un servicio de pagos  que maneja cientos de transacciones todos los días en producción (Identificando puntos más críticos con el manejo de Integers, Floats y Enteros Largos)
+8. Culturizando tu equipo de desarrollo con Code Review + Talks + Pylint + Travis.
+9. Coordinando con el equipo de QA como estrategia para  garantizar la estabilidad de tu proyecto en producción.
+10. Llevando tu migración de Python 3 de manera gradual a producción  (Contenedores, Servicios aislados).
+
+---
+language: es
+---
+summary: 
+---
+topic: Other
+---
+type: talk
+---
+    

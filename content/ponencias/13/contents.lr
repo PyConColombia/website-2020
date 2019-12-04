@@ -1,0 +1,23 @@
+name: Time Series Forecasting using Machine Learning
+---
+authors: miguel-cabrera
+---
+description: On this talk I will introduce the time series forecasting problem, the traditional methods as well as recent ML approaches discussing important steps such as target value transformation, commonly used predictors as well as hyper-parameter search.
+
+Description: When mentioning Time Series Forecasting what comes to mind are autoregressive models or exponential smoothing techniques using a dependent variable and the time dimension. Although those techniques work well in some domains, in others like retail, e-commerce, logistic and pricing, time series can be influenced by external factors that are hard to model using these traditional methods.
+
+When posing time series forecasting as a regression problem, one can use machine learning techniques like linear regression and support vector machines as well as more advanced models such as neural nets and boosted trees to perform the forecast. The main challenge here is not related to the particular machine learning technique but to the data preparation and feature engineering necessary to create powerful predictors.
+
+The talk is divided in three sections: in the first section I will briefly describe time series and their applications; common evaluation metrics, the models used traditionally to work with them and the limitations they bring. In the second I will focus on modeling, describing some machine learning methodologies, useful predictors and transformations that improve their predictive power. Finally I will combine the aforementioned concepts in small code samples using publicly available datasets to show how to apply some of these techniques using Python.The libraries used for include Pandas, Scikit-Learn and Catboost.
+
+This talk assumes you are familiar with basic Machine Learning concepts. Previous knowledge of time series forecasting is not necessary but beneficial. Knowledge of the Python stack for data processing (numpy, scikit-learn, pandas, etc.) is recommended.
+---
+language: en
+---
+summary: 
+---
+topic: Other, Machine Learning
+---
+type: talk
+---
+    

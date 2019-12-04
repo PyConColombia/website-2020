@@ -1,0 +1,15 @@
+name: Debugging beyond the print( ) call. Python debugging challenge.
+---
+authors: sergio-pulgarin
+---
+description: print( ) debugging is fine but it only takes you so far. Time is wasted trying to write the perfect print( ) statement and at the correct line. Proper debugging tools were built to help you find that obscure bug that has been haunting you for hours.
+---
+language: es
+---
+summary: 
+---
+topic: Other
+---
+type: workshop
+---
+    
