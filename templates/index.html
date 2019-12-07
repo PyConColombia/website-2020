@@ -155,6 +155,23 @@
                 </div>
             </div>
         </div>
+
+        <div class="subscribe">
+            <div class=" wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1.2s" data-wow-offset="-1000">
+                <div class="container">
+                    <div class="row">
+                        <div class="text-center col-md-12">
+                            <h1 class="title">&lt;{{ t_subscribe_title }}/&gt;</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            {% include 'partials/_mailchimp.html' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     {% include 'partials/_footer.html' %}
 </div>
