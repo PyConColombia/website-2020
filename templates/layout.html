@@ -1,4 +1,5 @@
 {%- set base_url = '/'|url(alt='es') -%}
+{%- set l_opimage = ('/dist/images/opimage.png')|url(alt=this.alt) -%}
 
 {%- from "macros/translation.html" import transbag -%}
 {%- set t_open_chat = transbag('translate', this.alt, 'open_chat') -%}
@@ -38,27 +39,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
-    <meta name="description"
-    content="PyCon Colombia 2020 will be the fourth national conference for users and developers of the Python programming language. It will be in Medellín, Colombia from February 7 to 9.">
 
-    <meta property="og:site_name" content="PyCon Colombia"/>
-    <meta property="og:title" content="PyCon Colombia | February 7th - 9th 2020 | Medellín, Colombia"/>
-    <meta property="og:description"
-    content="PyCon Colombia 2018 will be the fourth national conference for users and developers of the Python programming language. It will be in Medellín, Colombia from February 7 to 9."/>
-    <meta property="og:image" content="http://www.pycon.co/dist/images/opimage.png">
-    <meta property="og:url" content="http://www.pycon.co/">
-    <meta property="og:type" content="website"/>
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@pyconcolombia">
-    <meta name="twitter:creator" content="@soyelhijo">
-    <meta name="twitter:title" content="PyCon Colombia | February 7th - 9th 2020 | Medellín, Colombia">
-    <meta name="twitter:description"
-    content="PyCon Colombia 2020 will be the first national conference for users and developers of the Python programming language. It will be in Medellín, Colombia from February 7 to 9.">
-    <meta name="twitter:image" content="http://www.pycon.co/dist/images/opimage.png">
     <meta name="google-site-verification" content="Lb8Bugu2ORvYa3ZIYPfPDWFEntukt1Yztc4I8SDgJ6g" />
 
-    <title>PyCon Colombia | February 7th - 9th 2020 | Medellín, Colombia</title>
+    <link rel="canonical" href="{{ this|url(alt=this.alt) }}" />
+    <meta property="og:locale" content="{{ this.lang }}" />
+    <meta property="og:type" content="website" />
+
+    <meta property="og:url" content="{{ this|url(alt=this.alt) }}" />
+    <meta property="og:site_name" content="PyCon Colombia 2020" />
+    <meta property="og:updated_time" content="2019-08-13T17:51:00+00:00" />
+    {%- block og -%}
+      <meta property="og:title" content="PyCon Colombia 2020| February 7th - 9th 2020 | Medellín, Colombia" />
+      <meta property="og:description" content="Python conference in Colombia. PyCon Colombia | February 7th - 9th 2020 | Medellín, Colombia" />
+      <meta property="og:image" content="{{ l_opimage }}" />
+      <meta property="og:image:secure_url" content="{{ l_opimage }}" />
+      <meta property="og:image:width" content="500" />
+      <meta property="og:image:height" content="500" />
+
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@pyconcolombia">
+      <meta name="twitter:creator" content="@soyelhijo">
+      <meta name="twitter:title" content="PyCon Colombia 2020 February 7th - 9th 2020 | Medellín, Colombia">
+      <meta name="twitter:description"
+        content="Python conference in Colombia. PyCon Colombia | February 7th - 9th 2020 | Medellín, Colombia">
+    {%- endblock %}
+
+    {% block title %}
+        <title>PyCon Colombia 2020 | February 7th - 9th 2020 | Medellín, Colombia</title>
+    {% endblock %}
 
     <link rel="apple-touch-icon" sizes="57x57" href="{{ base_url }}dist/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="{{ base_url }}dist/favicon/apple-icon-60x60.png">
