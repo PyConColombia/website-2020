@@ -11,6 +11,22 @@
 {%- set st_about_talk = transbag('translate', this.alt, 'subtitle_about_talk') -%}
 {%- set t_slides = transbag('translate', this.alt, 'subtitle_slides') -%}
 
+{%- block og -%}
+    <meta property="og:title" content="{{ this.name }} | PyCon Colombia 2020" />
+    <meta property="og:description" content="{{ this.description }}" />
+    <meta name="twitter:title" content="{{ this.name }} | PyCon Colombia 2020">
+    <meta name="twitter:description" content="{{ this.description }}">
+    <meta property="og:image" content="{{ l_opimage }}" />
+    <meta property="og:image:secure_url" content="{{ l_opimage }}" />
+    <meta property="og:image:width" content="500" />
+    <meta property="og:image:height" content="500" />
+
+{%- endblock -%} 
+
+{% block title %}
+    <title>{{ this.name }} | {{ title }} | PyCon Colombia 2020</title>
+{% endblock %}
+
 {%- block body -%}
     <div class="layout-page">
         <div class="background-wrapper">
