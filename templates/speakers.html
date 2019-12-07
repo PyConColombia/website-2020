@@ -22,8 +22,8 @@
                                         <div class="col-md-6 col-sm-12">
                                             {{ render_speaker(speaker, index=loop.index, details=True) }}
                                         </div>
-                                    {%- if loop.index % 4 == 2 or loop.index % 4 == 4 or loop.index == loop.length -%}
-                                    </div>
+                                    {%- if loop.index % 4 == 2 or loop.index % 4 == 0 or loop.index == loop.length -%} 
+                                        </div>
                                     {%- endif -%}
                                 {%endfor %}
                             </div>

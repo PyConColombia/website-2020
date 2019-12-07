@@ -20,7 +20,7 @@
     <div class="speaker-avatar col-sm-3 col-xs-12 order-md-12 order-1">
         <a href="{{ team_member|url }}">
             <img src={%- if team_member.image -%} "/equipo/{{ team_member._id }}/{{ team_member.image }}"
-                {%- else -%} "{{ base_url }}dist/images/empty-photo.svg" {%- endif -%} " />
+                {%- else -%} "{{ base_url }}/dist/images/empty-photo.svg" {%- endif -%} " />
         </a>
     </div>
 </div>
@@ -32,7 +32,7 @@
         <div class="speaker-avatar col-sm-3 col-xs-12">
             <a href="{{ team_member|url }}">
                 <img src={%- if team_member.image -%} "/equipo/{{ team_member._id }}/{{ team_member.image }}"
-                {%- else -%} "{{ base_url }}dist/images/empty-photo.svg" {%- endif -%} " />
+                {%- else -%} "{{ base_url }}/dist/images/empty-photo.svg" {%- endif -%} " />
             </a>
         </div>
         <div class="speaker-description col-sm-9 col-xs-12">
