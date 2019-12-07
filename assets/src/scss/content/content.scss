@@ -265,8 +265,7 @@
 }
 
 .sponsors  {
-  padding-top: 10rem;
-  padding-bottom: 30rem;
+  padding: 10rem 0;
   background-image: url('../images/background-clouds.svg');
   background-position: top center;
   background-repeat: repeat-y;
@@ -283,6 +282,66 @@
       img {
         width: 95%;
         padding: 10px 0;
+      }
+    }
+  }
+}
+
+.subscribe  {
+  padding-bottom: 30rem;
+  margin: 0 auto;
+  .container {
+    .title {
+      text-transform: uppercase;
+      margin: 100px 0;
+    }
+
+    .form-container {
+      input {
+        box-shadow: 0.1rem 0.3rem 1.2rem rgba(132, 126, 126, 0.6);
+        transition: all 0.2s;
+        font-weight: bold;
+      }
+
+      .subscribe-input {
+        background: #fff;
+        border: 1px solid #94b8df;
+        border-radius: 50px;
+        color: map_get($colors, _gray_font);
+        display: inline-block;
+        font-size: 1.5rem;
+        font-weight: 300;
+        letter-spacing: 0px;
+        line-height: 1.2;
+        height: 43px;
+        margin: 5px 0;
+        padding: 0 20px;
+        width: 100%;
+      }
+
+      select {
+        color: map_get($colors, _gray_font);
+        font-size: 1.5rem;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        box-shadow: 0.1rem 0.3rem 1.2rem rgba(132, 126, 126, 0.6);
+        transition: all 0.2s;
+      }
+
+      .subscribe-btn {
+        font-size: 2.4rem;
+        border-radius: 5rem;
+        line-height: 1.5;
+        padding: 0.5rem 4.5rem;
+        border: 0;
+        text-decoration: none;
+        color: map_get($colors, _white);
+        background-color: map_get($colors, _primary);
+        width: 100%;
+
+        &:hover {
+          background-color: map_get($colors, _primary_active);
+        }
       }
     }
   }
