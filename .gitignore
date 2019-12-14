@@ -107,3 +107,5 @@ yarn.lock
 node_modules
 assets/dist
 .vscode
+
+.idea
