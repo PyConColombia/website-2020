@@ -13,6 +13,7 @@
 {%- set t_keynote_title = transbag('translate', this.alt, 'keynote_title') -%}
 {%- set t_sponsor_title = transbag('translate', this.alt, 'sponsor_title') -%}
 {%- set t_venue_title = transbag('translate', this.alt, 'venue_title') -%}
+{%- set t_dg_button = transbag('translate', this.alt, 'django_girls_button') -%}
 
 {# Sponsors #}
 {% set venue = site.query('/patrocinadores', alt=this.alt).filter(F.confirmed).filter(F.category ==
@@ -101,6 +102,31 @@
                 </div>
             </div>
         </div>
+        {% endif %}
+
+        {% set is_dg_section_enabled = this.djangogirls_link and 'djangogirls' in this.sections %}
+        {% set django_girls = site.get('/django-girls', alt=this.alt) %}
+        
+        {% if is_dg_section_enabled %}
+            <div class="django-girls wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1.2s" data-wow-offset="-1000">
+                <div class="container">
+                    <div class="call-to-actions row">
+                        <div class="text-center col-md-12">
+                            <div class="logo">
+                                <img src="{{ base_url }}dist/images/django-girls-pycon-logo-white.svg">
+                            </div>
+                        </div>
+                        <div class="text-center col-md-12">
+                            {{ django_girls.body }}
+                        </div>
+                    </div>
+                    <div class="row justify-content-center dg-button">
+                        <a href="{{ this.djangogirls_link }}" target="_blank" class="btn btn-primary btn-lg hidden">
+                            <span>{{ t_dg_button }}</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         {% endif %}
 
         <div class="venue wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1.2s" data-wow-offset="-1000">
