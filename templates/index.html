@@ -35,6 +35,10 @@
 {% set support = site.query('/patrocinadores', alt=this.alt).filter(F.confirmed).filter(F.category ==
 'support').order_by('_id') %}
 
+{%- set t_title_scholarship = transbag('translate', this.alt, 'title_scholarship') -%}
+{%- set t_content_scholarship = transbag('translate', this.alt, 'content_scholarship') -%}
+{%- set t_button_scholarship = transbag('translate', this.alt, 'button_scholarship') -%}
+
 {%- block body -%}
 <div class="layout-home">
     <div class="background-wrapper">
@@ -103,6 +107,26 @@
             </div>
         </div>
         {% endif %}
+
+        {%- if 'scholarships' in this.sections -%}
+            <div class="django-girls wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1.2s" data-wow-offset="-1000">
+                <div class="container">
+                    <div class="call-to-actions row">
+                        <div class="text-center col-md-12">
+                            <h1 class="title">&lt;{{ t_title_scholarship }}/&gt;</h1>
+                        </div>
+                        <div class="text-center col-md-12">
+                            <p>{{ t_content_scholarship }}</p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center dg-button">
+                        <a href="{{ '/becas'|url(alt=this.alt) }}" class="btn btn-primary btn-lg hidden">
+                            <span>{{ t_button_scholarship }}</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {%- endif -%}
 
         {% set is_dg_section_enabled = this.djangogirls_link and 'djangogirls' in this.sections %}
         {% set django_girls = site.get('/django-girls', alt=this.alt) %}
