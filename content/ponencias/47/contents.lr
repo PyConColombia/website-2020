@@ -1,0 +1,21 @@
+name: A Python library for Teaching-Learning-Based Optimization
+---
+authors: kevin-eliecer-patron-hernandez
+---
+description:
+
+Hoy en día existen diversas herramientas computacionales que intentan brindar solución a problemas altamente complejos de ingeniería. Muchas de esas herramientas hacen uso extensivo de algoritmos metaheurísticos de optimización que tratan de hallar una solución aceptable en períodos de tiempo razonables. Así, se distingue el uso de diversos algoritmos, tales como: Optimización por Enjambre de Partículas, Algoritmos Genéticos, Recocido Simulado, Evolución Diferencial, entre muchos otros.
+ 
+La mayoría de estos algoritmos son probabilísticos y requieren el ajuste de ciertos parámetros de control para el correcto funcionamiento de los mismos en un problema dado. El ajuste adecuado de estos parámetros es un factor crucial que afecta el desempeño de tales algoritmos, lo cual dificulta la aplicación de los mismos para problemas de diversas áreas de las ciencias e ingeniería.
+
+A diferencia de estos, el algoritmo de Optimización basado en Enseñanza y Aprendizaje (TLBO), formulado en 2011 por R. Venkata Rao, no requiere ningún parámetro específico del algoritmo que sea necesario ajustar, excepto el tamaño de la población y el número de generaciones. Lo anterior, sumado a su capacidad de obtener soluciones con poco esfuerzo computacional y alta consistencia, han permitido que haya ganado amplia aceptación en la comunidad científica en los últimos años.
+
+Teniendo en cuenta que Python se ha convertido en uno de los lenguajes de mayor aplicación en computación científica, es deseable tener disponible una librería que implemente el algoritmo TLBO y sus variantes, y que inclusive permita el desarrollo de nuevas variantes de dicho algoritmo.
+
+Es por esto que en esta charla se pretende dar a conocer la metodología detrás de este interesante algoritmo, presentar en términos generales la correspondiente implementación en Python (en forma de librería), y mostrar su aplicación en la solución de problemas de optimización con un objetivo, con y sin restricciones. Dicha librería es un trabajo en progreso que, a diferencia de otras, ya incluye utilidades para imposición de restricciones y criterios de parada según la literatura, logging y representación gráfica de resultados.
+---
+language: es
+---
+topic: Scientific Computing
+---
+type: talk

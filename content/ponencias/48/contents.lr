@@ -1,0 +1,9 @@
+name: Hacking Ético con Python
+---
+authors: galoget-latorre
+---
+description: Python es uno de los lenguajes de programación más potentes del mundo, pero ¿cómo se puede usar para desarrollar herramientas personalizadas para hacking ético y pentesting ?, en esta sesión se compartirán los módulos y herramientas más comunes que pueden usarse para crear scripts potentes que te ayudarán a automatizar tu trabajo como Pentester, por ejemplo: automatizar la búsqueda de ciertas vulnerabilidades, explotación de estas y cómo obtener datos para estudios posteriores o generación de informes, finalmente se analizará un caso de estudio del país del Expositor y de cómo esto podría ayudar a los Gobiernos a mejorar la seguridad y proteger de manera óptima sus aplicaciones web.
+---
+language: es
+---
+type: talk

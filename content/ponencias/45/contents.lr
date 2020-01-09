@@ -1,0 +1,31 @@
+name: IDK: Connecting APIs, developers, bots and customers with Django, Channels, and VueJS
+---
+authors: andres-gonzalez
+---
+description:
+
+At our company we required a solution to keep our customers and stakeholders informed with every aspect of the business to answer questions like:  What is the status of a project? How much budget is left? what will be the invoices this month? How long did it take to implement this?
+
+To resolve this, we initially implemented a dashboard that provides a consolidated report of the collected information from time tracking systems, project management tools, control version systems and continuous integration tools. Then we developed an artificial intelligence so through a chat bot It is possible to directly reply to these questions, but we wanted to go beyond that, and be able to reply to questions about the future, so it’s able to predict what will happen with projects and provide solutions to common problems based on the previous experiences.
+
+To achieve these goals, we had to face different problems when collecting a big amount of information, process it and still provide quick response to the users demand. We have taken advantage of the popular python framework Django, to get a quick MVP in weeks and then convert it to a powerful application providing real time information using web sockets and generating alerts, customized reports and a 24/7 bot agent ready to reply any question.
+
+This application has increased company productivity in a 300% since It was released by allowing team members to focus more on their work.
+
+This talk will explain the objetives of our developed system and will show how we resolved each one of the challenges we found during the way, to have a scalable application, using best practices and keep it fast and secure.
+
+Content:
+Intro about me and the topic ( 5 min)
+Introduction to the used technologies: Django, Channels, VueJS + Websockets  (10 min)
+Application architecture (5 min)
+Real time application and performance challenges (10 min)
+Artificial intelligence and chat bot ( 5 min )
+Video demo ( 3 min )
+Conlusions (2 min )
+Questions (5 min)
+---
+language: en
+---
+topic: Data Science, Python Core, Web, DevOps
+---
+type: talk

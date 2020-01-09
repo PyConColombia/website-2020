@@ -1,0 +1,19 @@
+name: Representación vectorial de nombres de dominio de Internet mediante técnicas de word embeddings
+---
+authors: waldemar-joel-lopez-anzolabehere
+---
+description:
+
+La vectorización de palabras es un conjunto de técnicas bien conocidas y ampliamente usadas en el procesamiento del lenguaje natural (PLN). Esta charla consiste en la presentación de los principales resultados obtenidos durante mi tesis de maestría informática, la cual explora el uso de vectorización de palabras en un escenario atípico a PLN, relacionado con los patrones de navegación de usuarios en Internet . Un modelo de espacio vectorial (VSM) para nombres de dominios de Internet (DNS) es creado tomando ideas fundamentales de PLN, las cuales son aplicadas a consultas reales anonimizadas de logs de DNS de un gran proveedor de servicios de Internet (ISP). 
+
+El objetivo principal es encontrar dominios relacionados semánticamente solamente usando información de consultas DNS sin ningún otro conocimiento sobre el contenido de esos dominios.
+
+Los resultados presentados pueden ser útiles en muchas actividades de ingeniería, con aplicación práctica en muchas áreas. Algunos ejemplos incluyen recomendaciones de sitios web, análisis competitivo, identificación de sitios riesgosos o fraudulentos, sistemas de control parental, mejoras de UX (basada en recomendaciones, corrección ortográfica, etc.), análisis de flujo de clics, representación y clustering de perfiles de navegación de usuarios, optimización de sistemas de cache en resolutores de DNS recursivos (entre otros).
+
+Como contribución a la comunidad, se libera un modelo pre-entrenado del DNS-VSM para usar en Python, a través de la conocida librería Gensim. El mismo puede descargarse a través de la página github en https://github.com/dns-vsm/embeddings . Con esto se espera que más trabajos e investigaciones puedan realizarse usando este modelo.
+---
+topic: Data Science, Artifial Intelligence, Machine Learning
+---
+language: es
+---
+type: talk

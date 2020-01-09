@@ -1,0 +1,35 @@
+name:
+
+Waldemar Joel	
+---
+country_residence: uy
+---
+email: waljoel@gmail.com
+---
+github_handle: dns-vsm/embeddings
+---
+information:
+
+Soy un Ingeniero en Computación con más de 13 años de experiencia en la industria del software, desarrollando sistemas informáticos para diversos sectores como Gestión Municipal, E-Learning, Gamificación, Recursos Humanos, Automatización de Testing, Entretenimiento, entre otros.
+
+Actualmente estoy enfocado en el desarrollo de soluciones de AI y ML, trabajando con servicios cognitivos para análisis de video, problemas de computer vision, procesamiento de audio y habla, tareas de procesamiento del lenguage, entre otros.
+
+Durante varios años me desempeñé además como docente de la carrera Tecnólogo en Informática en la facultad de Ingeniería de la Universidad de la República (CETP/UTU – FIng, UdelaR).
+
+En los últimos años he estudiado los sistemas de recomendaciones y acabo de finalizar mi maestría informática (MSc) en áreas relacionadas a la investigación operativa, el aprendizaje automático y técnicas de procesamiento de lenguaje natural (NLP).
+
+Considero que la PyCon 2020 es una excelente oportunidad para compartir los principales resultados de mi tesis (incluyendo la liberación de un modelo pre-entrenado de ML para usarse con python en conjunto con librerías como Gensim y fastText) con la comunidad, en particular con quienes utilizan el ecosistema Python para el desarrollo de soluciones de AI/ML.
+---
+last_name: Lopez Anzolabehere
+---
+linkedin_handle: waldemarlopez
+---
+position_1: UruIT
+---
+position_2: Facultad de Ingeniería (FIng) de la Universidad de la República (UdelaR)
+---
+prefix: Mr.
+---
+publish: yes
+---
+image: profile.png

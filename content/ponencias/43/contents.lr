@@ -1,0 +1,25 @@
+name:
+
+Desarrollo de Dashboards interactivos en Jupyter para personas desinteresadas en interfaces gráficas 
+---
+authors: camilo-cardona
+---
+description:
+
+"El objetivo de esta charla es explicar cómo construir prototipos de interfaces de usuario interactivas utilizando python y el proyecto jupyter. Describiré las herramientas básicas disponibles, y mostraré como utilizarlas para construir dashboards interactivos (con visualización de datos, botones, listas, etc) de diversa complejidad.
+
+La creación de prototipos completos (i.e. “end-to-end”) son muy utilices en las fases iniciales de muchos proyectos. Las interfaces de usuario *(e.g. el UI) deberían ser parte de estos prototipos desde el primer momento. Sin embargo, el desarrollo de estas requiere de conocimiento de conceptos o frameworks especializados y alejados de las utilizadas en el “backend”. Muchas veces inclusive, existen personas en los grupos dedicadas solamente al desarrollo de estos elementos.
+
+Para algunos de nosotros, como programadores de Python, nos gustaría poder construir estos prototipos sin necesidad de salir de nuestro ambiente de desarrollo. De esta manera podemos comunicar mejor nuestras ideas, y ser influyentes en la creación del producto, sin tener que aprender una cantidad enorme de nuevas tecnologías o depender de terceras personas.
+
+Por suerte, el proyecto jupyter cuenta con un conjunto de herramientas que nos pueden permitir crear prototipos de dashboards interactivos con relativa facilidad. Las librerías han llegado a un punto de maduración en donde es posible construir UIs relativamente complejos sin necesidad de conocimientos extensos del código interno de estas herramientas.
+
+En esta charla explicare algunas de estas herramientas. Comentare un poco de mi experiencia empleándolas, y, utilizando datasets ficticios, ilustraré varios ejemplos de dashboards similares a los que he tenido que construir en mi trabajo. "
+---
+language: es
+---
+summary: 
+---
+topic: Data Science, Web
+---
+type: talk

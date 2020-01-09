@@ -1,0 +1,11 @@
+name: Conectando microservicios con Python
+---
+authors: rodolfo-edelmann
+---
+description: Repasamos las librerías HTTP disponibles para hacer requests, cuáles son los casos de usos más comunes, porque elegir una sobre otra y compartir configuraciones avanzadas. Entender la importancia de mantener conexiones abiertas, pooling, reducir pedidos innecesarios al servidor de nombres (DNS). Analizar en profundidad cuáles son los side-effects de usar las librerías HTTP disponibles dentro de un servidor de aplicaciones. Al final de la charla presentamos algunos datos concretos de las mejoras obtenidas con muy poco esfuerzo de desarrollo pero con mucha lectura de documentación
+---
+language: es
+---
+topic: Other
+---
+type: talk

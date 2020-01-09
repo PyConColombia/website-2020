@@ -1,0 +1,15 @@
+name:
+
+ ¡Tierra a la vista baby! – Reconocimiento de planetas con Python
+---
+authors: andres-mauricio-repetto-ferrero
+---
+description:
+
+El objetivo del taller consiste en mostrar un conjunto reducido de librerías disponibles para el lenguaje Python, útiles para trabajar con procesamiento y reconocimiento de imágenes. Luego de introducir algunos conceptos básicos de aprendizaje automático y propiedades de las imágenes se plantea la construcción de un componente de software capaz de realizar la identificación de los distintos planetas que conforman el sistema solar a partir de una imagen. Este fue un taller dictado en contexto de un evento de preparación para el  "NASA Space App" una hackathon a nivel mundial que organizo la NASA en Octubre de este año. 
+---
+language: es
+---
+topic: Computer Vision, Artifial Intelligence
+---
+type: workshop

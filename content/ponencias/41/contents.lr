@@ -1,0 +1,11 @@
+name: Aplica el análisis de sentimientos a tu red social desde cero
+---
+authors: angelica-landazabal
+---
+description: El motivo de este workshop es enseñar al público presente la utilización de herramientas capaces de detectar el sentimiento alrededor de un tópico a través del análisis sentimental, por medio de las publicaciones o comentarios que se generan en la plataforma de una red social, expresando de ésta manera su emoción y analizando los factores que hacen que la comunidad genere dicho sentimiento.  Así mismo, la contextualización que se genera a través de estas herramientas es de gran utilidad debido a que ayudan a un análisis profundo en base a una publicación realizada o una situación en particular, por ejemplo, cómo la está pasando la comunidad de Python en la conferencia PyCon 2020 según los comentarios publicados en Twitter. También facilita la captura de palabras claves para tratar de especificar las causas que generen el sentimiento en tiempo real y a bajo coste, debido a que se elimina la utilización de las herramientas para la realización de recolección de datos con técnicas tradicionales como las encuestas o entrevistas.
+---
+language: es
+---
+topic: Data Science, Machine Learning
+---
+type: workshop
