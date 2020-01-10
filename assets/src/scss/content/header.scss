@@ -3,7 +3,7 @@
   height: 9rem;
   background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
   &.scrolled {
-    background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7));
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
   }
   .navigation {
     .nav-link {
@@ -83,7 +83,10 @@
 
 @media (max-width: map_get($screen, _lg-max)) {
   .navbar {
-    background-color: #fff;
+      background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
+    &.scrolled {
+      background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    }
 
     .navbar-toggler {
       font-size: 2.4rem;
