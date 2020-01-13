@@ -126,11 +126,18 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav scrollable-menu">
         {{ menu_item('lugar') }}
-        {{ menu_item_list('title_speakers', ['keynotes', 'ponentes']) }}
-        {{ menu_item('ponencias') }}
+        {{ menu_item_list('cronograma', ['cronograma', 'keynotes', 'ponentes', 'ponencias']) }}
         {{ menu_item('patrocinadores') }}
         {{ menu_item('equipo') }}
-        {{ menu_item('cronograma') }}
+        {{ menu_item('becas') }}
+
+        <li class="dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">{{ transbag('menu', this.alt, 'eventos') }}</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" target="blank_" href="https://djangogirls.org/medellin/">Django Girls</a>
+          </div>
+        </li>
 
         {% set url = this|url(alt=this.alt) %}
 
