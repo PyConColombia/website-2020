@@ -12,6 +12,8 @@ web: https://monoku.com
 ---
 github_handle: monoku
 ---
-image: monoku.svg
+image: 
 ---
 linkedin_handle: monoku
+---
+image_alt: monoku.svg

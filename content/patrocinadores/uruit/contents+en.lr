@@ -2,7 +2,7 @@ category: gold
 ---
 confirmed: yes
 ---
-image: uruit.svg
+image: 
 ---
 information:
 
@@ -27,3 +27,5 @@ linkedin_handle: uruit-global-it-services
 name: UruIT
 ---
 web: https://uruit.com/
+---
+image_alt: uruit.svg

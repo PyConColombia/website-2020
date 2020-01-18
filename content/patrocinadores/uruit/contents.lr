@@ -6,7 +6,7 @@ confirmed: yes
 ---
 web: https://uruit.com/
 ---
-image: uruit.svg
+image: 
 ---
 linkedin_handle: uruit-global-it-services
 ---
@@ -27,3 +27,5 @@ Valoramos la comunicación, la entrega temprana y la mejora constante.
 ![4](uruit-4.JPG)
 
 ![5](uruit-5.JPG)
+---
+image_alt: uruit.svg

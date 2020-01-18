@@ -2,8 +2,10 @@ category: venue
 ---
 confirmed: yes
 ---
-image: eafit.svg
+image: 
 ---
 name: EAFIT
 ---
 web: http://www.eafit.edu.co/
+---
+image_alt: eafit.svg

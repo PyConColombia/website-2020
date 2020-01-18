@@ -1,10 +1,12 @@
-name: Globant
----
 category: platinum
 ---
 confirmed: yes
 ---
 facebook_handle: Globant
+---
+image: 
+---
+image_alt: globant.svg
 ---
 information:
 
@@ -16,10 +18,8 @@ Queremos transformar el mundo, un paso por vez. Crecemos empoderando a las organ
 ---
 linkedin_handle: globant
 ---
+name: Globant
+---
 twitter_handle: globant
 ---
 web: https://www.globant.com/
----
-image: 
----
-image_alt: globant.svg
