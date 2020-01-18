@@ -35,6 +35,8 @@
 {% set support = site.query('/patrocinadores', alt=this.alt).filter(F.confirmed).filter(F.category ==
 'support').order_by('_id') %}
 
+
+{%- set t_title_schedule = transbag('translate', this.alt, 'title_schedule') -%}
 {%- set t_title_scholarship = transbag('translate', this.alt, 'title_scholarship') -%}
 {%- set t_content_scholarship = transbag('translate', this.alt, 'content_scholarship') -%}
 {%- set t_button_scholarship = transbag('translate', this.alt, 'button_scholarship') -%}
@@ -127,6 +129,19 @@
                 </div>
             </div>
         {%- endif -%}
+
+        <div class="django-girls wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="container">
+                <div class="call-to-actions row">
+                    <div class="text-center col-md-12">
+                        <h1 class="title">&lt;{{ t_title_schedule }}/&gt;</h1>
+                    </div>
+                    <div class="text-center col-md-12">
+                        {% include './partials/_schedule.html' %}
+                    </div>
+                </div>
+            </div>
+        </div>
 
         {% set is_dg_section_enabled = this.djangogirls_link and 'djangogirls' in this.sections %}
         {% set django_girls = site.get('/django-girls', alt=this.alt) %}
