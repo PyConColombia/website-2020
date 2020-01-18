@@ -129,7 +129,10 @@
         {{ menu_item_list('cronograma', ['cronograma', 'keynotes', 'ponentes', 'ponencias']) }}
         {{ menu_item('patrocinadores') }}
         {{ menu_item('equipo') }}
-        {{ menu_item('becas') }}
+
+        {%- if 'scholarships' in this.sections -%}
+          {{ menu_item('becas') }}
+        {%- endif -%}
 
         <li class="dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
