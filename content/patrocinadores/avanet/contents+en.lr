@@ -6,7 +6,7 @@ name: Avanet
 ---
 web: http://avanet.org
 ---
-image: avanet.svg
+image: 
 ---
 facebook_handle: avanet
 ---
@@ -19,3 +19,5 @@ As a foundation, it organizes technology events and supports other organizations
 linkedin_handle: avanet
 ---
 twitter_handle: avanet
+---
+image_alt: avanet.svg

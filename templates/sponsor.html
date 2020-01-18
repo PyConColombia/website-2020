@@ -9,9 +9,15 @@
                     <div class="content">
                         <div class="row justify-content-center">
                             <div class="col-md-10 col-sm-12">
-                                {% if this.image %}
+                                {% if this.image_alt %}
                                     <div class="row justify-content-center">
                                         <div class="col-md-6 col-sm-12">
+                                            <img src="/patrocinadores/{{ this._id }}/{{ this.image_alt }}" class="title text-center">
+                                        </div>
+                                    </div>
+                                {% elif this.image %}
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-3 col-sm-12">
                                             <img src="/patrocinadores/{{ this._id }}/{{ this.image }}" class="title text-center">
                                         </div>
                                     </div>

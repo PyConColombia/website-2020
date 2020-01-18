@@ -10,7 +10,7 @@ twitter_handle: playvoxcx
 ---
 web: http://playvox.com
 ---
-image: playvox.svg
+image: 
 ---
 summary: 
 ---
@@ -21,3 +21,5 @@ Playvox arms modern businesses and BPOs with the most comprehensive, collaborati
 At Playvox, we believe great customer experiences start with people.
 ---
 linkedin_handle: playvox
+---
+image_alt: playvox.svg
