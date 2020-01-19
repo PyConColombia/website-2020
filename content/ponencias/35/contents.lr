@@ -2,7 +2,9 @@ name: Crea tu primera red neuronal en Python con Keras
 ---
 authors: marta-maleyka-magallon-escobar
 ---
-description: Es importante aprender el tema de las redes neuronales debido a que son ideales para ayudar a las personas a resolver problemas complejos en situaciones de la vida real. Pueden aprender y modelar las relaciones entre entradas y salidas que no son lineales y complejas; hacer generalizaciones e inferencias; revelar relaciones ocultas, patrones y predicciones; y modelar datos altamente volátiles (como los datos de series de tiempo financieras) y las variaciones necesarias para predecir eventos raros (como la detección de fraudes). Como resultado, las redes neuronales pueden mejorar los procesos de decisión en áreas tales como:
+description:
+
+Es importante aprender el tema de las redes neuronales debido a que son ideales para ayudar a las personas a resolver problemas complejos en situaciones de la vida real. Pueden aprender y modelar las relaciones entre entradas y salidas que no son lineales y complejas; hacer generalizaciones e inferencias; revelar relaciones ocultas, patrones y predicciones; y modelar datos altamente volátiles (como los datos de series de tiempo financieras) y las variaciones necesarias para predecir eventos raros (como la detección de fraudes). Como resultado, las redes neuronales pueden mejorar los procesos de decisión en áreas tales como:
 Predicciones financieras para precios de acciones, divisas, opciones, futuros, quiebras y calificaciones de bonos.
 Carga eléctrica y previsión de demanda energética.
 Proceso y control de calidad.
@@ -22,4 +24,8 @@ topic: Other, Machine Learning, Scientific Computing
 ---
 type: workshop
 ---
-    
+datetime: 2020-02-09 07:30:00 -0500
+---
+datetime_end: 2020-02-09 09:30:00 -0500
+---
+room: room-2

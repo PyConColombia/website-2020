@@ -2,7 +2,9 @@ name: Debugging: A Senior's Skill
 ---
 authors: milton-lenis
 ---
-description: Have you ever find yourself trying to discover what's the bug in the codebase you're working for, running and restarting the application with print statements all over the place? Perhaps you've realized how difficult and time costing it is, and in some situations, very frustrating.
+description:
+
+Have you ever find yourself trying to discover what's the bug in the codebase you're working for, running and restarting the application with print statements all over the place? Perhaps you've realized how difficult and time costing it is, and in some situations, very frustrating.
 
 Most Senior developers have some things in common, and one of them is their ability to debug problems the proper way (Using the correct tools).
 
@@ -24,4 +26,8 @@ topic: Other
 ---
 type: talk
 ---
-    
+datetime: 2020-02-07 14:00:00 -0500
+---
+datetime_end: 2020-02-07 14:40:00 -0500
+---
+room: alfonso-quintana-auditorium-a
