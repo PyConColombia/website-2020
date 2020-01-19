@@ -13,3 +13,9 @@ language: es
 topic: Computer Vision, Artifial Intelligence
 ---
 type: workshop
+---
+datetime: 2020-02-09 07:30:00 -0500
+---
+datetime_end: 2020-02-09 09:30:00 -0500
+---
+room: room-6

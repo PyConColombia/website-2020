@@ -2,7 +2,9 @@ name: Procesamiento de datos en sistemas distribuidos con python
 ---
 authors: angel-galicia
 ---
-description: Antecedentes
+description:
+
+Antecedentes
 Hoy en dia es muy común escuchar que python se usa en el análisis de datos, lo cual es cierto, lo que casi nunca nos detenemos a pensar es ¿De donde vienen esos datos?, ¿Cómo se generaron?, ¿Cómo se guardan?, ¿Cómo se actualizan y con qué frecuencia?, etc.
 En esta charla explicaré estos puntos y nos enfocaremos en un caso muy específico (Real-Time Data Sources) que cada vez más han ido adoptando diferentes industrias en la era de la información .
 
@@ -26,4 +28,8 @@ topic: Other, IoT
 ---
 type: talk
 ---
-    
+datetime: 2020-02-08 10:00:00 -0500
+---
+datetime_end: 2020-02-08 10:40:00 -0500
+---
+room: felix-restrepo

@@ -19,3 +19,9 @@ language: es
 topic: Scientific Computing
 ---
 type: talk
+---
+datetime: 2020-02-07 14:50:00 -0500
+---
+datetime_end: 2020-02-07 15:30:00 -0500
+---
+room: felix-restrepo

@@ -2,7 +2,9 @@ name: Archiving the Internet Before it All Rots Away
 ---
 authors: nick-sweeting
 ---
-description: Could you imagine an internet where all links stopped working after 4 years? All the old blogs from the 90’s… gone, all your hot takes on Twitter… gone, all the news and reporting… gone.
+description:
+
+Could you imagine an internet where all links stopped working after 4 years? All the old blogs from the 90’s… gone, all your hot takes on Twitter… gone, all the news and reporting… gone.
 
 Some of that decay is good, no one wants the entire internet to be preserved for eternity, but most of that decay leads to great content disappearing forever, and future generations being deprived of access to the most important medium for knowledge in the last half century. If no one worked on preserving that information, the human race would be facing a loss of knowledge many times greater than the burning of the Library of Alexandria.
 
@@ -16,4 +18,8 @@ topic: Web, Other
 ---
 type: talk
 ---
-    
+datetime: 2020-02-08 10:00:00 -0500
+---
+datetime_end: 2020-02-08 10:50:00 -0500
+---
+room: alfonso-quintana-auditorium-b

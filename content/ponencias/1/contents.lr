@@ -2,7 +2,9 @@ name: Building a Scalable Food Delivery Service Using ElasticSearch Geo Queries
 ---
 authors: kevin-sarmiento-mendoza
 ---
-description: **** Submission description ****
+description:
+
+**** Submission description ****
 
 With the rise of food delivery services in Colombia, it’s a good time to discuss the technical aspects involved in their operation. How do they manage to provide a list of the nearest available restaurants to your location within seconds? How do they manage to handle thousands of request and still display updated information taking into account schedules? With ElasticSearch Geo Queries we can set up a fully functional service that can scale to satisfy the growing demand of users that want their lunch delivered to their home in a reasonable amount of time.
 
@@ -25,4 +27,8 @@ topic: Web, Other
 ---
 type: talk
 ---
-    
+datetime: 2020-02-08 09:10:00 -0500
+---
+datetime_end: 2020-02-08 09:50:00 -0500
+---
+room: alfonso-quintana-auditorium-b

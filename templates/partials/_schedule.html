@@ -99,7 +99,7 @@
             <div class="schedule schedule-multiple">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h2 class="text-left">{{ time.split(':')[0] }}:<small>{{ time.split(':')[-1] }}</small></h2>
+                        <h2 class="text-left">{{ time.split(':')[0] }}:{{ time.split(':')[-1] }}</h2>
                     </div>
                 </div>
                 <div class="row">
@@ -108,7 +108,7 @@
                         {{ render_room_author(talk, color='white') }}
                         <div>
                             {% set t_type = transbag('translate', this.alt, 'type_' + talk.type) %}
-                            <small><b>{{ t_type }}
+                            <p><b>{{ t_type }}
                                     {%- if talk.language -%}
                                     {% set t_lang = transbag('translate', this.alt, talk.language) %}
                                     ({{ t_lang }})
@@ -117,7 +117,7 @@
                                 </b>
                                 <a class="link" style="color:white;"
                                     href="{{talk|url(alt=this.alt)}}">{{ talk.name }}</a>
-                            </small>
+                            </p>
                         </div>
                     </div>
                     {%- endfor -%}
