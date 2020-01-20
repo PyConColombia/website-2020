@@ -42,6 +42,28 @@
 {%- set t_button_scholarship = transbag('translate', this.alt, 'button_scholarship') -%}
 
 {%- block body -%}
+<!-- Modal -->
+<!-- Modal -->
+<div class="modal fade" id="intro-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close-modal" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <!-- 16:9 aspect ratio -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ this.intro_video }}?autoplay=1" id="video" allowscriptaccess="always"
+                        allow="autoplay"></iframe>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
 <div class="layout-home">
     <div class="background-wrapper">
         <div class="container">
@@ -223,4 +245,9 @@
     </div>
     {% include 'partials/_footer.html' %}
 </div>
+<script type="text/javascript">
+    $(window).on('load', function () {
+        $('#intro-modal').modal('show');
+    });
+</script>
 {%- endblock -%}
