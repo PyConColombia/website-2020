@@ -10,12 +10,14 @@ date_start: 2020-02-07
 ---
 datetime: 2020-02-07 08:00:00 -0500
 ---
-sections: tickets, scholarships
+sections: tickets
 ---
 tickets_link: https://www.eventbrite.com/e/pycon-colombia-2020-tickets-56463397542
 ---
 title: PyCon Colombia 2020
 ---
-closed_sections: 
+closed_sections: tickets
 ---
 djangogirls_link: https://djangogirls.org/medellin/
+---
+intro_video: kSFuK_yNX8s

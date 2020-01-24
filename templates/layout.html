@@ -130,9 +130,7 @@
         {{ menu_item('patrocinadores') }}
         {{ menu_item('equipo') }}
 
-        {%- if 'scholarships' in this.sections -%}
-          {{ menu_item('becas') }}
-        {%- endif -%}
+        {# {{ menu_item('becas') }} #}
 
         <li class="dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -144,11 +142,14 @@
 
         {% set url = this|url(alt=this.alt) %}
 
+        {#
         {% if url != '/' and url != '/en/' %}
           <li class="nav-item">
             <a class="nav-link nav-primary" id="eventbrite-widget-modal-trigger-56463397542">Tickets</a>
           </li>
         {% endif %}
+        #}
+
         <li class="dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">v.2020</a>
