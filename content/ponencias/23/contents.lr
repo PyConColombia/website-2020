@@ -2,7 +2,9 @@ name: The road so far on building a web platform for drones
 ---
 authors: jose-benitez
 ---
-description: Drones extend our vision of the world and allow us to see, sense and feel the environment in a new level of awesomeness.
+description:
+
+Drones extend our vision of the world and allow us to see, sense and feel the environment in a new level of awesomeness.
 Imagine you are a scientist who needs to share the flight path and sensor readings of a drone experiment.
 Imagine you are a kid who can watch a scientist planning a flight path and see how the drone flies.
 Come to my talk to learn how I've built a web interface using Python to manage, examine, and share drone experiences, and get a glimpse of the world from above!
@@ -15,4 +17,8 @@ topic: IoT, Web, Other
 ---
 type: talk
 ---
-    
+room: felix-restrepo
+---
+datetime: 2020-02-07 10:00:00 -0500
+---
+datetime_end: 2020-02-07 10:40:00 -0500

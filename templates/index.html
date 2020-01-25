@@ -35,11 +35,33 @@
 {% set support = site.query('/patrocinadores', alt=this.alt).filter(F.confirmed).filter(F.category ==
 'support').order_by('_id') %}
 
+
+{%- set t_title_schedule = transbag('translate', this.alt, 'title_schedule') -%}
 {%- set t_title_scholarship = transbag('translate', this.alt, 'title_scholarship') -%}
 {%- set t_content_scholarship = transbag('translate', this.alt, 'content_scholarship') -%}
 {%- set t_button_scholarship = transbag('translate', this.alt, 'button_scholarship') -%}
 
 {%- block body -%}
+
+{% if 'after-movie' in this.sections %}
+    <!-- Modal -->
+    <div class="modal fade" id="intro-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close-modal" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <!-- 16:9 aspect ratio -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ this.intro_video }}" id="video" allowscriptaccess="always"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}
+
 <div class="layout-home">
     <div class="background-wrapper">
         <div class="container">
@@ -53,13 +75,18 @@
             {% set is_tickets_section_enabled = this.tickets_link and 'tickets' in this.sections %}
             {% set is_speakers_call_enabled = this.accepted_speakers_link and 'speakers-call' in this.sections %}
             {% set is_speakers_call_section_closed = 'speakers-call' in this.closed_sections %}
+            {% set is_tickets_section_closed = 'tickets' in this.closed_sections %}
 
             <div class="row event-info justify-content-center">
                 {% if is_tickets_section_enabled %}
                 <div class="event-ticket col-md-4 {{ 'offset-md-2' if is_speakers_call_enabled else '' }}">
                     <a id="eventbrite-widget-modal-trigger-56463397542">
-                        <img
-                            src="{% if this.alt == 'en' %} {{ base_url }}dist/images/ticket_en.svg {% else %} {{ base_url }}dist/images/ticket_es.svg {% endif %}">
+                        {% if is_tickets_section_closed %}
+                            <img src="{{ base_url }}dist/images/sold_out_en.svg">
+                        {% else %}
+                            <img
+                                src="{% if this.alt == 'en' %} {{ base_url }}dist/images/ticket_en.svg {% else %} {{ base_url }}dist/images/ticket_es.svg {% endif %}">
+                        {% endif %}
                     </a>
                 </div>
                 {% endif %}
@@ -127,6 +154,19 @@
                 </div>
             </div>
         {%- endif -%}
+
+        <div class="django-girls wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="container">
+                <div class="call-to-actions row">
+                    <div class="text-center col-md-12">
+                        <h1 class="title">&lt;{{ t_title_schedule }}/&gt;</h1>
+                    </div>
+                    <div class="text-center col-md-12">
+                        {% include './partials/_schedule.html' %}
+                    </div>
+                </div>
+            </div>
+        </div>
 
         {% set is_dg_section_enabled = this.djangogirls_link and 'djangogirls' in this.sections %}
         {% set django_girls = site.get('/django-girls', alt=this.alt) %}
@@ -208,4 +248,14 @@
     </div>
     {% include 'partials/_footer.html' %}
 </div>
+{% if 'after-movie' in this.sections %}
+    <script type="text/javascript">
+        $(window).on('load', function () {
+            $('#intro-modal').modal('show');
+            $("#intro-modal").on('hidden.bs.modal', function () {
+                $("#intro-modal iframe").attr("src", null);
+            });
+        });
+    </script>
+{% endif %}
 {%- endblock -%}

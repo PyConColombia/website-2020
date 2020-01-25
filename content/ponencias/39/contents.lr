@@ -2,7 +2,9 @@ name: Title: "ASyncio microTelegram Bot" - Attendees will learn the usage and im
 ---
 authors: steven-alexander-silva-mendoza
 ---
-description: In this workshop, the attendee will learn and follow the process on how to use the asyncio library for MicroPython and ESP32 microcontroller, and how to create a Telegram Bot with these two tools and a library developed with asyncio to control the Bot. Meaning this workshop will consist in two parts, the usage of asyncio with MicroPython and then the creation and manage of a Telegram Bot with a library developed with asyncio. These two sections are detailed below:
+description:
+
+In this workshop, the attendee will learn and follow the process on how to use the asyncio library for MicroPython and ESP32 microcontroller, and how to create a Telegram Bot with these two tools and a library developed with asyncio to control the Bot. Meaning this workshop will consist in two parts, the usage of asyncio with MicroPython and then the creation and manage of a Telegram Bot with a library developed with asyncio. These two sections are detailed below:
 
 Asyncio
 
@@ -29,4 +31,8 @@ topic: Community, IoT, Other
 ---
 type: workshop
 ---
-    
+datetime: 2020-02-09 13:30:00 -0500
+---
+datetime_end: 2020-02-09 15:30:00 -0500
+---
+room: room-3

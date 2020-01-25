@@ -2,7 +2,9 @@ name: Programación en paralelo con Python: sácale jugo a los núcleos de tu co
 ---
 authors: andres-felipe-torres-cano
 ---
-description: Ahora más que nunca, personas de distintas áreas del conocimiento han aprendido a programar. Debido a su formación no técnica, los conceptos básicos de programación en paralelo son desconocidos y estamos perdiendo tiempo precioso de nuestras vidas al programar tareas largas de manera secuencial.
+description:
+
+Ahora más que nunca, personas de distintas áreas del conocimiento han aprendido a programar. Debido a su formación no técnica, los conceptos básicos de programación en paralelo son desconocidos y estamos perdiendo tiempo precioso de nuestras vidas al programar tareas largas de manera secuencial.
 
 En esta charla cubriremos los conceptos básicos de programación en paralelo con Python y mostraremos lo fácil que es implementarlo en Python. También aclararemos ciertos mitos como que en Python no hay paralelismo real e introduciremos distintas herramientas para usar fácilmente programación en paralelo con Python. Se explicarán ciertas consideraciones que debemos tener en cuenta para crear programas que hagan procesamiento en paralelo. Finalmente introduciremos unos casos de estudio, por ejemplo, de cómo aplicar programación en paralelo para acelerar la evaluación de modelos de Machine Learning.
 
@@ -48,4 +50,8 @@ topic: Other
 ---
 type: talk
 ---
-    
+datetime: 2020-02-08 09:10:00 -0500
+---
+datetime_end: 2020-02-08 09:50:00 -0500
+---
+room: alfonso-quintana-auditorium-a

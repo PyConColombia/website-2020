@@ -2,7 +2,9 @@ name: My voice is my passport. Verify me?
 ---
 authors: ben-dechrai
 ---
-description: Security is hard. Using the same password for everything is easy.
+description:
+
+Security is hard. Using the same password for everything is easy.
 
 Over the years, we've made it easier for users to do the right thing, from email-based verification to one-time passwords via email and security tokens. But nearly all these solutions require you to have your mobile phone, or security device with you. And if you're overseas, you might have additional problems.
 
@@ -18,4 +20,8 @@ topic: Web, Other
 ---
 type: talk
 ---
-    
+datetime: 2020-02-07 11:50:00 -0500
+---
+datetime_end: 2020-02-07 12:30:00 -0500
+---
+room: alfonso-quintana-auditorium-b

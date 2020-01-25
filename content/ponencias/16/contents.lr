@@ -2,7 +2,9 @@ name: Antes mi servicio se demoraba 5 seg y ahora 300 miliseg, veamos que es pro
 ---
 authors: gustavo-andres-angulo-morales
 ---
-description: Esta charla es para un público intermedio-avanzado.
+description:
+
+Esta charla es para un público intermedio-avanzado.
 
 Se realizará en dos secciones (Optimizaciones y posibles degradaciones) y muestra como se realiza profiling de aplicaciones en ambientes de desarrollo y luego como se puede realizar optimizaciones en producción, reduciendo tiempos de respuesta en diferentes capas (Base de datos, aplicación, cache, contenido estático) 
 En cada capa se mostrará un ejemplo normal de uso y el tiempo de consumo en respuesta en un ambiente de producción y luego con la optimización como se encuentran cambios y se optimiza reduciendo tiempo, memoria o CPU de uso..
@@ -19,4 +21,8 @@ topic: Other
 ---
 type: talk
 ---
-    
+datetime: 2020-02-08 11:00:00 -0500
+---
+datetime_end: 2020-02-08 11:40:00 -0500
+---
+room: alfonso-quintana-auditorium-a

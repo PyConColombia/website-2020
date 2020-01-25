@@ -1,8 +1,12 @@
-name: Como migrar mi proyecto de Python 2 a Python 3 
+name:
+
+Como migrar mi proyecto de Python 2 a Python 3 
 ---
 authors: jonathan-vallejo-munoz
 ---
-description: El 1 de Enero del 2020 es la fecha oficial del final del soporte de Python 2. Si tienes proyectos desarrollados en Python 2, si quieres mejorar tus conocimientos en Python 3 o si te interesa liderar proyectos de transformación tecnológica en la compañía o en los proyectos donde haces parte, esta charla es la indicada para ti. Hablaremos a cerca de las estrategias que en Lendingfront nos permitieron enfrentar los retos técnicos y procedimentales que hacen posible esta migración como te las describo a continuación:
+description:
+
+El 1 de Enero del 2020 es la fecha oficial del final del soporte de Python 2. Si tienes proyectos desarrollados en Python 2, si quieres mejorar tus conocimientos en Python 3 o si te interesa liderar proyectos de transformación tecnológica en la compañía o en los proyectos donde haces parte, esta charla es la indicada para ti. Hablaremos a cerca de las estrategias que en Lendingfront nos permitieron enfrentar los retos técnicos y procedimentales que hacen posible esta migración como te las describo a continuación:
 1. Identificando y Migrando librerías sin soporte en Python 3 en mi proyecto (caniusepython3, pipcheck, suds)
 2. Python 3.6, Python 3.7 o Python 3.8 ? Cual es la versión más adecuada ? Pros y Contras.
 3. Desarrollando tu código compatible con Python 2 y Python 3 al mismo tiempo (six, contexter, python-modernize, python-future)
@@ -23,4 +27,8 @@ topic: Other
 ---
 type: talk
 ---
-    
+datetime: 2020-02-07 10:00:00 -0500
+---
+datetime_end: 2020-02-07 10:40:00 -0500
+---
+room: alfonso-quintana-auditorium-a

@@ -2,7 +2,9 @@ name: Time Series Forecasting using Machine Learning
 ---
 authors: miguel-cabrera
 ---
-description: On this talk I will introduce the time series forecasting problem, the traditional methods as well as recent ML approaches discussing important steps such as target value transformation, commonly used predictors as well as hyper-parameter search.
+description:
+
+On this talk I will introduce the time series forecasting problem, the traditional methods as well as recent ML approaches discussing important steps such as target value transformation, commonly used predictors as well as hyper-parameter search.
 
 Description: When mentioning Time Series Forecasting what comes to mind are autoregressive models or exponential smoothing techniques using a dependent variable and the time dimension. Although those techniques work well in some domains, in others like retail, e-commerce, logistic and pricing, time series can be influenced by external factors that are hard to model using these traditional methods.
 
@@ -20,4 +22,8 @@ topic: Other, Machine Learning
 ---
 type: talk
 ---
-    
+datetime: 2020-02-08 09:10:00 -0500
+---
+datetime_end: 2020-02-08 09:50:00 -0500
+---
+room: felix-restrepo
