@@ -154,19 +154,21 @@
                 </div>
             </div>
         {%- endif -%}
-
-        <div class="django-girls wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1.2s" data-wow-offset="-1000">
-            <div class="container">
-                <div class="call-to-actions row">
-                    <div class="text-center col-md-12">
-                        <h1 class="title">&lt;{{ t_title_schedule }}/&gt;</h1>
-                    </div>
-                    <div class="text-center col-md-12">
-                        {% include './partials/_schedule.html' %}
+        
+        {% if 'schedule' in this.sections %}
+            <div class="django-girls wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1.2s" data-wow-offset="-1000">
+                <div class="container">
+                    <div class="call-to-actions row">
+                        <div class="text-center col-md-12">
+                            <h1 class="title">&lt;{{ t_title_schedule }}/&gt;</h1>
+                        </div>
+                        <div class="text-center col-md-12">
+                            {% include './partials/_schedule.html' %}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        {% endif %}
 
         {% set is_dg_section_enabled = this.djangogirls_link and 'djangogirls' in this.sections %}
         {% set django_girls = site.get('/django-girls', alt=this.alt) %}
