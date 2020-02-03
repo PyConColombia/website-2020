@@ -1,0 +1,17 @@
+name: Rompiendo el Build con Python en tu Integrador Continuo
+---
+datetime: 2020-02-09 09:30:00 -0500
+---
+datetime_end: 2020-02-09 11:30:00 -0500
+---
+description:
+
+La integración continua de tu aplicación rompe por vulnerabilidades conocidas? El ciclo de cierre de vulnerabilidades es independiente del ciclo de desarrollo? Aprende cómo puedes usar un framework de Python (Asserts) para romper el build en tus pipelines para vulnerabilidades confirmadas, e incluso, detectar algunas deterministicamente de forma automática. Como asitente podrás entender la filosofía, seguir los ejemplos, instalar el API en vivo y crear tus propios exploits que permitan romper la integración por problemas de seguridad. 
+---
+language: es
+---
+room: room-6
+---
+type: workshop
+---
+authors: andres-roldan

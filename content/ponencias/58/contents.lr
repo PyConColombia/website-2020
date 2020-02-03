@@ -1,0 +1,15 @@
+name: Self-driving cars, robotica con Deep Learning
+---
+datetime: 2020-02-09 13:00:00 -0500
+---
+datetime_end: 2020-02-09 15:00:00 -0500
+---
+description: Consiste en el montaje y manipulación de un carro de escala 1/16 con adición de periféricos, como cámaras y sensores que constituyen una plataforma para el desarrollo de un sistema autónomo, que sea capaz de desplazarse a través de una pista definida por los organizadores, usando una gran variedad de stack tecnológicos.
+---
+language: es
+---
+room: room-9
+---
+type: workshop
+---
+authors: alejandro-gomez-flores, aldemar-hernandez
