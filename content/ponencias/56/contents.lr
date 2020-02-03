@@ -1,0 +1,15 @@
+name: Explorando relaciones con bases de datos orientadas a grafos (Neo4j) con Python
+---
+datetime: 2020-02-09 09:30:00 -0500
+---
+datetime_end: 2020-02-09 11:30:00 -0500
+---
+description: Las bases de datos orientadas a grafos están enfocadas en mostrar y reflejar relaciones entre nodos, las cuales a menudo son difíciles y poco evidentes de ver en bases de datos SQL. Éste taller es un primer paso para analizar datos de negocio usando Python y Neo4j para descubrir patrones de relación entre entidades, mantener una visión holística de la base de datos, generar nuevas formas de cualificar información y eventualmente entender la causalidad de eventos mediante las relaciones dirigidas y progresivas de los grafos.
+---
+language: es
+---
+room: room-10
+---
+type: workshop
+---
+authors: juan-salvador-bahamon-arias

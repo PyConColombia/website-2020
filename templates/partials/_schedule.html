@@ -71,7 +71,7 @@
             {%- if talk.type in ['break'] -%}
             {% set icon = 'coffee' -%}
             {%- elif talk.type in ['lunch_break'] -%}
-            {% set icon = 'cutlery' -%}
+            {% set icon = 'utensils' -%}
             {%- elif talk.type in ['lightning'] -%}
             {% set icon = 'bolt' -%}
             {%- elif talk.type in ['closing', 'opening'] -%}
@@ -86,11 +86,10 @@
             <div class="schedule schedule-{{talks[0].type}}">
                 <div class="row">
                     <div class="col-lg-3">
-                        <h2 class="text-left">{{ time.split(':')[0] }}:<small>{{ time.split(':')[-1] }}</small></h2>
+                        <h2 class="text-left">{{ time.split(':')[0] }}:{{ time.split(':')[-1] }}</h2>
                     </div>
                     <div class="col-lg-9 text-left">
-                        {{ render_room_author(talk, color='#3e1a87') }}
-                        <h2 class="text-left"><i class="fa fa-{{icon}}" aria-hidden="true"></i> {{ talk.name }}</h2>
+                        <h2 class="text-left"><i class="fa fa-{{icon}}" aria-hidden="true"></i> {{ talk.name }}</h2>{{ render_room_author(talk, color='#3e1a87') }}
                     </div>
 
                 </div>
