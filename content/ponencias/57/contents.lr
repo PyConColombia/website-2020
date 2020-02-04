@@ -1,0 +1,22 @@
+name: Procesamiento de datos a gran escala con PySpark
+---
+datetime: 2020-02-09 09:30:00 -0500
+---
+datetime_end: 2020-02-09 11:30:00 -0500
+---
+language: es
+---
+room: room-11
+---
+summary:
+
+En 30 minutos los asistentes tendrán la oportunidad de conocer uno de los frameworks indispensables y más usados en el mundo del Big Data, además de ser una de las habilidades de mayor crecimiento de demanda en la industria. 
+La charla será enfocada en mostrar la facilidad del uso de Apache Spark, su filosofía, sus módulos y cómo estos se convierten en una herramienta increíble.  Mostraré las diferentes alternativas que existen para la extracción de información, un recorrido emocionante por las transformaciones y sus métodos de acción. Concluyendo con las opciones de persistencia de los datos.
+Como organizador de la comunidad de Apache Spark Bogotá, estoy convencido de que dominar Spark, será un camino que se disfrutará, incluso partiendo con un nivel intermedio en Phyton.
+Mi misión será la de mostrar a los asistentes como con conocimientos de Python el desarrollo en Spark, con PySpark, facilitará el manejo de datos e incrementará hasta 100 veces la velocidad con que se procesa la información
+---
+topic: Data Science, Machine Learning
+---
+type: workshop
+---
+authors: jose-david-arevalo-espinosa

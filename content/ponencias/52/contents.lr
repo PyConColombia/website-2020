@@ -1,0 +1,37 @@
+name: Prueba tu código con PyTest.
+---
+datetime: 2020-02-08 14:00:00 -0500
+---
+datetime_end: 2020-02-08 14:40:00 -0500
+---
+description:
+
+Pytest es una poderosa herramienta para quienes seguimos las buenas prácticas de probar nuestro código al desarrollar un proyecto, desgraciadamente no es tan popular como podría serlo, y no muchos explotan su potencial.
+
+En esta charla propongo explicar a detalle las ventajas de pytest, al igual que mostrar casos de uso que ejemplifiquen lo que voy a explicar, para que los asistentes a la charla puedan comprender que con pytest es posible probar múltiples escenarios con el mismo código del test, entre otras cosas.
+
+Introducción al testing (5 minutos):
+- Por qué debemos probar nuestro código.
+- Qué opciones hay para hacerlo.
+
+¿Qué es Pytest? (10 minutos)
+- Pytest como herramienta de pruebas.
+- Instalando y configurando pytest.
+- Primer ejemplo con pytest.
+
+Explicando las diferentes funciones de pytest (15 minutos)
+- Agrupar tests en una clase.
+- Corriendo múltiples tests.
+- Explicar los contextos de pytest.
+- Los ""fixtures"" en pytest (explícito, modular y escalable).
+- Cómo correr test específico y otras configuraciones al ejecutar las pruebas.
+---
+language: es
+---
+room: alfonso-quintana-auditorium-a
+---
+topic: Web
+---
+type: talk
+---
+authors: jesus-armando-anaya-orozco

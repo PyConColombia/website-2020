@@ -1,0 +1,20 @@
+name: Creación de un pipeline básico de reconocimiento facial
+---
+datetime: 2020-02-09 09:30:00 -0500
+---
+datetime_end: 2020-02-09 11:30:00 -0500
+---
+language: es
+---
+room: room-9
+---
+topic: Computer Vision
+---
+type: workshop
+---
+description:
+
+Construir un pipeline de reconocimiento facial desde el registro del usuario hasta su autenticación.
+Considerando un modelo de machine learning hecho a la medida, con implementación on-premise y un prototipo cloud haciendo uso de los modelos disponibles en AWS / Google Cloud.
+---
+authors: felipe-mejia, ariel-calzada, yeimy-arevalo

@@ -1,0 +1,15 @@
+name: Three approaches to modern py devops: bare-metal, kubernetes, and lambda
+---
+authors: nick-sweeting
+---
+datetime: 2020-02-09 13:00:00 -0500
+---
+datetime_end: 2020-02-09 15:00:00 -0500
+---
+description: We'll explore the latest best practices and compare the differences between the three main python devops setups: bare metal with supervisord/systemd, docker-compose and kubernetes, and lambda-style FaaS deployments. We'll also tell some stories about how the various methods fail in different situations based on our years of experience deploying Python applications in production. We expect to get fairly advanced in this workshop, but we hope it will be useful for people at all levels. We'll start with intro level deployment best-practices and then quickly dive in to discuss the deeper complexities around managing application state and dealing with distributed systems failure modes.
+---
+language: en
+---
+room: room-10
+---
+type: workshop
