@@ -10,7 +10,7 @@ date_start: 2020-02-07
 ---
 datetime: 2020-02-07 08:00:00 -0500
 ---
-sections: tickets
+sections: tickets, schedule, after-movie
 ---
 tickets_link: https://www.eventbrite.com/e/pycon-colombia-2020-tickets-56463397542
 ---
