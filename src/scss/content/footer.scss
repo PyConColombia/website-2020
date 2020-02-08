@@ -1,0 +1,115 @@
+.footer {
+  margin-top: -20rem;
+  margin-bottom: -20rem;
+  min-height: calc(100rem - 20rem);
+  background-image: url('../images/footer.svg');
+  background-size: 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  .container {
+    padding-top: 0;
+  }
+
+  .footer-info {
+    padding-top: 25rem;
+    text-align: center;
+    .social-networks {
+      margin-bottom: 6.5rem;
+      a {
+        margin: 0 3rem;
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+        .svg-inline--fa {
+          color: map_get($colors, _primary);
+          padding: 0.5rem;
+          background-color: map_get($colors, _white);
+          border-radius: 50%;
+          width: 4rem;
+          height: 4rem;
+        }
+      }
+    }
+    .copyright {
+      p {
+        a {
+          &:first-child {
+            padding-right: 0.5rem;
+          }
+          &:last-child {
+            padding-left: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Breakpoint: x <= 1399
+@media (max-width: map_get($screen,_xxl-max)) {
+  .footer {
+    background-size: 120%!important;
+  }
+}
+
+// Breakpoint: x <= 1199
+@media (max-width: map_get($screen,_xl-max)) {
+  .footer {
+    background-size: 140%!important;
+  }
+}
+
+
+// Breakpoint:  x <= 991
+@media (max-width: map_get($screen,_lg-max)) {
+  .footer {
+    background-size: 180%!important;
+  }
+}
+
+// Breakpoint: x <= 767
+@media (max-width: map_get($screen,_md-max)) {
+  .footer {
+    background-size: 240%!important;
+  }
+}
+
+// Breakpoint: x < 575
+@media (max-width: map_get($screen,_sm-max)) {
+  .footer {
+    background-size: 275%!important;
+  }
+}
+
+// Breakpoint: x < 520
+@media (max-width: 520px) {
+  .footer {
+    background-size: 320%!important;
+  }
+}
+
+// Breakpoint: x <= 449
+@media (max-width: map_get($screen,_xs-max)) {
+  .footer {
+    background-size: 400%!important;
+  }
+}
+
+// Breakpoint: x <= 349
+@media (max-width: map_get($screen,_xxs-max)) {
+  .footer {
+    background-size: 460%!important;
+  }
+}
+
+// Breakpoint: x < 320
+@media (max-width: 320px) {
+  .footer {
+    background-size: 500%!important;
+  }
+}

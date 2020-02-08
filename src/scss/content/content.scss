@@ -1,0 +1,463 @@
+
+.container {
+  max-width: 96rem;
+}
+
+.layout-home {
+  &:before {
+    content: '';
+    width: 100%;
+    height: 90rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../images/intro_complete.svg');
+    background-size: cover;
+    background-position: top center;
+  }
+  background-color: #99F2D6;
+  .background-wrapper {
+    padding-top: 22rem;
+    background-image: linear-gradient(#89d0e9, #66a6ff, #99F2D6);
+  }
+  background-position: top center;
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
+
+  .container {
+    position: relative;
+    z-index: 1;
+    .logotype-container {
+      margin: 0 2rem 6rem 2rem;
+      img {
+        margin: 0 auto;
+        max-width: 46rem;
+        display: block;
+      }
+    }
+
+    .logo-container{
+      margin: 0 auto 6rem auto;
+      background-size: contain;
+      width: auto;
+      background: url('../images/logo.svg') center center no-repeat;
+      height: 25rem;
+      img {
+        display: block
+      }
+    }
+
+  }
+
+  .bubbles-background {
+    background-image: url('../images/bubles.svg');
+    background-position: top center;
+    background-size: 85%;
+    position: relative;
+
+    &:before, &:after {
+      content: '';
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: top center;
+      position: absolute;
+      position: absolute;
+    }
+
+    &:before {
+      left: -5%;
+      width: 110%;
+      height: 80rem;
+      top: -52rem;
+      background-image: url('../images/cloud_1.svg');
+    }
+    &:after {
+      left: -5%;
+      width: 110%;
+      height: 70rem;
+      bottom: -60rem;
+      background-image: url('../images/cloud_2.svg');
+    }
+  }
+}
+
+.layout-page {
+  .background-wrapper {
+    background-image: linear-gradient(to top, #89d0e9, #77baf5 35%, #6aabfc 71%, #66a6ff);
+    min-height: 100vh;
+    
+    .background-image-wrapper {
+      padding: 80px 0;
+      background-image: url('../images/background-clouds.svg');
+      background-position: top center;
+      background-size: 1366px;
+      background-repeat: repeat-y;
+      margin: 0 auto;
+      .content {
+        margin-bottom: 150px;
+
+        a {
+          text-decoration: underline;
+          color: map_get($colors, _white);
+        }
+        h1, h2, h3, h4 { margin: 50px 0 20px 0; }
+        p { text-align: justify;}
+
+        .title {
+          text-transform: uppercase;
+          margin: 100px 0;
+        }
+
+        img {
+          max-width: 100%;
+        }
+
+        hr {
+          padding: 2rem 0;
+          border-top: 1px solid map_get($colors, _white);;
+        }
+
+        .sponsor-web {
+          img {
+            padding: 25px 0;
+            width: 95%;
+          }
+        }
+      }
+
+      .video-talk {
+        position: relative;
+        width: 100%;
+        height: 0;
+        margin: 3rem 0;
+        padding-bottom: 56.25%;
+      }
+      
+      .video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .footer {
+        background-image: none;
+      }
+    }
+  }
+
+  background-position: top center;
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  .title {
+    text-transform: uppercase;
+    margin-top: 100px;
+  }
+}
+
+.event-info {
+  .event-ticket {
+    a {
+      cursor: pointer;
+    }
+
+    img {
+      width: 90%;
+      margin: 0 auto;
+      transform: rotate(-15deg);
+      display: block;
+    }
+
+    &:hover {
+      -webkit-animation-duration: 0.5s;
+      animation-duration: 0.5s;
+      -webkit-animation-name: shake;
+      animation-name: shake;
+    }
+  }
+  .event-description {
+    .wrapper {
+      padding: 0 0 20rem 0;
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.key-speakers-info {
+  padding: 15rem 0;
+  position: relative;
+
+  .category-title {
+    margin-top: 5rem;
+  }
+
+  .speakers-title {
+    h1 {
+      margin-left: 5.5rem;
+      text-transform: uppercase;
+    }
+  }
+
+  .speaker-info {
+    padding-top: 6.2rem;
+    width: 100%;
+    .speaker-description {
+      text-align: right;
+      .wrapper {
+        padding: 0 1.2rem;
+        h3 {
+          margin-top: 6.2rem;
+        }
+        .speaker-title {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &.alt {
+      .speaker-description {
+        text-align: left;
+      }
+      .speaker-avatar {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.venue  {
+  padding-top: 26.5rem;
+  padding-bottom: 10rem;
+
+  .map {
+    padding-top: 20rem;
+
+    &:before, &:after {
+      content: '';
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: top center;
+      margin-left: 15px;
+      position: absolute;
+    }
+
+    &:before {
+      width: 100%;
+      height: 80rem;
+      background-image: url('../images/clouds-top.svg');
+      margin-top: -80px;
+    }
+    &:after {
+      width: 100%;
+      height: 70rem;
+      background-image: url('../images/clouds-bottom.svg');
+      margin-top: 320px;
+    }
+  }
+}
+
+.django-girls {
+  padding-top: 26.5rem;
+
+  .dg-button {
+    padding-top: 20px;
+  }
+
+  .logo {
+    margin: 0 auto;
+    max-width: 500px;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+}
+
+.sponsors  {
+  padding-top: 10rem;
+  padding-bottom: 30rem;
+  background-image: url('../images/background-clouds.svg');
+  background-position: top center;
+  background-repeat: repeat-y;
+  margin: 0 auto;
+  .container {
+    .title {
+      text-transform: uppercase;
+      margin: 100px 0;
+    }
+    .row-sponsor {
+      padding: 2rem 0;
+    }
+    .sponsor-ini {
+      img {
+        width: 95%;
+        padding: 10px 0;
+      }
+    }
+  }
+}
+
+
+.call-for-papers {
+  h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+
+  .call-to-actions {
+    .left {
+      text-align: right;
+    }
+  }
+}
+
+
+.speaker-social {
+  margin: 0 auto;
+  .social-networks {
+    margin: 5rem 0;
+    a {
+      margin: 0rem 1rem;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      .svg-inline--fa {
+        color: map_get($colors, _background);
+        padding: 0.5rem;
+        background-color: map_get($colors, _white);
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+
+        &:hover {
+          color: map_get($colors, _email);
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+}
+
+.speaker-info {
+  padding: 0 1rem;
+}
+
+.title {
+  text-transform: uppercase;
+  margin-bottom: 100px;
+}
+
+.container-talk {
+  h2 {
+    padding-left: 5px;
+  }
+}
+
+/* Talk Tag */
+
+.tags {
+  ul {
+    padding-left: 0;
+    li {
+      display:inline-block;
+    }
+  }
+
+  .tag {
+    border-radius: 5rem;
+    font-size: 1.4rem;
+    margin: 5px;
+    padding: 5px 10px;
+    text-align: center;
+  }
+  
+  .Computer.Vision.tag {
+    background-color: #ffeb3b;
+    color: #000;
+  }
+  
+  .Blockchain.tag {
+    background-color: #f9a825;
+  }
+  
+  .Data.Science.tag {
+    background-color: #f57f17;
+  }
+  
+  .Scientific.Computing.tag {
+    background-color: #e65100;
+  }
+  
+  .Artifial.Intelligence.tag {
+    background-color: #ff7043;
+    color: #000;
+  }
+  
+  .Machine.Learning.tag {
+    background-color: #f4511e;
+  }
+  
+  .Deep.Learning.tag {
+    background-color: #bf360c;
+  }
+  
+  .DevOps.tag {
+    background-color: #4caf50;
+    color: #000;
+  }
+  
+  .IoT.tag {
+    background-color: #1b5e20;
+  }
+  
+  .Web.tag {
+    background-color: #4fc3f7;
+    color: #000;
+  }
+  
+  .Python.Core.tag {
+    background-color: #039be5;
+  }
+  
+  .Video.Games.tag {
+    background-color: #0e29a1;
+  }
+  
+  .Infrastructure.tag {
+    background-color: #9575cd;
+    color: #000;
+  }
+  
+  .Performance.tag {
+    background-color: #5e35b1;
+  }
+  
+  .Community.tag {
+    background-color: #ec407a ;
+    color: #000;
+  }
+  
+  .Other.tag {
+    background-color: #c2185b;
+  }
+}
+
+.speaker-avatar {
+  img {
+    width: 100%;
+    max-width: 23rem;
+    height: auto;
+    border-radius: 100%;
+    margin: 0 1.2rem;
+  }
+}

@@ -1,0 +1,38 @@
+.gitter-custom-button {
+  color: #fc3a82;
+  background-color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-right: 2rem;
+  border-radius: 2rem 2rem 0 0;
+  border-bottom-width: 0;
+  min-width: 14rem;
+  position: fixed;
+  bottom: 0;
+  right: 1rem;
+  padding: 1.3rem 1.5rem;
+  transition: 0.3s;
+  z-index: 100;
+  border: 0;
+
+  &:hover {
+    background-color: #fc3a82;
+    border-color: #fc3a82;
+    color: #ffffff;
+  }
+}
+
+.gitter-chat-embed {
+  top: 90px;
+}
+
+@media (max-width: 768px) {
+}
+
+// Breakpoint: x < 400
+@media (max-width: 400px) {
+  .gitter-custom-button {
+    width: calc(100% - 6.5rem);
+  }
+}

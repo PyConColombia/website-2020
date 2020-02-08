@@ -1,0 +1,1816 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta name="google-site-verification" content="Lb8Bugu2ORvYa3ZIYPfPDWFEntukt1Yztc4I8SDgJ6g" />
+
+    <link rel="canonical" href="/ponencias/" />
+    <meta property="og:locale" content="" />
+    <meta property="og:type" content="website" />
+
+    <meta property="og:url" content="/ponencias/" />
+    <meta property="og:site_name" content="PyCon Colombia 2020" />
+    <meta property="og:updated_time" content="2019-08-13T17:51:00+00:00" /><meta property="og:title" content="PyCon Colombia 2020| February 7th - 9th 2020 | Medellín, Colombia" />
+      <meta property="og:description" content="Python conference in Colombia. PyCon Colombia | February 7th - 9th 2020 | Medellín, Colombia" />
+      <meta property="og:image" content="/dist/images/opimage.png" />
+      <meta property="og:image:secure_url" content="/dist/images/opimage.png" />
+      <meta property="og:image:width" content="500" />
+      <meta property="og:image:height" content="500" />
+
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@pyconcolombia">
+      <meta name="twitter:creator" content="@soyelhijo">
+      <meta name="twitter:title" content="PyCon Colombia 2020 February 7th - 9th 2020 | Medellín, Colombia">
+      <meta name="twitter:description"
+        content="Python conference in Colombia. PyCon Colombia | February 7th - 9th 2020 | Medellín, Colombia">
+
+    
+        <title>PyCon Colombia 2020 | February 7th - 9th 2020 | Medellín, Colombia</title>
+    
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/dist/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/dist/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/dist/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/dist/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/dist/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/dist/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/dist/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/dist/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/dist/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/dist/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/dist/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/dist/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/dist/favicon/android-icon-192x192.png">
+    <link rel="manifest" href="/dist/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/dist/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/dist/css/vendors.css">
+    <link rel="stylesheet" href="/dist/css/main.css">
+
+    <!-- Javascript -->
+    <script src="/dist/js/vendors.js"></script>
+    <script src="/dist/js/main.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105321720-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-105321720-3');
+    </script>
+
+    <script>
+      $(document).ready(function() {});
+    </script>
+  </head>
+
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="/">
+      <img src="/dist/images/logo.svg" alt="" width="auto" height="50">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav scrollable-menu">
+        
+  
+  
+
+  <li class="dropdown">
+    <a href="/lugar/" class="nav-link ">
+      Lugar
+    </a>
+  </li>
+        <li class="dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">Cronograma</a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        
+        
+        <a class="dropdown-item"
+          href="/cronograma/">Cronograma</a>
+        
+        
+        <a class="dropdown-item"
+          href="/keynotes/">Invitados Internacionales</a>
+        
+        
+        <a class="dropdown-item"
+          href="/ponentes/">Ponentes</a>
+        
+        
+        <a class="dropdown-item"
+          href="/ponencias/">Ponencias</a></div>
+  </li>
+        
+  
+  
+
+  <li class="dropdown">
+    <a href="/patrocinadores/" class="nav-link ">
+      Patrocinadores
+    </a>
+  </li>
+        
+  
+  
+
+  <li class="dropdown">
+    <a href="/equipo/" class="nav-link ">
+      Equipo
+    </a>
+  </li>
+
+        
+
+        <li class="dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Eventos</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" target="blank_" href="https://djangogirls.org/medellin/">Django Girls</a>
+          </div>
+        </li>
+
+        
+
+        
+
+        <li class="dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">v.2020</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="https://2019.pycon.co">v.2019</a>
+            <a class="dropdown-item" href="https://2018.pycon.co">v.2018</a>
+            <a class="dropdown-item" href="https://2017.pycon.co">v.2017</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          
+            <a class="nav-link" href="/en/talks/">English</a>
+          
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <button class="js-gitter-toggle-chat-button gitter-custom-button">
+    Abrir Chat
+  </button>
+  <body><div class="layout-page">
+        <div class="background-wrapper">
+            <div class="background-image-wrapper">
+                <div class="container">
+                    <div class="content">
+                        <div class="row justify-content-center">
+                            
+                            
+                            <div class="col-sm-12">
+                                <h1 class="title text-center">&lt;Presentaciones/&gt; (36)</h1>
+                                
+                                    <div class="row">
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/47/">A Python library for Teaching-Learning-Based Optimization</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Scientific Computing tag">Scientific Computing</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/kevin-eliecer-patron-hernandez/">
+                            <img
+                            src="/ponentes/kevin-eliecer-patron-hernandez/profile.jpg"">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/8/">AfroPython: Empowering black people using Python in Brazil</a> (Inglés)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Community tag">Community</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/felipe-dos-santos-de-morais/">
+                            <img
+                            src="/ponentes/felipe-dos-santos-de-morais/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/16/">Antes mi servicio se demoraba 5 seg y ahora 300 miliseg, veamos que es profiling en diferentes capas, Base de datos, aplicación, cache, mobile, para llevar a tus aplicaciones a otro nivel de velocidad.</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Other tag">Other</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/gustavo-andres-angulo-morales/">
+                            <img
+                            src="/ponentes/gustavo-andres-angulo-morales/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/5/">Archiving the Internet Before it All Rots Away</a> (Inglés)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Web tag">Web</li><li class="Other tag">Other</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/nick-sweeting/">
+                            <img
+                            src="/ponentes/nick-sweeting/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/10/">Breaking the Enigma: what if Turing had Python?</a> (Inglés)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Other tag">Other</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/maria-camila-remolina-gutierrez/">
+                            <img
+                            src="/ponentes/maria-camila-remolina-gutierrez/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/1/">Building a Scalable Food Delivery Service Using ElasticSearch Geo Queries</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Web tag">Web</li><li class="Other tag">Other</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/kevin-sarmiento-mendoza/">
+                            <img
+                            src="/ponentes/kevin-sarmiento-mendoza/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/19/">Como migrar mi proyecto de Python 2 a Python 3</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Other tag">Other</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/jonathan-vallejo-munoz/">
+                            <img
+                            src="/ponentes/jonathan-vallejo-munoz/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/18/">Comprension de la musica con Python, una mirada desde la Fisica y la Matematica</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Scientific Computing tag">Scientific Computing</li><li class="Other tag">Other</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/jose-ricardo-zapata-gonzalez/">
+                            <img
+                            src="/ponentes/jose-ricardo-zapata-gonzalez/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/42/">Conectando microservicios con Python</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Other tag">Other</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/rodolfo-edelmann/">
+                            <img
+                            src="/ponentes/rodolfo-edelmann/profile.png"">
+                        </a>
+                    </div>
+                </div><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/carlos-matias-de-la-torre-litox/">
+                            <img
+                            src="/ponentes/carlos-matias-de-la-torre-litox/profile.jpeg"">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/11/">Creando aplicaciones de MicroPython para módulos ESP01 y ESP32</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="IoT tag">IoT</li><li class="Other tag">Other</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/jose-luis-laica-cornejo/">
+                            <img
+                            src="/ponentes/jose-luis-laica-cornejo/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/22/">Debugging: A Senior&#39;s Skill</a> (Inglés)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Other tag">Other</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/milton-lenis/">
+                            <img
+                            src="/ponentes/milton-lenis/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/43/">Desarrollo de Dashboards interactivos en Jupyter para personas desinteresadas en interfaces gráficas</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Data Science tag">Data Science</li><li class="Web tag">Web</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/camilo-cardona/">
+                            <img
+                            src="/ponentes/camilo-cardona/profile.jpg"">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/14/">Did you know it’s possible to avoid bugs only by using types? Meet “Type Driven Development”, a strong approach used to get rid of common bugs in the code and it can be used in Python</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Other tag">Other</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/carlos-villavicencio/">
+                            <img
+                            src="/ponentes/carlos-villavicencio/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/15/">Enhancing Data Privacy through Federated (Machine) Learning</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Other tag">Other</li><li class="IoT tag">IoT</li><li class="Machine Learning tag">Machine Learning</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/sebastian-arango/">
+                            <img
+                            src="/ponentes/sebastian-arango/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/21/">Hablemos de voz</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Other tag">Other</li><li class="Machine Learning tag">Machine Learning</li><li class="Scientific Computing tag">Scientific Computing</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/mauricio-collazos/">
+                            <img
+                            src="/ponentes/mauricio-collazos/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/48/">Hacking Ético con Python</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/galoget-latorre/">
+                            <img
+                            src="/ponentes/galoget-latorre/profile.png"">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/9/">High Performance Pandas 2: Time series data analysis</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Other tag">Other</li><li class="Machine Learning tag">Machine Learning</li><li class="Scientific Computing tag">Scientific Computing</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/luis-david-camacho-gonzalez/">
+                            <img
+                            src="/ponentes/luis-david-camacho-gonzalez/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/45/">IDK: Connecting APIs, developers, bots and customers with Django, Channels, and VueJS</a> (Inglés)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Data Science tag">Data Science</li><li class="Python Core tag">Python Core</li><li class="Web tag">Web</li><li class="DevOps tag">DevOps</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/andres-gonzalez/">
+                            <img
+                            src="/ponentes/andres-gonzalez/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/2/">Inheriting code, and I don&#39;t mean classes</a> (Inglés)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Community tag">Community</li><li class="Other tag">Other</li><li class="Web tag">Web</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/flavio-percoco/">
+                            <img
+                            src="/ponentes/flavio-percoco/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/6/">It takes some engineering ⚙️ to serve 41679 users 💡</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Other tag">Other</li><li class="Web tag">Web</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/miguel-alejandro-bolivar-portilla/">
+                            <img
+                            src="/ponentes/miguel-alejandro-bolivar-portilla/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/46/">Máquinas de aprendizaje para analis de datos geoespaciales en procesos de identificación de cobertura terrestre e índices.</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Data Science tag">Data Science</li><li class="Machine Learning tag">Machine Learning</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/yilsey-teresa-benavides-miranda/">
+                            <img
+                            src="/ponentes/yilsey-teresa-benavides-miranda/profile.JPG"">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/49/">Modern Python packaging without pain</a> (Inglés)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Python Core tag">Python Core</li><li class="Community tag">Community</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/oscar-cortez/">
+                            <img
+                            src="/ponentes/oscar-cortez/profile.JPG"">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/17/">Movie Genre Classification Using Deep Multimodal Neural Networks</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Other tag">Other</li><li class="Machine Learning tag">Machine Learning</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/jesus-solano/">
+                            <img
+                            src="/ponentes/jesus-solano/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/3/">My voice is my passport. Verify me?</a> (Inglés)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Web tag">Web</li><li class="Other tag">Other</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/ben-dechrai/">
+                            <img
+                            src="/ponentes/ben-dechrai/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/24/">Ocultando datos en datos</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Other tag">Other</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/manuel-alejandro-alvarado-cobo/">
+                            <img
+                            src="/ponentes/manuel-alejandro-alvarado-cobo/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/25/">Presentaciones y encuestas interactivas en jupyter notebooks y RISE</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Other tag">Other</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/sebastian-andres-flores-benner/">
+                            <img
+                            src="/ponentes/sebastian-andres-flores-benner/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/26/">Probabilistic Programming: Using Python to Simplify Statistical Inference</a> (Inglés)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Other tag">Other</li><li class="Machine Learning tag">Machine Learning</li><li class="Scientific Computing tag">Scientific Computing</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/carlos-miguel-patino/">
+                            <img
+                            src="/ponentes/carlos-miguel-patino/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/20/">Procesamiento de datos en sistemas distribuidos con python</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Other tag">Other</li><li class="IoT tag">IoT</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/angel-galicia/">
+                            <img
+                            src="/ponentes/angel-galicia/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/4/">Programación en paralelo con Python: sácale jugo a los núcleos de tu computadora</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Other tag">Other</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/andres-felipe-torres-cano/">
+                            <img
+                            src="/ponentes/andres-felipe-torres-cano/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/52/">Prueba tu código con PyTest.</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Web tag">Web</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/jesus-armando-anaya-orozco/">
+                            <img
+                            src="/ponentes/jesus-armando-anaya-orozco/profile.jpg"">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/44/">Representación vectorial de nombres de dominio de Internet mediante técnicas de word embeddings</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Data Science tag">Data Science</li><li class="Artifial Intelligence tag">Artifial Intelligence</li><li class="Machine Learning tag">Machine Learning</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/waldemar-joel-lopez-anzolabehere/">
+                            <img
+                            src="/ponentes/waldemar-joel-lopez-anzolabehere/profile.png"">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/51/">Taking machine learning models to production level</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Artifial Intelligence tag">Artifial Intelligence</li><li class="Data Science tag">Data Science</li><li class="Machine Learning tag">Machine Learning</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/ivan-torroledo/">
+                            <img
+                            src="/ponentes/ivan-torroledo/profile.jpeg"">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/23/">The road so far on building a web platform for drones</a> (Inglés)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="IoT tag">IoT</li><li class="Web tag">Web</li><li class="Other tag">Other</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/jose-benitez/">
+                            <img
+                            src="/ponentes/jose-benitez/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/13/">Time Series Forecasting using Machine Learning</a> (Inglés)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Other tag">Other</li><li class="Machine Learning tag">Machine Learning</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/miguel-cabrera/">
+                            <img
+                            src="/ponentes/miguel-cabrera/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/50/">Tumaini: A Deep learning object detection API integrated to an android app, case of study in banana disease  detection</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Other tag">Other</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/javier-alejandro-vergara/">
+                            <img
+                            src="/ponentes/javier-alejandro-vergara/profile.jpg"">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                            <div class="col-md-6 col-sm-12">
+                                                
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/12/">Y is X but X is not always Y: An introduction to Python internals</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Other tag">Other</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/kevin-hernandez/">
+                            <img
+                            src="/ponentes/kevin-hernandez/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                            </div>
+                                        
+                                    </div>
+                                
+                            </div>
+
+                            
+                            <div class="col-sm-12">
+                                <h1 class="title text-center">&lt;Talleres/&gt; (22)</h1>
+                                
+                                    <div class="row">
+                                        
+                                        <div class="col-md-6 col-sm-12">
+                                            
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/41/">Aplica el análisis de sentimientos a tu red social desde cero</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Data Science tag">Data Science</li><li class="Machine Learning tag">Machine Learning</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/angelica-landazabal/">
+                            <img
+                            src="/ponentes/angelica-landazabal/profile.jpg"">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                        </div>
+                                        
+                                        <div class="col-md-6 col-sm-12">
+                                            
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/28/">Concurrency in Python</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Web tag">Web</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/jorge-galvis/">
+                            <img
+                            src="/ponentes/jorge-galvis/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                        </div>
+                                        
+                                        <div class="col-md-6 col-sm-12">
+                                            
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/35/">Crea tu primera red neuronal en Python con Keras</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Other tag">Other</li><li class="Machine Learning tag">Machine Learning</li><li class="Scientific Computing tag">Scientific Computing</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/marta-maleyka-magallon-escobar/">
+                            <img
+                            src="/ponentes/marta-maleyka-magallon-escobar/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                        </div>
+                                        
+                                        <div class="col-md-6 col-sm-12">
+                                            
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/55/">Creación de un pipeline básico de reconocimiento facial</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Computer Vision tag">Computer Vision</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/felipe-mejia/">
+                            <img
+                            src="/dist/images/empty-photo.svg"">
+                        </a>
+                    </div>
+                </div><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/ariel-calzada/">
+                            <img
+                            src="/ponentes/ariel-calzada/profile.jpeg"">
+                        </a>
+                    </div>
+                </div><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/yeimy-arevalo/">
+                            <img
+                            src="/ponentes/yeimy-arevalo/profile.jpeg"">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                        </div>
+                                        
+                                        <div class="col-md-6 col-sm-12">
+                                            
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/32/">Creando una aplicación web en el ecosistema Jupyter</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Other tag">Other</li><li class="Scientific Computing tag">Scientific Computing</li><li class="Web tag">Web</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/edward-yesid-villegas-pulgarin/">
+                            <img
+                            src="/ponentes/edward-yesid-villegas-pulgarin/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                        </div>
+                                        
+                                        <div class="col-md-6 col-sm-12">
+                                            
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/53/">Data Analytics and Data Processing with Apache Spark</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/alexander-cabezas/">
+                            <img
+                            src="/ponentes/alexander-cabezas/profile.jpeg"">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                        </div>
+                                        
+                                        <div class="col-md-6 col-sm-12">
+                                            
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/27/">Debugging beyond the print( ) call. Python debugging challenge.</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Other tag">Other</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/sergio-pulgarin/">
+                            <img
+                            src="/ponentes/sergio-pulgarin/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                        </div>
+                                        
+                                        <div class="col-md-6 col-sm-12">
+                                            
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/37/">Deep Learning as a Service – Building cloud-based intelligent solutions</a> (Inglés)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Other tag">Other</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/rodolfo-ferro/">
+                            <img
+                            src="/ponentes/rodolfo-ferro/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                        </div>
+                                        
+                                        <div class="col-md-6 col-sm-12">
+                                            
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/31/">Developing a Crawler API with Scrapy and Klein</a> (Inglés)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Other tag">Other</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/betina-costa/">
+                            <img
+                            src="/ponentes/betina-costa/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                        </div>
+                                        
+                                        <div class="col-md-6 col-sm-12">
+                                            
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/60/">Elastic APM + Django = (Elastic)</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/eddie-turizo/">
+                            <img
+                            src="/dist/images/empty-photo.svg"">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                        </div>
+                                        
+                                        <div class="col-md-6 col-sm-12">
+                                            
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/56/">Explorando relaciones con bases de datos orientadas a grafos (Neo4j) con Python</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/juan-salvador-bahamon-arias/">
+                            <img
+                            src="/ponentes/juan-salvador-bahamon-arias/profile.jpeg"">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                        </div>
+                                        
+                                        <div class="col-md-6 col-sm-12">
+                                            
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/30/">Introducción a Rest API con Django Rest Framework</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Web tag">Web</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/juan-sebastian-parada-celis/">
+                            <img
+                            src="/ponentes/juan-sebastian-parada-celis/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                        </div>
+                                        
+                                        <div class="col-md-6 col-sm-12">
+                                            
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/38/">Luces, MicroPython... ¡Acción!: Arte interactiva con MicroPython y leds neopixel programables.</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="IoT tag">IoT</li><li class="Other tag">Other</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/jhon-paulo-merchan-morales/">
+                            <img
+                            src="/ponentes/jhon-paulo-merchan-morales/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                        </div>
+                                        
+                                        <div class="col-md-6 col-sm-12">
+                                            
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/29/">Más allá de matplotlib y reportes PDF: creación de dashboards dinámicos con Dash de Plotly y Python</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Other tag">Other</li><li class="Web tag">Web</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/david-mauricio-delgado-ruiz/">
+                            <img
+                            src="/ponentes/david-mauricio-delgado-ruiz/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                        </div>
+                                        
+                                        <div class="col-md-6 col-sm-12">
+                                            
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/57/">Procesamiento de datos a gran escala con PySpark</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Data Science tag">Data Science</li><li class="Machine Learning tag">Machine Learning</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/jose-david-arevalo-espinosa/">
+                            <img
+                            src="/ponentes/jose-david-arevalo-espinosa/profile.jpeg"">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                        </div>
+                                        
+                                        <div class="col-md-6 col-sm-12">
+                                            
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/33/">Real time Django + Vue.js</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Other tag">Other</li><li class="Web tag">Web</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/andres-gonzalez/">
+                            <img
+                            src="/ponentes/andres-gonzalez/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                        </div>
+                                        
+                                        <div class="col-md-6 col-sm-12">
+                                            
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/54/">Rompiendo el Build con Python en tu Integrador Continuo</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/andres-roldan/">
+                            <img
+                            src="/ponentes/andres-roldan/profile.jpeg"">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                        </div>
+                                        
+                                        <div class="col-md-6 col-sm-12">
+                                            
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/58/">Self-driving cars, robotica con Deep Learning</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/alejandro-gomez-flores/">
+                            <img
+                            src="/ponentes/alejandro-gomez-flores/profile.jpeg"">
+                        </a>
+                    </div>
+                </div><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/aldemar-hernandez/">
+                            <img
+                            src="/ponentes/aldemar-hernandez/profile.jpeg"">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                        </div>
+                                        
+                                        <div class="col-md-6 col-sm-12">
+                                            
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/34/">Taller de procesamiento digital de imágenes y visión por computadora</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Computer Vision tag">Computer Vision</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/jorge-martinez-gomez/">
+                            <img
+                            src="/ponentes/jorge-martinez-gomez/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                        </div>
+                                        
+                                        <div class="col-md-6 col-sm-12">
+                                            
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/59/">Three approaches to modern py devops: bare-metal, kubernetes, and lambda</a> (Inglés)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/nick-sweeting/">
+                            <img
+                            src="/ponentes/nick-sweeting/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                        </div>
+                                        
+                                        <div class="col-md-6 col-sm-12">
+                                            
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/39/">Title: &#34;ASyncio microTelegram Bot&#34; - Attendees will learn the usage and importance of asyncio by creating a Telegram Bot with it and the use of MicroPython, the future emerging language for microcontrollers.</a> (Inglés)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Community tag">Community</li><li class="IoT tag">IoT</li><li class="Other tag">Other</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/steven-alexander-silva-mendoza/">
+                            <img
+                            src="/ponentes/steven-alexander-silva-mendoza/profile.png
+
+    "">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                        </div>
+                                        
+                                        <div class="col-md-6 col-sm-12">
+                                            
+    <div class="container-talk">
+        <div class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1.2s" data-wow-offset="-1000">
+            <div class="row">
+                <h2><a href="/ponencias/40/">¡Tierra a la vista baby! – Reconocimiento de planetas con Python</a> (Español)</h2>
+            </div>
+            <div class="row">
+                <div class="tags">
+                    <ul><li class="Computer Vision tag">Computer Vision</li><li class="Artifial Intelligence tag">Artifial Intelligence</li></ul>
+                </div>
+            </div>
+            <div class="row"><div class="col-sm-2">
+                    <div class="speaker-avatar">
+                        <a href="/ponentes/andres-mauricio-repetto-ferrero/">
+                            <img
+                            src="/ponentes/andres-mauricio-repetto-ferrero/mauricio-repetto.jpg"">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+
+                                        </div>
+                                        
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">
+    <div class="container">
+        <div class="footer-info">
+            <div class="social-networks">
+                <a href="https://twitter.com/pyconcolombia" target="_blank">
+                    <i class="fab fa-twitter fa-3x"></i>
+                </a>
+                <a href="https://facebook.com/pyconcolombia" target="_blank">
+                    <i class="fab fa-facebook-f fa-3x"></i>
+                </a>
+                <a href="https://instagram.com/pyconcolombia" target="_blank">
+                    <i class="fab fa-instagram fa-3x"></i>
+                </a>
+                <a href="https://medium.com/@pyconcolombia" target="_blank">
+                    <i class="fab fa-medium fa-3x"></i>
+                </a>
+                <a href="https://github.com/pyconcolombia" target="_blank">
+                    <i class="fab fa-github-alt fa-3x"></i>
+                </a>
+            </div>
+            <div class="copyright">
+                <p>© 2020 <a href="https://python.org.co" target="blank_">Python Colombia</a>. All rights reserved.</p>
+                <p>
+                <a href="/codigo-de-conducta/">Código de Conducta</a>
+                 | <a
+                        href="mailto:hello@pycon.co">hello@pycon.co</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div><script>
+      ((window.gitter = {}).chat = {}).options = {
+        room: 'PyConColombia/Lobby',
+        activationElement: '.gitter-button',
+      };
+    </script>
+    <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+    <script src="/dist/js/navbar.js"></script>
+    <!-- Noscript content for added SEO -->
+    <noscript><a href="https://www.eventbrite.com/e/pycon-colombia-2020-tickets-56463397542" rel="noopener noreferrer"
+        target="_blank"></noscript>
+    <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+    <script type="text/javascript">
+      var exampleCallback = function () {
+        console.log('Order complete!');
+      };
+      window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '56463397542',
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-56463397542',
+        onOrderComplete: exampleCallback
+      });
+    </script>
+  </body>
+</html>
