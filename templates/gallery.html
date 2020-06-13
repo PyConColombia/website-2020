@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{%- from "macros/translation.html" import transbag -%}
+
+{%- block body -%}
+    <div class="layout-page">
+        <div class="background-wrapper">
+            <div class="background-image-wrapper">
+                <div class="container">
+                    <div class="content">
+                        <div class="row justify-content-center">
+                            <div class="col-md-12 col-sm-12">
+                                <h1 class="title text-center">&lt;{{ this.title }}/&gt;</h1>
+                                {{ this.body }}
+
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <a data-flickr-embed="true" data-header="true" data-footer="true" href="https://www.flickr.com/photos/pyconcolombia/albums/72157713679835003" title="Keynotes - PyCon Colombia 2020">
+                                            <img src="https://live.staticflickr.com/65535/49714271156_c55ff57c93_z.jpg" width="1801" height="0" alt="Keynotes - PyCon Colombia 2020">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <a data-flickr-embed="true" data-header="true" data-footer="true" href="https://www.flickr.com/photos/pyconcolombia/albums/72157713678221257" title="Activities - PyCon Colombia 2020">
+                                            <img src="https://live.staticflickr.com/65535/49713977982_8ed09388ca_z.jpg" width="1801" height="0"  alt="Activities - PyCon Colombia 2020">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <a data-flickr-embed="true" data-header="true" data-footer="true" href="https://www.flickr.com/photos/pyconcolombia/albums/72157713680493756" title="Talks - PyCon Colombia 2020">
+                                            <img src="https://live.staticflickr.com/65535/49714300588_fec78dc6e5_z.jpg" width="1801" height="0" alt="Talks - PyCon Colombia 2020">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <a data-flickr-embed="true" data-header="true" data-footer="true" href="https://www.flickr.com/photos/pyconcolombia/albums/72157713678438666" title="Awards - PyCon Colombia 2020">
+                                            <img src="https://live.staticflickr.com/65535/49713633888_8223ce8ba6_z.jpg" width="1801" height="0" alt="Awards - PyCon Colombia 2020">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <a data-flickr-embed="true" data-header="true" data-footer="true" href="https://www.flickr.com/photos/pyconcolombia/albums/72157713680977338" title="Team - PyCon Colombia 2020">
+                                            <img src="https://live.staticflickr.com/65535/49714049348_8525499c4b_z.jpg" width="1801" height="0" alt="Team - PyCon Colombia 2020">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <a data-flickr-embed="true" data-header="true" data-footer="true" href="https://www.flickr.com/photos/pyconcolombia/albums/72157713681807882" title="Sponsors - PyCon Colombia 2020">
+                                            <img src="https://live.staticflickr.com/65535/49714282878_8595887a5a_z.jpg" width="1801" height="0" alt="Sponsors - PyCon Colombia 2020">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% include 'partials/_footer.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+{%- endblock -%}
