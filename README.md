@@ -215,8 +215,8 @@ ___
 
 💪 Colaboradores
 
-|[<img src="https://avatars3.githubusercontent.com/u/3627835?s=400&v=4" width="100px;"/><br /><sub><b>Gonzalo Peña</b></sub>](https://github.com/goanpeca) | [<img src="https://avatars3.githubusercontent.com/u/14989202?s=400&v=4" width="100px;"/><br /><sub><b>Alejandro E. Rendon</b></sub>](https://github.com/arendondiosa)| [<img src="https://avatars2.githubusercontent.com/u/2729395?s=460&v=4" width="100px;"/><br /><sub><b>Sergio Alexander F.</b></sub>](https://github.com/xergioalex)|
-| :---: | :---: | :---: |
+|[<img src="https://avatars3.githubusercontent.com/u/3627835?s=400&v=4" width="100px;"/><br /><sub><b>Gonzalo Peña</b></sub>](https://github.com/goanpeca) | [<img src="https://avatars3.githubusercontent.com/u/14989202?s=400&v=4" width="100px;"/><br /><sub><b>Alejandro E. Rendon</b></sub>](https://github.com/arendondiosa) | [<img src="https://avatars2.githubusercontent.com/u/2729395?s=460&v=4" width="100px;"/><br /><sub><b>Sergio Alexander F.</b></sub>](https://github.com/xergioalex)| [<img src="https://avatars2.githubusercontent.com/u/5959590?s=400&v=4" width="100px;"/><br /><sub><b>Jonathan Vallejo Muñoz</b></sub>](https://github.com/jonathanvm13) |
+| :---: | :---: | :---: | :---: |
 
 </div>
 
