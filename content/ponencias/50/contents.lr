@@ -15,3 +15,5 @@ type: talk
 description: Tumaini is an android app that is helping farmers around the world to detect diseases in banana crops; This app uses in the backend a Flask API rest to connect the android app with the trained deep learning (DL) object detection models (using TensorFlow). In this talk, I am explaining the full pipeline to build an android DL App. This app have been featured in well known blogs as NVIDIA blog(https://blogs.nvidia.com/blog/2019/09/24/ai-banana-farmers-crop-disease) and is based in the research paper  (https://plantmethods.biomedcentral.com/articles/10.1186/s13007-019-0475-z)
 ---
 authors: javier-alejandro-vergara
+---
+video_code: oIiy5LcvtvQ
