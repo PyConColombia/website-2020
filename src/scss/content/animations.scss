@@ -1,0 +1,16 @@
+.transition-mdl-hover {
+  transition: all 0.27s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-mdl-elements {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(358deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}

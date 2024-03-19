@@ -1,0 +1,123 @@
+// Vars
+@import "config/variables";
+
+// Components
+@import "components/buttons";
+@import "components/gitter_button";
+
+// Header
+@import "content/header";
+
+// Content
+@import "content/animations";
+@import "content/header";
+@import "content/content";
+@import "content/footer";
+@import "content/responsive";
+
+// Footer
+@import "content/footer";
+
+
+* {
+  font-family: 'Ubuntu', 'Helvetica', 'Arial', sans-serif;
+  outline: none !important
+}
+
+html, body {
+  font-family: 'Ubuntu', 'Helvetica', 'Arial', sans-serif;
+  font-size: 10px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  &:hover {
+    text-decoration:none;
+  }
+}
+
+
+h1, h2, h3, h4 {
+  color: map_get($colors, _white);
+  font-weight: map_get($fonts-weigths, _bold);
+  text-shadow: 0.1rem 0.3rem 1.2rem rgba(132, 126, 126, 0.6);
+  width: 100%;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4, span {
+  font-size: 2.4rem;
+}
+
+small {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: map_get($colors, _white);
+}
+
+p, ol, ul {
+  font-size: 2.1rem;
+  color: map_get($colors, _white);
+  text-shadow: 0.1rem 0.3rem 1.2rem rgba(132, 126, 126, 0.6);
+}
+
+a {
+  color: map_get($colors, _white);
+  text-shadow: 0.1rem 0.3rem 1.2rem rgba(132, 126, 126, 0.6);
+  transition: all 0.2s;
+  &:hover {
+    text-decoration: underline;
+    color: map_get($colors, _white);
+    transition: all 0.2s;
+  }
+}
+
+// Video Intro
+
+.modal-dialog {
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.modal-body {
+  position:relative;
+  padding:0px;
+}
+.close-modal {
+  background: none;
+  border: none;
+  position:absolute;
+  right:-30px;
+  top:0;
+  z-index:999;
+  font-size:2rem;
+  font-weight: normal;
+  color:#fff;
+  opacity:1;
+}
+
+// Breakpoint:  x <= 991
+@media (max-width: map_get($screen,_lg-max)) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+// Breakpoint: x <= 449
+@media (max-width: map_get($screen,_xs-max)) {
+  h1 {
+    font-size: 2.4rem;
+  }
+}

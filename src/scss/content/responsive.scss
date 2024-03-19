@@ -1,0 +1,258 @@
+/*
+ * MEDIA QUERYS
+ *
+ * Extra tiny grid  devices Phones  (<350px) = .col-*
+ * Tiny grid  devices Phones  (<450px) = .col-*
+ * Extra small grid  devices Phones  (<576px) = .col-*
+ * Small grid  devices Phones  (<768px) = .col-sm-*
+ * Regular grid devices Tablets (≥768px) = .col-md-*
+ * Medium grid devices Desktops  (≥992px) = .col-lg-*
+ * Large grid devices Desktops  (≥1200px) = .col-xl-*
+ * Extra large grid deivces desktop (≥1400px)
+ */
+
+
+
+// Breakpoint: x >= 1900
+@media (min-width: map_get($screen,_xxxxl)) {
+
+}
+
+
+// Breakpoint: x >= 1600 y >= 700
+@media (min-width: map_get($screen,_xxxl)) and (min-height: 700px) {
+
+}
+
+// Breakpoint: x >= 1600 y >= 850
+@media (min-width: map_get($screen,_xxxl)) and (min-height: 850px) {
+
+}
+
+// Breakpoint: x >= 1600 y >= 900px
+@media (min-width: map_get($screen,_xxxl)) and (min-height: 900px) {
+
+}
+
+// Breakpoint: x >= 1900 y >= 1200
+@media (min-width: map_get($screen,_xxxl)) and (min-height: 1100px) {
+
+}
+
+// Breakpoint: x <= 1551
+@media (min-width: 1551px) {
+  .layout-home {
+    &:before {
+      height: 110rem;
+      top: -20rem !important;
+    }
+  }
+}
+
+
+@media (max-width: 1610px) and (max-height: 910px) {
+  .layout-home {
+    &:before {
+      height: 90rem;
+      top: -18rem !important;
+    }
+    .background-wrapper {
+      padding-top: 11rem;
+    }
+    .container {
+      .logo-container{
+        margin-bottom: 5rem !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .layout-home {
+    &:before {
+      top: -24rem !important;
+    }
+    .background-wrapper {
+      padding-top: 10rem;
+    }
+    .container {
+      .logotype-container {
+        margin-bottom: 5rem;
+        img {
+          max-width: 40rem;
+        }
+      }
+      .logo-container{
+        height: 20rem;
+        margin-bottom: 3rem !important;
+      }
+    }
+  }
+}
+
+// Breakpoint: x <= 1399
+@media (max-width: 1800px) {
+
+}
+
+// Breakpoint: x >= 1400
+@media (min-width: map_get($screen,_xxl)) {
+
+}
+
+// Breakpoint: x <= 1399
+@media (max-width: map_get($screen,_xxl-max)) {
+
+}
+
+// Breakpoint: x >= 1200 y >= 700
+@media (min-width: map_get($screen,_xl)) and (max-height: 590px) {
+
+}
+
+// Breakpoint: x <= 1199
+@media (max-width: map_get($screen,_xl-max)) {
+  .layout-home {
+    .bubbles-background {
+      &:before {
+        top: -40rem;
+      }
+      // &:after {
+      //   bottom: -60rem;
+      // }
+    }
+  }
+}
+
+// Breakpoint:  x <= 991
+@media (max-width: map_get($screen,_lg-max)) {
+  .layout-home {
+    .bubbles-background {
+      &:before {
+        top: -35rem !important;
+      }
+    }
+  }
+
+  .venue  {
+    .map {
+      &:before {
+        margin-top: -60px;
+      }
+      &:after {
+        margin-top: 340px;
+      }
+    }
+  }
+}
+
+// Breakpoint: x <= 767
+@media (max-width: map_get($screen,_md-max)) {
+  .layout-home {
+    &:before {
+      top: -27rem !important;
+    }
+    .background-wrapper {
+      padding-top: 10rem;
+    }
+    .container {
+      .logotype-container {
+        margin-bottom: 4rem;
+        img {
+          max-width: 36rem;
+        }
+      }
+      .logo-container {
+        height: 18rem;
+        margin-bottom: 2rem !important;
+      }
+    }
+
+    .bubbles-background {
+      &:before {
+        top: -45rem;
+      }
+      &:after {
+        bottom: -60rem;
+      }
+    }
+  }
+
+  .venue  {
+    .map {
+      &:before {
+        margin-top: -40px;
+      }
+      &:after {
+        margin-top: 360px;
+      }
+    }
+  }
+}
+
+// Breakpoint: x >= 1024 y >= 900px
+@media (min-width: 1024px) and (min-height: 1300px) {
+
+}
+
+// Breakpoint: x < 575
+@media (max-width: map_get($screen,_sm-max)) {
+  .venue  {
+    .map {
+      &:before {
+        margin-top: -30px;
+      }
+      &:after {
+        margin-top: 370px;
+      }
+    }
+  }
+}
+
+// Breakpoint: x < 520
+@media (max-width: 520px) {
+
+}
+
+// Breakpoint: x <= 449
+@media (max-width: map_get($screen,_xs-max)) {
+  .layout-home {
+    &:before {
+      top: -30rem !important;
+    }
+    .container {
+      .logo-container{
+        height: 15rem;
+      }
+    }
+  }
+  
+  .venue  {
+    .map {
+      &:before {
+        margin-top: -20px;
+      }
+      &:after {
+        margin-top: 380px;
+      }
+    }
+  }
+}
+
+// Breakpoint: x <= 349
+@media (max-width: map_get($screen,_xxs-max)) {
+
+}
+
+// Breakpoint: x < 320
+@media (max-width: 320px) {
+
+}
+
+
+
+
+
+
+
+
